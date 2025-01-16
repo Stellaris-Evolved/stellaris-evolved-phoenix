@@ -1,0 +1,225 @@
+inline_scripts = {
+    ## context_configs_type = multiple
+    jobs/tec_job = {
+        ## cardinality = 0..inf
+        triggered_desc = single_alias_right[triggered_desc_clause]
+        ## cardinality = 0..inf
+        ## replace_scopes = { this = planet root = planet }
+        triggered_planet_modifier = single_alias_right[triggered_modifier_clause]
+    }
+
+    ## context_configs_type = multiple
+    jobs/tec_job_$display$ = {
+        ## cardinality = 0..inf
+        triggered_desc = single_alias_right[triggered_desc_clause]
+        ## cardinality = 0..inf
+        ## replace_scopes = { this = planet root = planet }
+        triggered_planet_modifier = single_alias_right[triggered_modifier_clause]
+    }
+
+    ## context_configs_type = multiple
+    jobs/tec_job_with_desc = {
+        ## cardinality = 0..inf
+        triggered_desc = single_alias_right[triggered_desc_clause]
+        ## cardinality = 0..inf
+        ## replace_scopes = { this = planet root = planet }
+        triggered_planet_modifier = single_alias_right[triggered_modifier_clause]
+    }
+
+    ## context_configs_type = multiple
+    jobs/tec_job_no_desc = {
+        ## cardinality = 0..inf
+        ## replace_scopes = { this = planet root = planet }
+        triggered_planet_modifier = single_alias_right[triggered_modifier_clause]
+    }
+
+    ## context_configs_type = multiple
+    jobs/tec_job_per_pop = {
+        ## cardinality = 0..inf
+        triggered_desc = single_alias_right[triggered_desc_clause]
+        ## cardinality = 0..inf
+        ## replace_scopes = { this = planet root = planet }
+        triggered_planet_modifier = single_alias_right[triggered_modifier_clause]
+    }
+
+    ## context_configs_type = multiple
+    jobs/tec_job_per_pop_no_desc = {
+        ## cardinality = 0..inf
+        ## replace_scopes = { this = planet root = planet }
+        triggered_planet_modifier = single_alias_right[triggered_modifier_clause]
+    }
+
+    ## context_configs_type = multiple
+    jobs/tec_job_leader_background_planet = {
+        ## cardinality = 0..inf
+        ## replace_scopes = { this = leader from = planet }
+        triggered_background_planet_modifier = single_alias_right[triggered_modifier_clause]
+    }
+    ## context_configs_type = multiple
+    jobs/tec_job_leader_sector = {
+        ## cardinality = 0..inf
+        ## replace_scopes = { this = leader from = sector }
+        triggered_sector_modifier = single_alias_right[triggered_modifier_clause]
+    }
+
+    ## context_configs_type = multiple
+    jobs/tec_job_leader_sector_per_pop = {
+        ## cardinality = 0..inf
+        ## replace_scopes = { this = leader from = sector }
+        triggered_sector_modifier = single_alias_right[triggered_modifier_clause]
+    }
+
+
+    ## context_configs_type = multiple
+    ant:jobs/effects/* = {
+        ## cardinality = 0..1
+        ## replace_scopes = { this = pop root = pop }
+        pop_modifier = single_alias_right[modifier_clause]
+        ## cardinality = 0..1
+        ## replace_scopes = { this = country root = country }
+        country_modifier = single_alias_right[modifier_clause]
+        ## cardinality = 0..1
+        ## replace_scopes = { this = planet root = planet }
+        planet_modifier = single_alias_right[modifier_clause]
+
+        ## cardinality = 0..inf
+        ## replace_scopes = { this = pop root = pop }
+        triggered_pop_modifier = single_alias_right[triggered_modifier_by_pop_clause]
+        ## cardinality = 0..inf
+        ## replace_scopes = { this = country root = country }
+        triggered_country_modifier = single_alias_right[triggered_modifier_by_pop_clause]
+        ## cardinality = 0..inf
+        ## replace_scopes = { this = planet root = planet }
+        triggered_planet_modifier = single_alias_right[triggered_modifier_by_pop_clause]
+    }
+
+    ## context_configs_type = multiple
+    ant:jobs/resources/* = {
+        alias_name[economic_template] = alias_match_left[economic_template]
+    }
+
+    ## context_configs_type = multiple
+    ant:jobs/effects/type/* = {
+        ## cardinality = 0..1
+        ## replace_scopes = { this = pop root = pop }
+        pop_modifier = single_alias_right[modifier_clause]
+        ## cardinality = 0..1
+        ## replace_scopes = { this = country root = country }
+        country_modifier = single_alias_right[modifier_clause]
+        ## cardinality = 0..1
+        ## replace_scopes = { this = planet root = planet }
+        planet_modifier = single_alias_right[modifier_clause]
+
+        ## cardinality = 0..inf
+        ## replace_scopes = { this = pop root = pop }
+        triggered_pop_modifier = single_alias_right[triggered_modifier_by_pop_clause]
+        ## cardinality = 0..inf
+        ## replace_scopes = { this = country root = country }
+        triggered_country_modifier = single_alias_right[triggered_modifier_by_pop_clause]
+        ## cardinality = 0..inf
+        ## replace_scopes = { this = planet root = planet }
+        triggered_planet_modifier = single_alias_right[triggered_modifier_by_pop_clause]
+    }
+}
+
+definitions = {
+    ## type = job
+    wrangler
+
+    ## type = job
+    rancher
+}
+
+parameters = {
+    ### jobs/tec_job
+    ## context_key = inline_script@jobs/tec_job
+    display = enum[tec_job_display]
+    ## context_key = inline_script@jobs/tec_job
+    job = <job>
+    ## context_key = inline_script@jobs/tec_job
+    ## context_configs_type = multiple
+    default_job = {
+        <job>
+        no
+    }
+    ## context_key = inline_script@jobs/tec_job
+    count = float
+    ## context_key = inline_script@jobs/tec_job
+    mult = value_field
+    ## context_key = inline_script@jobs/tec_job
+    ## replace_scopes = { this = planet  root = any }
+    ## context_configs_type = multiple
+    trigger = single_alias_right[trigger_clause]
+
+
+    ### jobs/tec_job_$display$
+    ## context_key = inline_script@jobs/tec_job_$display$
+    job = <job>
+    ## context_key = inline_script@jobs/tec_job_$display$
+    count = float
+    ## context_key = inline_script@jobs/tec_job_$display$
+    mult = value_field
+    ## context_key = inline_script@jobs/tec_job_$display$
+    ## replace_scopes = { this = planet  root = any }
+    ## context_configs_type = multiple
+    trigger = single_alias_right[trigger_clause]
+
+
+    ### jobs/tec_job_no_desc
+    ## context_key = inline_script@jobs/tec_job_no_desc
+    job = <job>
+    ## context_key = inline_script@jobs/tec_job_no_desc
+    count = float
+    ## context_key = inline_script@jobs/tec_job_no_desc
+    mult = value_field
+    ## context_key = inline_script@jobs/tec_job_no_desc
+    ## replace_scopes = { this = planet  root = any }
+    ## context_configs_type = multiple
+    trigger = single_alias_right[trigger_clause]
+
+    ### jobs/tec_job_per_pop
+    ## context_key = inline_script@jobs/tec_job_per_pop
+    job = <job>
+    ## context_key = inline_script@jobs/tec_job_per_pop
+    count = float
+    ## context_key = inline_script@jobs/tec_job_per_pop
+    mult = value_field
+    ## context_key = inline_script@jobs/tec_job_per_pop
+    ## replace_scopes = { this = planet  root = any }
+    ## context_configs_type = multiple
+    trigger = single_alias_right[trigger_clause]
+
+    ### jobs/tec_job_with_desc
+    ## context_key = inline_script@jobs/tec_job_with_desc
+    job = <job>
+    ## context_key = inline_script@jobs/tec_job_with_desc
+    count = float
+    ## context_key = inline_script@jobs/tec_job_with_desc
+    mult = value_field
+    ## context_key = inline_script@jobs/tec_job_with_desc
+    ## replace_scopes = { this = planet  root = any }
+    ## context_configs_type = multiple
+    trigger = single_alias_right[trigger_clause]
+
+    ### jobs/tec_*
+    ## context_key = re:inline_script@jobs/tec_(?:(?!job).)+
+    display = enum[tec_job_display]
+    ## context_key = re:inline_script@jobs/tec_(?:(?!job).)+
+    count = float
+    ## context_key = re:inline_script@jobs/tec_(?:(?!job).)+
+    mult = value_field
+    ## context_key = re:inline_script@jobs/tec_(?:(?!job).)+
+    ## replace_scopes = { this = planet  root = any }
+    ## context_configs_type = multiple
+    trigger = single_alias_right[trigger_clause]
+    ## context_key = re:inline_script@jobs/tec_(?:(?!job).)+
+    ## context_configs_type = multiple
+    default_job = {
+        <job>
+        no
+    }
+    ## context_key = re:inline_script@jobs/tec_(?:(?!job).)+
+    ## replace_scopes = { this = country  root = any }
+    ## context_configs_type = multiple
+    default_trigger = single_alias_right[trigger_clause]
+}

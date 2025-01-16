@@ -1,0 +1,175 @@
+enums = {
+    enum[tec_trimmed_ethic] = {
+        # Vanilla
+
+        authoritarian
+        egalitarian
+        xenophobe
+        xenophile
+        militarist
+        pacifist
+        spiritualist
+        materialist
+
+        # Evolved
+        cooperative
+        competitive
+        ecologist
+        industrialist
+        elitist
+        pluralist
+
+        # Gestalt Vanilla
+
+        gestalt_consciousness
+
+        # Gestalt Evolved
+
+        gestalt_empathy
+        gestalt_apathy
+        gestalt_preservation
+        gestalt_overconsumption
+        gestalt_introspective
+        gestalt_extrospective
+    }
+
+    enum[tec_ethic_attraction] = {
+        POS
+        NEG
+        no
+    }
+
+    enum[capital_tier] = {
+        1
+        2
+        3
+        4
+        5
+        6
+        hab1
+        hab2
+        hab3
+    }
+
+    enum[building_cost_tier] = {
+        0
+        1
+        2
+        3
+        4
+        1_half
+    }
+
+    enum[branch_tier] = {
+        1
+        2
+        3
+    }
+
+    enum[building_tier] = {
+        1
+        2
+        3
+    }
+
+    enum[ring_production_type] = {
+        menial
+        industry
+        unity
+    }
+
+    enum[subject_specialist_type] = {
+        bulwark
+        prospectorium
+        scholarium
+    }
+
+    enum[flag_scope_type] = {
+        planet
+        pop
+        species
+        country
+    }
+
+    enum[tec_job_display] =  {
+        with_desc
+        no_desc
+        per_pop
+        per_pop_no_desc
+        leader_background_planet
+        leader_sector
+        leader_sector_per_pop
+    }
+
+    enum[building_inline_type] =  {
+        all
+        regular
+        hive
+        machine
+        gestalt
+    }
+
+    enum[designation_type] = {
+        any
+        rural
+        mining
+        farming
+        generator
+        industrial
+        factory
+        foundry
+        research
+        unity
+        refinery
+        fortress
+        trade
+    }
+
+    enum[habitat_type] = {
+        energy
+        science
+        mining
+    }
+
+    enum[orbital_type] = {
+        knights
+        generic
+    }
+
+    enum[tec_effect_category] = {
+        priest
+        administrator
+        researcher
+        bureaucrat
+        enforcer
+        entertainer
+        roboticist
+        healthcare
+        trader
+        manager
+        soldier
+        naval_operator
+        foundry
+        artisan
+        colonist
+        clerk
+        miner
+        farmer
+        technician
+        bio_trophy
+        livestock
+        organic_batteries
+    }
+
+    enum[tec_menial_type] = {
+        mining
+        farming
+        generator
+    }
+
+    enum[tec_hoarder_resource_type] = {
+        basic
+        advanced
+        strategic
+    }
+}
