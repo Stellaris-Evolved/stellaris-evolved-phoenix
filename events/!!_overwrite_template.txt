@@ -1,0 +1,34 @@
+# events\!!_overwrite_template.txt
+
+# We leave commented the ones not overwritten, and indicated the overwritten part CLEARLY
+# example
+
+namespace = overwritten_event
+
+#planet_event = {
+#	id = overwritten_event.1
+
+#planet_event = {
+#	id = overwritten_event.2
+
+planet_event = {
+	id = overwritten_event
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			is_gestalt = no
+			# Evolved
+				is_gestalt = no
+			# /
+			OR = { # Evolved
+				is_gestalt = no
+				is_gestalt = no
+			}
+		}
+	}
+	immediate = {
+		break = yes
+	}	
+}

@@ -1,0 +1,62 @@
+# events\zz_evolved_event_template.txt
+
+# filenames must be zz_evolved_whatever
+# namespaces must be separated by different features
+# example
+
+namespace = tec_template
+
+country_event = { # Event information here - on action here
+	id = tec_template.10
+	title = "OK"
+	# Descs
+		# Regular
+		desc = {
+			text = "OK"
+			# GENERALLY : "tec_template.10.desc.regular"
+			trigger = {
+				is_gestalt = no
+			}
+		}
+		# Gestalt
+		desc = {
+			text = "OK"
+			# GENERALLY : "tec_template.10.desc.gestalt"
+			trigger = {
+				is_gestalt = yes
+			}
+		}
+	# /
+	# Elements
+		picture = GFX_evt_overtuned
+		show_sound = event_evolution_mastery
+		trackable = yes
+		is_triggered_only = yes
+		trigger = {
+			always = yes
+		}
+	# /
+	# Effects
+		immediate = {
+			break = yes
+		}
+		after = {
+			break = yes
+		}
+	# Options
+		option = {
+			name = "OK"
+			custom_tooltip = "OK"
+			# GENERALLY name = "tec_template.10.effect"
+			# GENERALLY custom_tooltip = "tec_template.10.effect.tooltip"
+			icon = {
+				icon = GFX_situation_approach_genetics
+				icon_background = GFX_situation_approach_bg_yellow
+				text = set_situation_approach_icon_text
+			}
+			hidden_effect = {
+				break = yes
+			}
+		}
+	# /
+}
