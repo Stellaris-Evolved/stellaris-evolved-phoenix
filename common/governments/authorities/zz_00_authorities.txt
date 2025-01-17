@@ -1,0 +1,3 @@
+# common\governments\authorities\zz_00_authorities.txt
+
+# Note: placeholder - authorities must be directly overwritten

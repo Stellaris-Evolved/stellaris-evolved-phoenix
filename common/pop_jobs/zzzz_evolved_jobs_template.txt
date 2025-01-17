@@ -1,0 +1,96 @@
+# common\pop_jobs\zzzz_evolved_jobs_template.txt
+
+# Example job
+	#tec_example_job = {
+	#	category = specialist
+	#	condition_string = SPECIALIST_JOB_TRIGGER
+	#	building_icon = building_tec_regular_genetic_archive
+	#	clothes_texture_index = 3
+	#	icon = tec_geneticist
+	#	# Definition
+	#		possible_pre_triggers = {
+	#			has_owner = yes
+	#			is_being_purged = no
+	#			is_being_assimilated = no
+	#			is_sapient = yes
+	#		}
+	#		possible_precalc = can_fill_specialist_job
+	#		possible = {
+	#			complex_specialist_job_check_trigger = { cached = yes }
+	#		}
+	#	# /
+	#	# Resources
+	#		resources = {
+	#			category = planet_tec_gene_recombinators
+	#			produces = {
+	#				society_research = 4
+	#				unity = 2
+	#			}
+	#			upkeep = {
+	#				consumer_goods = 2
+	#			}
+	#			inline_script = {
+	#				script = jobs/resources/tec_science_requisition_resources
+	#				consumer_goods = 1
+	#				energy = 0
+	#				mult = 1
+	#			}
+	#		}
+	#		overlord_resources = {
+	#			category = planet_requisitioned_research
+	#			inline_script = {
+	#				script = jobs/resources/tec_science_requisition_overlord_resources
+	#				research = 3
+	#				mult = 1
+	#				PHYSICS = no
+	#				ENGINEERING = no
+	#			}
+	#		}
+	#	# /
+	#	# Modifiers
+	#		triggered_country_modifier = {
+	#			potential = {
+	#				exists = owner
+	#				owner = {
+	#					always = yes
+	#				}
+	#			}
+	#			trade_value_mult = 0.01
+	#		}
+	#		triggered_planet_modifier = {
+	#			potential = {
+	#				exists = owner
+	#				owner = {
+	#					always = yes
+	#				}
+	#			}
+	#			trade_value_mult = 0.01
+	#		}
+	#	# /
+	#	# Effects
+	#		inline_script = jobs/effects/type/tec_researcher_effect
+	#	# /
+	#	# Tags
+	#		inline_script = jobs/tec_space_tag
+	#		inline_script = {
+	#			script = jobs/tec_effect_category_tag
+	#			category = researcher
+	#		}
+	#		inline_script = {
+	#			script = jobs/tec_eco_category_tag
+	#			category = planet_tec_gene_recombinators
+	#		}
+	#	# /
+	#	weight = {
+	#		# Specialist weight
+	#		weight = @specialist_job_weight
+	#		mult = value:job_weights_research_modifier|JOB|tec_gene_recombinator|
+	#		inline_script = jobs/weights/tec_researcher_weight
+	#		inline_script = {
+	#			script = jobs/weights/tec_specialist_weight
+	#			job = tec_gene_recombinator
+	#		}
+	#	}
+	#	inline_script = "jobs/automodding_priority_research"
+	#}
+# /

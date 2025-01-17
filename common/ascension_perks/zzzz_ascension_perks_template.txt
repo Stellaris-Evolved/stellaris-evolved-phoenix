@@ -1,0 +1,58 @@
+# common\ascension_perks\zz_ascension_perks_template.txt
+
+# Normal aps
+	#ap_example = {
+	#	potential = {
+	#	}
+	#	possible = {
+	#	}
+	#	on_enabled = {
+	#	}
+	#	modifier = {
+	#	}
+	#	triggered_modifier = {
+	#	}
+	#	ai_weight = {
+	#	}
+	#}
+# /
+# Path aps with swaps
+	#ap_swap_example = { 			# Mystical Tier I
+	# # Base - Allows branching
+	#	potential = {
+	#	}
+	#	possible = {
+	#	}
+	#	on_enabled = {
+	#	}
+	#	ai_weight = {
+	#	}
+	# # /
+	# tradition_swap = {	# 1
+	#	name = ap_swap_example_swapped
+	#	inherit_effects = no
+	#	inherit_icon = no
+	#	inherit_name = no
+	#	trigger = {
+	#		has_country_flag = tec_swap_ap
+	#	}
+	#	on_enabled = {
+	#	}
+	#	weight = {
+	#	}
+	# }
+	# tradition_swap = {	# 2
+	#	name = ap_swap_example_swapped_2
+	#	inherit_effects = no
+	#	inherit_icon = no
+	#	inherit_name = no
+	#	trigger = {
+	#		has_country_flag = ap_swap_example_swapped_2
+	#	}
+	#	on_enabled = {
+	#	}
+	#	weight = {
+	#	}
+	# }
+	#}
+# /

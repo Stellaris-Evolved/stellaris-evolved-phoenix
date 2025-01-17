@@ -1,0 +1,55 @@
+# common\buildings\zz_evolved_buildings_template.txt
+
+# Example
+	#building_tec_example = {	 			# Keepers
+	#	icon = x
+	#	base_buildtime = @bTIER_time
+	#	position_priority = @tec_build_sort_WHATEVER		# POSITION
+	#	ai_estimate_without_unemployment = yes
+	#	# Definition
+	#		base_cap_amount = 1
+	#		can_be_disabled = no
+	#	
+	#		category = category
+	#		potential = {
+	#			
+	#		}
+	#		allow = {
+	#			
+	#		}
+	#		convert_to = {
+	#			X
+	#		}
+	#	# /
+	#	resources = {
+	#		category = planet_buildings
+	#		cost = {
+	#			minerals = 2000
+	#		}
+	#		upkeep = {
+	#		}
+	#	}
+	#	# Modifiers
+	#	 # Regular
+	#		
+	#	 # /
+	#	 # Gestalt
+	#		
+	#	 # /
+	#	# /
+	#	# Jobs
+	#	 # Regular
+	#		
+	#	 # /
+	#	 # Gestalt
+	#		
+	#	 # /
+	#	# /
+	#	# AI
+	#	# /
+	#}
+# /
+
+# For repeated tiers/mirror art buildings, inlines with conditions
+
+# Position priorities are defined by sorting variables

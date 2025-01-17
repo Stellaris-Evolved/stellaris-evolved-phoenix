@@ -43,6 +43,7 @@ country_event = { # Event information here - on action here
 		after = {
 			break = yes
 		}
+	# /
 	# Options
 		option = {
 			name = "OK"

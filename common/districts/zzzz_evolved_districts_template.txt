@@ -1,0 +1,54 @@
+# common\districts\zzzz_evolved_districts_template.txt
+
+	#district_tec_example = {
+	#	icon = ICONHERE
+	#	base_buildtime = @tec_VARIABLE
+	#	is_capped_by_modifier = no
+	#	exempt_from_ai_planet_specialization = yes
+	#	ai_estimate_without_unemployment = yes
+	#	# Definition
+	#		show_on_uncolonized = {
+	#		}
+	#		potential = {
+	#		}
+	#		allow = {
+	#		}
+	#		conversion_ratio = X
+	#		inline_script = districts/convert_to/x
+	#	# /
+	#	resources = {
+	#		category = planet_districts_cities
+	#		inline_script = {
+	#			script = districts/resources/tec_district_resource_cost
+	#			upkeep_trigger = "
+	#				always = no
+	#			"
+	#			cost = @tec_district_arc_cost
+	#			upkeep = 0
+	#		}
+	#	}
+	#	# Modifiers
+	#		triggered_planet_modifier = {
+	#			X
+	#		}
+	#	# /
+	#	# Effect Types
+	#		
+	#	# /
+	#	# Jobs
+	#		# Regular
+	#	
+	#		# /
+	#		# Gestalt
+	#		# /
+	#	# /
+	#	# AI
+	#		inline_script = {
+	#			script = districts/tec_aibait_housing
+	#			has_building_slots = "
+	#				always = no
+	#			"
+	#		}
+	#	# /
+	#}
+# /

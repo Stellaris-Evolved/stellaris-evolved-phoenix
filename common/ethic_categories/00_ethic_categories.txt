@@ -1,0 +1,28 @@
+# common\ethic_categories\00_ethic_categories.txt
+
+#Note: Ethics have no scope, so no restrictions pre-game to auths or whatever, sadly
+
+col = {}
+
+xen = {}
+
+mil = {}
+
+spi = {}
+
+hive = {}
+
+# Evolved Regular
+# Society
+soc = {}
+# Ecology
+eco = {}
+# Education
+edu = {}
+
+# Evolved Gestalt
+gestaltint = {}
+
+gestalteco = {}
+
+gestaltdisc = {}
