@@ -61,3 +61,57 @@ country_event = { # Event information here - on action here
 		}
 	# /
 }
+
+# Hidden event, change to country/planet/whatever when wanted
+country_event = { # Event information here - on action here
+	id = tec_template.20
+	# Elements
+		hide_window = yes
+		is_triggered_only = yes
+		trigger = {
+			always = yes
+		}
+	# /
+	# Effects
+		immediate = {
+			break = yes
+		}
+		after = {
+			break = yes
+		}
+	# /
+}
+
+
+# Note: pretriggers
+# ONLY FOR planet, pop, system, starbase and leader scopes !!!!!!!
+	#pre_triggers = {	# Planet
+	#	has_owner = yes					# whether the planet has an owner
+	#	is_homeworld = no				# whether the planet is its owner's homeworld
+	#	original_owner = yes			# whether the planet still belong to its original owner
+	#	has_ground_combat = no			# whether ground combat is going on the planet
+	#	is_capital = no					# whether the planet is the capital world of the empire it belongs too
+	#	is_occupied_flag = no			# whether the planet is occupied
+	#}
+	#possible_pre_triggers = {	# Pop
+	#	has_owner = yes					# whether the pop planet has an owner
+	#	is_enslaved = no				# whether the pop is enslaved
+	#	is_being_purged = no			# whether the pop is being purged
+	#	is_being_assimilated = no		# whether the pop is being assimilated
+	#	has_planet = yes				# whether the pop is on a planet or not
+	#	is_sapient = yes				# whether the pop is sapient
+	#}
+	#possible_pre_triggers = {	# System
+	#	has_owner = yes					# whether the system has an owned starbase
+	#	is_capital = yes				# whether the system has its owner's capital in it
+	#	is_occupied_flag = yes			# whether the system is fully occupied by someone other than its owner, including all of its planets
+	#}
+	#possible_pre_triggers = {	# Starbase
+	#	has_owner = yes					# whether it has an owner
+	#	is_occupied_flag = yes			# whether the controller is not the owner
+	#}
+	#possible_pre_triggers = {	# Leader
+	#	has_owner = yes					# whether the leader has an owner
+	#	is_idle	 = yes					# whether the leader is assigned to a task
+	#}
+# /
