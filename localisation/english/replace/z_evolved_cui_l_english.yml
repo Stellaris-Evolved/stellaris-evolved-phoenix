@@ -2,3 +2,546 @@
 
 # CUI, QOL, DIVERSE ELEMENTS
 
+# Reminder
+# §B thisisblue §!
+# §E thisisteal §!
+# §G thisisgreen §!
+# §H thisisorange §!
+# §L thisisbrown §!
+# §M thisispurple §!
+# §P thisislightred §! 
+# §R thisisred §!
+# §S thisisdarkorange §!
+# §T thisislightgrey §!
+# §W thisiswhite §!
+# §Y thisisyellow §!
+
+# MAINSCREEN
+# ------------------------------------------------------------ Date
+	TEC_EVOLVED_VERSION:0 "Evolved Version: v0.2 (§YXX-05-2025§!)"
+	# §RE X P E R I M E N T A L§!
+	TEC_EVOLVED_TOOLTIP:0 "§E$TEC_EVOLVED_TITLE$§!\n§Y$TEC_EVOLVED_STEAMLINK$§!\n$TEC_EVOLVED_REPORTS$\n\n$TEC_EVOLVED_DONATIONS$"
+	TEC_EVOLVED_TITLE:0 "Stellaris Evolved"
+	TEC_EVOLVED_STEAMLINK:0 "Clicking this item will open the mod Steam Workshop page"
+	TEC_EVOLVED_REPORTS:0 "Please report any issue or error you find, specially via tickets on the mod discord"
+	TEC_EVOLVED_DONATIONS:0 "If you enjoyed this mod, consider supporting it! £unity£"
+# /
+
+# Scripted and CUI loc
+# ------------------------------------------------------------
+	tec_jump_empty:0 "\n\n"
+	tec_loc_desc_separator: "-----------"
+	tec_loc_warning:0 "£trigger_tec_warning£"
+	tec_loc_warning_red:0 "£trigger_tec_warning_red£"
+	tec_loc_minitab:0 "  "
+	tec_loc_tab:0 "    "
+
+	tec_loc_feature_not_ready:0 "§R£trigger_tec_warning_red£ Feature not ready§!"
+
+	tec_blank:0 ""
+	tec_error:0 "£trigger_no£ §RERROR§!"
+	tec_disabled_temporarely: "£trigger_tec_warning£§YTEMPORARILY DISABLED§!"
+	tec_disabled_temporarely_hotfix: "£trigger_tec_warning£§YTEMPORARILY DISABLED - Will be reenabled in a hotfix§!"
+	tec_disabled_todo: "£trigger_tec_warning£§YDISABLED - ONGOING WORK§!"
+
+	trigger_tec_warning:1 "£trigger_tec_warning£ "
+
+	trigger_tec_warning_red:0 "£trigger_tec_warning_red£ "
+	tec_loc_temporarily_disabled: "§R£trigger_tec_warning_red£ [[Temporarily Disabled]§!"
+
+	# Deliverables
+	todo_ascension:0 ""
+	todo_new_ascension:0 ""
+	todo_new_civics:0 ""
+	todo_regular_civics:0 ""
+	todo_megacorp_civics:0 ""
+	todo_hive_civics:0 ""
+	todo_machine_civics:0 ""
+	todo_origin_civics:0 ""
+	todo_origins:0 ""
+	todo_terrasculpting:0 ""
+	todo_firefantasy:0 ""
+	todo_foundation:0 ""
+	todo_ships:0 ""
+
+	todo_art:0 ""
+
+	# Common loc
+	tec_loc_energy:0 "$tec_loc_energy_icon$ Energy"
+	tec_loc_energy_icon:0 "£energy£"
+	tec_loc_minerals:0 "$tec_loc_minerals_icon$ Minerals"
+	tec_loc_minerals_icon:0 "£minerals£"
+	tec_loc_food:0 "$tec_loc_food_icon$ Food"
+	tec_loc_food_icon:0 "£food£"
+	tec_loc_alloys:0 "£alloys£ Alloys"
+	tec_loc_consumer_goods:0 "£consumer_goods£ Consumer Goods"
+	tec_loc_cg:0 "$tec_loc_consumer_goods$"
+	tec_loc_cgs:0 "$tec_loc_consumer_goods$"
+	tec_loc_unity:0 "£unity£ Unity"
+	tec_loc_unity_icon:0 "£unity£"
+	tec_loc_influence:0 "£influence£ Influence"
+	tec_loc_influence_icon:0 "£influence£"
+
+	tec_loc_alloys_and_energy:0 "$tec_loc_alloys$ and $tec_loc_energy$"
+	tec_loc_alloys_and_minerals:0 "$tec_loc_alloys$ and $tec_loc_minerals$"
+	tec_loc_alloys_and_food:0 "$tec_loc_alloys$ and $tec_loc_food$"
+
+	tec_loc_food_or_minerals:0 "$tec_loc_food$ or $tec_loc_minerals$"
+	tec_loc_food_and_minerals:0 "$tec_loc_food$ or $tec_loc_minerals$"
+
+	tec_loc_basic_resource:0 "£trigger_tec_basic_resources£ Basic Resource"
+	tec_loc_basic_resources:0 "£trigger_tec_basic_resources£ Basic Resources"
+	tec_loc_industrial_resource:0 "£alloys£ £consumer_goods£ Manufactured Resource"
+	tec_loc_industrial_resources:0 "£alloys£ £consumer_goods£ Manufactured Resources"
+
+	tec_loc_physics:0 "$tec_loc_physics_icon$ $physics_research$"
+	tec_loc_society:0 "$tec_loc_society_icon$ $society_research$"
+	tec_loc_engineering:0 "$tec_loc_engineering_icon$ $engineering_research$"
+	tec_loc_physics_icon:0 "£physics£"
+	tec_loc_society_icon:0 "£society£"
+	tec_loc_engineering_icon:0 "£engineering£"
+	tec_loc_research_resources_icon:0 "£trigger_tec_research£"
+	tec_loc_research_resources:0 "£trigger_tec_research£ Research"
+	tec_loc_research_speed:0 "£job_researcher£ Research Speed"
+
+	tec_loc_rare_crystals:0 "£rare_crystals£ $rare_crystals$"
+	tec_loc_exotic_gases:0 "£exotic_gases£ $exotic_gases$"
+	tec_loc_volatile_motes:0 "£volatile_motes£ $volatile_motes$"
+	tec_loc_minor_artifacts:0 "£minor_artifacts£ $minor_artifacts$"
+
+	tec_loc_strategic_resources: "£trigger_tec_rare_resources£ Strategic Resources"
+
+	tec_loc_living_metal:0 "£sr_living_metal£ $sr_living_metal$"
+	tec_loc_living_metal_icon:0 "£sr_living_metal£"
+	tec_loc_nanite:0 "£nanites£ Nanite"
+	tec_loc_nanites:0 "£nanites£ $nanites$"
+	tec_loc_nanite_icon:0 "£nanites£"
+	tec_loc_nanites_icon:0 "£nanites£"
+	tec_loc_zro:0 "£sr_zro£ $sr_zro$"
+	tec_loc_zro_icon:0 "£sr_zro£"
+	tec_loc_dark_matter:0 "£sr_dark_matter£ $sr_dark_matter$"
+	tec_loc_dark_matter_icon:0 "£sr_dark_matter£"
+
+	tec_loc_codebreaking:0 "$MOD_INTEL_DECRYPTION_ADD$"
+	tec_loc_encryption:0 "$MOD_INTEL_ENCRYPTION_ADD$"
+
+ # Fake resource locs
+	tec_loc_housing: "£housing£ $PLANET_HOUSING_TITLE$"
+	tec_loc_amenities: "£amenities£ $PLANET_AMENITIES_TITLE$"
+	tec_loc_amenities_icon: "£amenities£"
+	tec_loc_amenity: "£amenities£ Amenity"
+	tec_loc_amenities_gestalt: "£amenities_no_happiness£ $PLANET_AMENITIES_TITLE$"
+	tec_loc_amenity_gestalt: "£amenities_no_happiness£ Amenity"
+	tec_loc_amenities_gestalt_icon: "£amenities_no_happiness£"
+	tec_loc_amenities_generic: "[TecGetAmenitiesIcon] $PLANET_AMENITIES_TITLE$"
+	tec_loc_crime: "£crime£ $PLANET_CRIME_TITLE$"
+	tec_loc_crime_gestalt: "£crime£ $MOD_PLANET_CRIME_NO_HAPPINESS_MULT$"
+	tec_loc_happiness: "£happiness£ $MOD_POP_HAPPINESS$"
+
+	tec_loc_devastation:0 "£tec_devastation£ $PLANET_DEVASTATION$"
+
+	tec_loc_stability: "£stability£ $PLANET_STABILITY_TITLE$"
+	tec_loc_trade_value_icon: "£trade_value£"
+	tec_loc_trade_value_icon: "£trade_value£"
+	tec_loc_trade_value: "£trade_value£ $TRADE_VALUE$"
+	tec_loc_trade: "$tec_loc_trade_value$"
+	tec_loc_trade_icon: "£trade_value£"
+	tec_loc_pop: "£pop£ Pop"
+	tec_loc_pops: "$tec_loc_pop$s"
+	tec_loc_pop_growth: "£mod_pop_growth_speed£ $MOD_POP_GROWTH_SPEED$"
+	tec_loc_pop_growth_icon: "£mod_pop_growth_speed£"
+
+	tec_loc_jobs: "£job£ Jobs"
+	tec_loc_job: "£job£ Job"
+	tec_loc_job_output: "£job£ Job Output"
+	tec_loc_organic_job_output: "£job£ §YOrganic§! Job Output"
+
+	tec_loc_defense_army:0 "£defense_army£ Defense Army"
+	tec_loc_defense_armies:0 "£defense_army£ Defense Armies"
+
+	tec_loc_building_slots: "$planet_automation_building_slot$"
+
+	tec_loc_edict:0 "£edict£ Edict"
+	tec_loc_edicts:0 "£edict£ Edicts"
+	tec_loc_edict_plural:0 "£edict£ Edicts"
+	tec_loc_edict_icon:0 "£edict£"
+	tec_loc_edict_funds_icon:0 "£mod_country_edict_fund_add£"
+	tec_loc_edict_funds:0 "$tec_loc_edict_funds_icon$ $MOD_COUNTRY_EDICT_FUND_ADD$"
+	tec_loc_naval_cap: "£mod_country_naval_cap_add£ $MOD_COUNTRY_NAVAL_CAP_ADD$"
+	tec_loc_naval_capacity: "$tec_loc_naval_cap$"
+	tec_loc_naval_cap_icon: "£mod_country_naval_cap_add£"
+	tec_loc_navalcap_from_jobs:0 "$mod_pop_job_naval_mult$"
+	tec_loc_admin_cap: "£mod_country_admin_cap_add£ $MOD_COUNTRY_ADMIN_CAP_ADD$"
+	tec_loc_admin_cap_icon: "£mod_country_admin_cap_add£"
+	tec_loc_amenities_from_jobs:0 "$mod_pop_job_amenities_mult$"
+
+	tec_loc_menial_output: "£job£ Menial Job Output"
+	tec_loc_specialist_output: "£job£ Specialist Job Output"
+
+	tec_loc_planet: "£planet£ Planet"
+	tec_loc_designation: "£stability£ Designation"
+	tec_loc_planet_designation: "£stability£ Planet Designation"
+
+	tec_loc_planet_decision:0 "£decision£ Planetary Decision"
+	tec_loc_planet_decisions:0 "$tec_loc_planet_decision$s"
+	tec_loc_planetary_decision:0 "$tec_loc_planet_decision$"
+
+	tec_loc_district: "£district£ $DISTRICT$"
+	tec_loc_districts: "£district£ $DISTRICTS$"
+	tec_loc_district_plural:0 "£district£ $DISTRICTS$"
+	tec_loc_district_icon:0 "£district£"
+	tec_loc_building: "£building£ $BUILDING$"
+	tec_loc_buildings: "£building£ $BUILDINGS_TITLE$"
+	tec_loc_building_plural:0 "£building£ $BUILDINGS_TITLE$"
+	tec_loc_building_icon:0 "£building£"
+	tec_loc_blocker: "£blocker£ $BLOCKER_DEPOSIT$"
+	tec_loc_blockers: "£blocker£ $BLOCKER_DEPOSITS$"
+	tec_loc_blocker_plural_icon: "£blocker£ $BLOCKER_DEPOSITS$"
+	tec_loc_blocker_icon: "£blocker£"
+	tec_loc_natural_blocker: "£blocker£ Natural $BLOCKER_DEPOSIT$"
+	tec_loc_natural_blockers: "£blocker£ Natural $BLOCKER_DEPOSITS$"
+	tec_loc_deposit: "£tec_deposit£ Deposit"
+	tec_loc_deposits: "$tec_loc_deposit$s"
+	tec_loc_deposit_plural: "$tec_loc_deposit$s"
+	tec_loc_deposit_icon: "£tec_deposit£"
+	tec_loc_resource_deposit: "£tec_deposit£ Resource Deposit"
+	tec_loc_resource_deposits: "$tec_loc_resource_deposit$s"
+	tec_loc_planet_feature: "£tec_planet_feature£ Planetary Feature"
+	tec_loc_planet_features: "$tec_loc_planet_feature$s"
+	tec_loc_planet_feature_plural: "$tec_loc_planet_feature$s"
+	tec_loc_planet_feature_icon: "£tec_planet_feature£"
+	tec_loc_planet_modifier: "£time£ Planet Modifier"
+	tec_loc_planet_modifiers: "$tec_loc_planet_feature$s"
+	tec_loc_planet_natural_feature: "£tec_planet_feature£ Natural Feature"
+	tec_loc_planet_natural_features: "$tec_loc_planet_natural_feature$s"
+	tec_loc_planet_engineered_feature: "£tec_planet_feature£ Engineered Feature"
+	tec_loc_planet_engineered_features: "$tec_loc_planet_engineered_feature$s"
+
+	tec_loc_sr_tec_ai_power: "£sr_tec_ai_power£ $sr_tec_ai_power$"
+	tec_loc_sr_tec_machine_processing_empire: "£sr_tec_machine_processing_empire£ $sr_tec_machine_processing_empire$"
+
+	tec_loc_generic_assembly:0 "£mod_planet_pop_assembly_mult£ Pop Assembly"
+	tec_loc_robot_assembly:0 "£job_roboticist£ Mechanical Pop Assembly"
+	tec_loc_robot_assembly_add: "£mod_planet_pop_assembly_mult£ $MOD_PLANET_POP_ASSEMBLY_ADD$"
+	tec_loc_robot_assembly_mult: "£mod_planet_pop_assembly_mult£ $MOD_PLANET_POP_ASSEMBLY_ADD$ Mult"
+	tec_loc_organic_assembly:0 "£mod_pop_growth_speed£ Organic Assembly"
+	tec_loc_organic_assembly_mult_per_pop: "£mod_planet_pop_assembly_mult£ $MOD_PLANET_POP_ASSEMBLY_ORGANIC_ADD$ Mult per pop"
+	tec_loc_assembly: "£mod_planet_pop_assembly_mult£ $MOD_PLANET_POP_ASSEMBLY_ADD$"
+	tec_loc_cybernetic_assembly_mult: "£mod_planet_pop_assembly_mult£ Cybernetic Assembly Mult"
+
+	tec_loc_industrial_jobs:0 "£job_foundry£ £job_artisan£ Industrial Jobs"
+	tec_loc_research_jobs:0 "$mod_base_planet_researchers$"
+	tec_loc_unity_jobs:0 "$mod_base_planet_administrators$"
+
+	tec_loc_job_output:0 "$mod_planet_jobs_produces_mult$"
+	tec_loc_biological_pop_output:0 "$mod_planet_jobs_organics_produces_mult$"
+	tec_loc_robot_pop_output:0 "$mod_planet_jobs_robotic_produces_mult$"
+	tec_loc_cyborg_pop_output:0 "$mod_planet_cyborg_jobs_produces_mult$"
+	tec_loc_cybernetic_pop_output:0 "£tec_cybernetic_icon£ Cybernetic Pop Output"
+	tec_loc_psionic_pop_output:0 "$mod_planet_psionic_jobs_produces_mult$"
+	tec_loc_psychic_pop_output:0 "£tec_psychic_icon£ Psychic Pop Output"
+	tec_loc_automation_output:0 "£trigger_tec_automation£ Automation Output"
+
+	tec_loc_machine_processing:0 "£sr_tec_machine_processing_empire£ $sr_tec_machine_processing_empire$"
+	tec_loc_machine_processing_redirection:0 "£sr_tec_machine_processing_redirection£ $sr_tec_machine_processing_redirection$"
+
+	tec_loc_habitability:0 "£mod_habitability_floor_add£ $HABITABILITY$"
+	tec_loc_planet_capacity:0 "£mod_planet_carry_cap_add£ $MOD_PLANET_CARRY_CAP_ADD$"
+	tec_loc_planet_build_speed:0 "£mod_planet_building_build_speed_mult£ $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$"
+
+	tec_loc_terraform_speed:0 "£mod_country_terraform_speed_mult£ $MOD_COUNTRY_TERRAFORM_SPEED_MULT$"
+
+	tec_loc_main_species: "Main Species"
+	tec_loc_empire:0 "£empire£ Empire"
+
+	tec_loc_capital:0 "£building£ Planetary Capital"
+	tec_loc_capitals:0 "$tec_loc_capital$s"
+	tec_loc_planet_capital:0 "£building£ Planet Capital"
+	tec_loc_planet_capitals:0 "£building£ Planetary Capitals"
+	tec_loc_planetary_capital:0 "$tec_loc_planet_capital$"
+	tec_loc_planetary_capitals:0 "$tec_loc_planet_capitals$"
+	tec_loc_habitat_capital:0 "£building£ Habitat Capital"
+	tec_loc_habitat_capitals:0 "£building£ Habitat Capitals"
+	tec_loc_capital_tier:0 "£building£ Capital Tier"
+
+	tec_loc_technology:0 "£job_researcher£ Technology"
+	tec_loc_technologies:0 "£job_researcher£ Technologies"
+
+	tec_loc_planet_ascension:0 "£unity£ Planet Ascension"
+	tec_loc_planet_ascensions:0 "£unity£ Planet Ascensions"
+	tec_loc_planet_ascension_plural:0 "$tec_loc_planet_ascensions$"
+
+	tec_loc_ascension_perk:0 "£unity£ Ascension Perk"
+	tec_loc_ascension_perks:0 "£unity£ Ascension Perks"
+	tec_loc_ascension_perk_plural:0 "$tec_loc_ascension_perks$"
+
+	tec_loc_species_modification: "£tec_genetics_icon£ Organic Species Modification"
+	tec_loc_species_modification_point: "£tec_genetics_icon£ Organic Species Modification Point"
+	tec_loc_species_modification_points: "£tec_genetics_icon£ Organic Species Modification Points"
+	tec_loc_species_trait_pick: "£tec_genetics_icon£ Organic Species Trait Pick"
+	tec_loc_species_trait_picks: "£tec_genetics_icon£ Organic Species Trait Picks"
+
+	tec_loc_robotic_modification: "£job_roboticist£ Mechanical Species Modification"
+	tec_loc_robotic_modification_point: "£job_roboticist£ Mechanical Species Modification Point"
+	tec_loc_robotic_modification_points: "£job_roboticist£ Mechanical Species Modification Points"
+	tec_loc_robotic_trait_pick: "£job_roboticist£ Mechanical Species Trait Pick"
+	tec_loc_robotic_trait_picks: "£job_roboticist£ Mechanical Species Trait Picks"
+
+	tec_loc_xenocytes:0 "£tec_genetics_icon£ §YXenocytes§!"
+
+	tec_loc_cannot_reproduce:0 "§RCannot Reproduce Naturally§!"
+
+	tec_loc_failure_rate:0 "§R£job_purge£ Failure Rate§!"
+
+	tec_loc_terraform:0 "£planet£ Terraform"
+
+	tec_loc_ai_ruler_node: "£tec_ai_ruler£ AI Ruler Node"
+	tec_loc_ai_councilor_node: "£tec_ai_councilor£ AI Councilor Node"
+	tec_loc_ai_planetary_node: "£tec_ai_planetary£ AI Planetary Node"
+	tec_loc_ai_node: "£tec_ai_node£ AI Leader Node"
+	tec_loc_ai_idle_node: "£tec_ai_node£ Idle AI Leader Node"
+	tec_loc_ruler: "£ruler£ Ruler"
+	tec_loc_ruler_plural: "£ruler£ Rulers"
+	tec_loc_councilor: "£council£ Councilor"
+	tec_loc_councilor_plural: "£council£ Councilors"
+	tec_loc_council_members: "£council£ Council Members"
+	tec_loc_idle_leader: "£unemployment£ Idle Leader"
+
+	tec_loc_leader_icon:0 "£tec_leader£"
+	tec_loc_leader:0 "$tec_loc_leader_icon$ Leader"
+	tec_loc_leaders:0 "$tec_loc_leader_icon$ Leaders"
+	tec_loc_leader_lifespan:0 "$MOD_LEADER_LIFESPAN_ADD$"
+	tec_loc_all_leaders:0 "£official£ £scientist£ £commander£"
+	tec_loc_leader_official:0 "£official£ Official"
+	tec_loc_leader_commander:0 "£commander£ Commander"
+	tec_loc_leader_scientist:0 "£scientist£ Scientist"
+
+	tec_loc_councilor_traits: "£council£ Councilor Traits"
+	tec_loc_normal_traits: "£noclass£ Normal Traits"
+
+	tec_trait_bonuses_scale_with_skill: "§YTrait bonuses scale with §HLeader Skill§!§!"
+	tec_trait_upkeep_scale_with_skill: "§YTrait upkeep scale with §HLeader Skill§!§!"
+	tec_trait_upkeep_scale_with_negatives: "§YTrait upkeep scale with §RNegative Traits§! suppressed till now§!"
+
+	tec_loc_effect_administrators: "$concept_tec_effect_administrator_alias_icon$"
+	tec_loc_effect_researchers: "£job_researcher£ $job_researcher_plural$"
+	tec_loc_effect_priests: "$concept_tec_effect_priest_alias_icon$"
+	tec_loc_effect_soldiers: "£job_soldier£ $job_soldier_plural$"
+	tec_loc_effect_metallurgists: "£job_foundry£ $job_foundry_plural$"
+
+	tec_loc_section_core_sector: "§E£empire_capital£ §YCore§! Sector Planets:§!"
+	tec_loc_section_core_sector_and_administrated: "§E£empire£ §YCore§! Sector Planets and ['concept_tec_centrality_core_administrated_icon'] Planets:§!"
+	tec_loc_section_rim_sector: "§E£sector£ Non-§YCore§! Sector Planets:§!"
+	tec_loc_section_unlock_agenda: "§YUnlocks Agenda:§!"
+  #Situations	# TODO CODE REWORK - ICON
+	tec_loc_situation:0 "Situation"
+	tec_loc_situation_icon:0 "£stability£"
+	tec_loc_agenda:0 "Agenda"
+	tec_loc_agenda_icon:0 "£stability£"
+
+	tec_loc_pop_cat_ruler: "£pop_cat_ruler£ $pop_cat_ruler$"
+	tec_loc_pop_cat_specialist: "£pop_cat_specialist£ $pop_cat_specialist$"
+	tec_loc_pop_cat_worker: "£pop_cat_worker£ $pop_cat_worker$"
+	tec_loc_pop_cat_prime_drone: "£pop_cat_tec_prime_drone£ $pop_cat_tec_prime_drone$"
+	tec_loc_pop_cat_brood_drone: "£pop_cat_tec_brood_drone£ $pop_cat_tec_brood_drone$"
+	tec_loc_pop_cat_complex_drone: "£pop_cat_complex_drone£ $pop_cat_complex_drone$"
+	tec_loc_pop_cat_simple_drone: "£pop_cat_simple_drone£ $pop_cat_simple_drone$"
+
+  # Espionage
+	tec_loc_espionage_interdiction_icon:0 "£trigger_tec_espionage_interdiction£"
+	tec_loc_espionage_interdiction:0 "$tec_loc_espionage_interdiction_icon$ Operation Interdiction"
+	tec_loc_espionage_interdiction_desc:0 "$tec_loc_espionage_interdiction$ is a value (%) of extra chance of discovering an hostile covert action on a planet or territory before it's executed"
+	tec_loc_espionage_bypass_icon:0 "£trigger_tec_espionage_bypass£"
+	tec_loc_espionage_bypass:0 "$tec_loc_espionage_bypass_icon$ Operation Bypass"
+	tec_loc_espionage_bypass_desc:0 "$tec_loc_espionage_bypass$ is a value (%) of extra chance of overcoming target defenses and intelligence while executing a covert action on a planet or territory, delaying it's discovery until it's too late to react."
+
+	tec_loc_hc_unlock_feature: "§HUnlocks Feature:§!"
+	tec_loc_hc_unlock_building: "§HUnlocks Building:§!"
+	tec_loc_hc_unlock_army: "§HUnlocks Army:§!"
+	tec_loc_hc_unlock_mega: "§HUnlocks Megastructure:§!"
+	tec_loc_hc_unlock_trait: "§HUnlocks Trait:§!"
+
+	tec_loc_from_orbital_building_key: "From Orbital Ring Buildings"
+	tec_loc_from_starbase_building_key: "From Starbase Buildings"
+# /
+
+# Situations
+# ------------------------------------------------------------
+	tec_icon_text_path_good:0 "This can lead to a §GPositive§! path."
+	tec_icon_text_path_neutral:0 "This can lead to a §YNeutral§! path."
+	tec_icon_text_path_bad:0 "This can lead to a §RBad§! path."
+
+	tec_icon_text_outcome_good:0 "This is a §GPositive§! outcome."
+	tec_icon_text_outcome_neutral:0 "This is a §YNeutral§! outcome."
+	tec_icon_text_outcome_bad:0 "This is a §RBad§! outcome."
+	tec_icon_text_outcome_unknown:0 "This option has an §YUnknown§! outcome."
+
+	tec_icon_text_approach_slow:0 "This is a §YSlow§! and §YSafe§! approach."
+	tec_icon_text_approach_neutral:0 "This is a §YStandard§! approach."
+	tec_icon_text_approach_fast:0 "This is a §YFast§! and §YRisky§! approach."
+# /
+
+# Events
+# ------------------------------------------------------------
+	tec_icon_text_likes_robots:0 "This option is available as the empire §GLikes§! £job_roboticist£ Mechanic or Synthetic technologies and affairs."
+	tec_icon_text_likes_psionic:0 "This option is available as the empire §GLikes§! £job_telepath£ Psionic technologies and affairs."
+	tec_icon_text_likes_biological:0 "This option is available as the empire §GLikes§! £tec_genetics_icon£ Biological technologies and affairs."
+
+	tec_icon_text_good_relations:0 "This option is available as we have £trigger_yes£ §GGood Relations§! with the empire."
+	tec_icon_text_bad_relations:0 "This option is available as we have £trigger_no£ §RBad Relations§! with the empire."
+	tec_icon_text_war_relations:0 "This option is available as we are £job_duelist£ §YIn War§! with the empire."
+# /
+
+# Extra
+# ------------------------------------------------------------
+  tec_loc_empire_scope_effects: "£empire£ §YEmpire§!"
+  tec_loc_planet_scope_effects: "£planet£ §YPlanet§!"
+  tec_loc_science_ship_scope_effects: "£planet£ §YPlanet§!"
+
+  tec_cui_tec_no_ai_empire_leader_loc: "Leader"
+  tec_cui_tec_ai_empire_leader_loc: "Leader (non-AI Nodes)"
+  mod_tec_spacer: " "
+  mod_tec_spacer_short: ""
+# /
+
+# AI Auth
+# ------------------------------------------------------------
+  tec_ai_power_income_negative: "§R[tec_ai_power_income_value]§!"
+  tec_ai_power_income_neutral: "§Y[tec_ai_power_income_value]§!"
+  tec_ai_power_income_positive: "§G+[tec_ai_power_income_value]§!"
+
+  tec_cui_aiauth_ethic: "£icon_ethics£"
+  tec_cui_aiauth_ethic_effect: "Re-Align the §Y[This.GetName]§! AI Node to another §YEthic§!"
+  tec_cui_ai_power: "$tec_loc_sr_tec_ai_power$: [FROM.tec_ai_power_income]"
+  tec_cui_ai_power_effect: "§H$sr_tec_ai_power$§!\n$RESOURCES_STORED$§Y[FROM.tec_ai_power_stockpile]§!\n$RESOURCES_GAINED$[FROM.tec_ai_power_income]\n$PRODUCED$§G+[FROM.tec_ai_power_revenue]§!\n$CONSUMED$§R-[FROM.tec_ai_power_expenses]§!\n$tec_loc_desc_separator$\n$sr_tec_ai_power_desc$"
+
+  tec_cui_aiuth_fragment_commander: "£commander£"
+  tec_cui_aiuth_fragment_general: "£commander£"
+  tec_cui_aiuth_fragment_official: "£official£"
+  tec_cui_aiuth_fragment_scientist: "£scientist£"
+
+  tec_cui_aiuth_fragment_commander_effect: "Fragments the $tec_aiauth_ruler$ into a new $commander_with_icon$ AI Node, which can only be used to fill councilor positions.\n\nThe fragmented node will take monthly §Y$tec_loc_sr_tec_ai_power$§! Upkeep, but will not take §YLeader Capacity§! and can only get §YCouncilor Traits§!"
+  tec_cui_aiuth_fragment_general_effect: "Fragments the $tec_aiauth_ruler$ into a new $general_with_icon$ AI Node, which can only be used to fill councilor positions.\n\nThe fragmented node will take monthly §Y$tec_loc_sr_tec_ai_power$§! Upkeep, but will not take §YLeader Capacity§! and can only get §YCouncilor Traits§!"
+  tec_cui_aiuth_fragment_official_effect: "Fragments the $tec_aiauth_ruler$ into a new $official_with_icon$ AI Node, which can only be used to fill councilor positions.\n\nThe fragmented node will take monthly §Y$tec_loc_sr_tec_ai_power$§! Upkeep, but will not take §YLeader Capacity§! and can only get §YCouncilor Traits§!"
+  tec_cui_aiuth_fragment_scientist_effect: "Fragments the $tec_aiauth_ruler$ into a new $scientist_with_icon$ AI Node, which can only be used to fill councilor positions.\n\nThe fragmented node will take monthly §Y$tec_loc_sr_tec_ai_power$§! Upkeep, but will not take §YLeader Capacity§! and can only get §YCouncilor Traits§!"
+
+  tec_aiauth_experience_tooltip: "\nAI Node Leaders do not gain experience normally. Spare §Y$tec_loc_sr_tec_ai_power$§! gets converted into experience, distributed in a weighted manner between AI nodes.[tec_aiauth_node_share_total_tooltip]"
+
+  tec_aiauth_node_share_total_tooltip: "\n\nExperience Weight Share/Total: §Y[tec_aiauth_node_weight_tooltip]/[owner.tec_aiauth_total_weight_text]§!"
+
+  tec_can_not_dismiss_aiauth_planetary_governing_nodes: "§RCan't Dismiss Planetary AI Nodes, you must demolish the $building_tec_planetary_node_center$§!"
+
+  tec_cui_aiauth_fragmenting_node: "$TRIGGER_FAIL$Cannot fragment another AI Node as a node is already being fragmented in this moment."
+  tec_cui_aiauth_fragmenting_cost_effect: "\n\nFragmentation will cost §Y£unity£ [tec_aiauth_fragment_cost] Unity§! and require at least §Y£sr_tec_ai_power£ [tec_aiauth_fragment_base_upkeep] $sr_tec_ai_power$§!.\nIf fragmentation is not finished, the unity cost is §Rwasted§!"
+
+  tec_cui_aiauth_refragment_node: "This node will be re-fragmented, generating a new set of traits and qualities."
+  tec_cui_aiauth_cannot_refragment_node: "§RCannot re-fragment due to lack of §Y£unity£ [tec_aiauth_fragment_cost] $unity$§! or not enough §Y£sr_tec_ai_power£ [tec_aiauth_fragment_base_upkeep] $sr_tec_ai_power$§!"
+  tec_cui_aiauth_changing_class_refragment_node: "Changing this nodes class requires for it to be re-fragmented, generating a new set of traits and qualities specific to the new class."
+  tec_cui_aiauth_finish_fragmenting_node: "This AI Node will join your empire."
+  tec_cui_aiauth_planetary_dismiss: "§RDismissing this Planetary AI Node will lead to the destruction of the £building£ §Y$building_tec_planetary_node_center$§!§!"
+  tec_cui_aiauth_ruler_dismiss: "§RWe cannot dismiss our Ruler AI Node§!"
+  TEC_REFRAGMENT_NODE: "Re-fragment Node"
+  TEC_FRAGMENT_NODE: "Finish Fragmentation"
+# /
+
+# Annotations
+# ------------------------------------------------------------
+  #Leader levels
+
+  #Level		II   III   IV			V		 	VI			VII			VIII   IX			X
+  #XP		   	400  1100  2100  	3400  5000  	6900  	8100   10600  13400
+  #Total XP 400  1500  3600  	7000  12000  	18900 	27000  37600  51000
+# /
+
+# Debug
+# ------------------------------------------------------------
+  decision_tec_debug_create_pops:0 "z-DEBUG-CREATE 10 POPS (£planet£)"
+  decision_tec_debug_create_pops_desc:0 "Creates 10 pops"
+  decision_tec_debug_create_pops_tooltip:0 "Creates 10 pops"
+
+  decision_tec_debug_pop_output:0 "z-DEBUG-JOB OUTPUT (£planet£)"
+  decision_tec_debug_pop_output_desc:0 "Increases job output by 10000% - reactivate to disable"
+  decision_tec_debug_pop_output_tooltip:0 "Increases job output by 10000% - reactivate to disable"
+  modifier_tec_debug_pop_output:0 "$decision_tec_debug_pop_output$"
+
+  decision_tec_debug_resources:0 "z-DEBUG-RESOURCES (£empire£)"
+  decision_tec_debug_resources_desc:0 "Provides 5000 of each resource"
+  decision_tec_debug_resources_tooltip:0 "$decision_tec_debug_resources_desc$"
+  modifier_tec_debug_resources:0 "$decision_tec_debug_resources$"
+
+  decision_tec_debug_ethic_shift:0 "z-DEBUG-ETHIC SHIFT (£planet£)"
+  decision_tec_debug_ethic_shift_desc:0 "Increases ethic shift massively - reactivate to disable"
+  decision_tec_debug_ethic_shift_tooltip:0 "$decision_tec_debug_ethic_shift_desc$"
+
+  decision_tec_debug_pop_growth:0 "z-DEBUG-POP GROWTH (£planet£)"
+  decision_tec_debug_pop_growth_desc:0 "Increases pop growth massively - reactivate to disable"
+  decision_tec_debug_pop_growth_tooltip:0 "$decision_tec_debug_pop_growth_desc$"
+
+  decision_tec_debug_planet_building_speed:0 "z-DEBUG-BUILDING SPEED (£empire£)"
+  decision_tec_debug_planet_building_speed_desc:0 "Increases planet building speed by 10000% - reactivate to disable"
+  decision_tec_debug_planet_building_speed_tooltip:0 "$decision_tec_debug_planet_building_speed_desc$"
+  modifier_tec_debug_planet_building_speed:0 "$decision_tec_debug_planet_building_speed$"
+
+  decision_tec_debug_planet_automodding:0 "z-DEBUG-Automodding (£planet£)"
+  decision_tec_debug_planet_automodding_desc:0 "Automodding maxxer"
+  decision_tec_debug_planet_automodding_tooltip:0 "Automodding maxxer"
+  modifier_tec_debug_planet_automodding:0 "$decision_tec_debug_planet_districts$"
+
+  decision_tec_debug_planet_districts:0 "z-DEBUG-INCREASE SLOTS (£planet£)"
+  decision_tec_debug_planet_districts_desc:0 "Increases max building slots and 100 district slots"
+  decision_tec_debug_planet_districts_tooltip:0 "Increases max building slots and 100 district slots"
+  modifier_tec_debug_planet_districts:0 "$decision_tec_debug_planet_districts$"
+
+  decision_tec_debug_ship_building_speed:0 "z-DEBUG-SHIP BUILDING SPEED (£empire£)"
+  decision_tec_debug_ship_building_speed_desc:0 "Increases ship building speed - reactivate to disable"
+  decision_tec_debug_ship_building_speed_tooltip:0 "Increases ship building speed - reactivate to disable"
+  modifier_tec_debug_ship_building_speed:0 "$decision_tec_debug_ship_building_speed$"
+
+  decision_tec_debug_tech_speed:0 "z-DEBUG-TECH SPEED (£empire£)"
+  decision_tec_debug_tech_speed_desc:0 "Increases tech research speed - reactivate to disable"
+  decision_tec_debug_tech_speed_tooltip:0 "Increases tech research speed - reactivate to disable"
+  modifier_tec_debug_tech_speed:0 "$decision_tec_debug_tech_speed$"
+
+  decision_tec_debug_exploration:0 "z-DEBUG-SHIP SPEED (£empire£)"
+  decision_tec_debug_exploration_desc:0 "Increases ship speed, colonization, megastructure build speed - reactivate to disable"
+  decision_tec_debug_exploration_tooltip:0 "$decision_tec_debug_exploration_desc$"
+  modifier_tec_debug_exploration:0 "$decision_tec_debug_exploration$"
+  modifier_tec_debug_exploration_desc:0 "$decision_tec_debug_exploration_desc$"
+
+  decision_tec_debug_ship_techs:0 "z-DEBUG-SHIP TECHS (£empire£)"
+  decision_tec_debug_ship_techs_desc:0 "Provides all ship construction and starbase upgrade techs"
+  decision_tec_debug_ship_techs_tooltip:0 "Provides all ship construction and starbase upgrade techs"
+
+  modifier_tec_debug_test_megastructures:0 "z-DEBUG-MEGASTRUCTURES"
+  modifier_tec_debug_test_megastructures_desc:0 "a"
+  modifier_tec_debug_test_megastructures_tooltip:0 "a"
+
+  modifier_tec_debug_automodding:0 "z-DEBUG-AUTOMODDING"
+  modifier_tec_debug_automodding_desc:0 "a"
+  modifier_tec_debug_automodding_tooltip:0 "a"
+
+  modifier_tec_debug_mega_output:0 "modifier_tec_debug_mega_output"
+  modifier_tec_debug_mega_output_desc:0 "a"
+  modifier_tec_debug_mega_output_tooltip:0 "a"
+
+  # Debug Windows
+  tec_debug_no:0 "§RNo§!"
+  tec_debug_yes:0 "§GYes§!"
+  tec_debug_yes_run:0 "§GYes§! §Y(Not Acquired but Executed)§!"
+  tec_debug_yes_acquired:0 "§GYes§! §G(Acquired)§!"
+  tec_debug_na:0 "§YN/A§!"
+
+  tec_debug.1.name: "Debugging Leader: [event_target:tec_debug_leader.GetName]"
+  tec_debug.1.desc: "[event_target:tec_debug_leader.tec_debug_leader_general_info][event_target:tec_debug_leader.tec_debug_leader_ainode_info][event_target:tec_debug_leader.tec_debug_leader_pick_traits_info][event_target:tec_debug_leader.tec_debug_leader_flags_variables_info]"
+  tec_debug.1.desc_general: "General Information\n--------------------------\nName: §Y[GetName]§!\nSkill Level: §Y[tec_debug_leader_level]/[tec_debug_leader_max_level]§!\nEffective Councilor Skill Level: §Y[tec_debug_leader_councilor_level]§!\nSpecies: §Y[Species.GetName]§!\nMain Species: [tec_debug_leader_is_main_species]\nBuilt Species: [tec_debug_leader_is_built_species]\nAI Node Species: [tec_debug_leader_is_aiauth_node_species]\nExpected Base Exp/Month: §Y[tec_debug_leader_experience_gain]§!\nTotal Expected Multiplier: §Y[tec_debug_leader_experience_mult]§!\nIs Idle: [tec_debug_leader_is_idle]\nIs True Idle: [tec_debug_leader_is_true_idle]\nCount Towards Leader Cap: [tec_debug_leader_count_towards_leader_cap]\nIs Ruler: [tec_debug_leader_is_ruler]\nIs Councilor: [tec_debug_leader_is_councilor]\nIs Governor: [tec_debug_leader_is_governor]"
+  tec_debug.1.desc_ainode: "\n\nAI Node Information\n--------------------------\nNode Weight: §Y[tec_aiauth_node_weight_tooltip]/[owner.tec_aiauth_total_weight_text]§!\nAI Capacity to Exp: §Y[tec_debug_leader_aiauth_capacity_to_exp]§!\nAI Experience Gain Difference: §Y[tec_debug_leader_aiauth_experience_per_month_with_exp_gain]§!\nAscension Trait: [tec_debug_leader_flag_tec_aiauth_ascension_trait]"
+  tec_debug.1.desc_pick_traits: "\n\nPicking Traits Information\n--------------------------\nForce All Traits: [tec_debug_leader_tec_force_allow_all_traits]\nCouncilor Traits: [tec_debug_leader_can_leader_get_council_trait]\nForce Councilor Traits: [tec_debug_leader_tec_force_councilor_traits]\nNormal Traits: [tec_debug_leader_can_leader_get_normal_trait]\nForce Normal Traits: [tec_debug_leader_tec_force_normal_traits]\nSubclass Traits: [tec_debug_leader_can_leader_get_subclass_trait]\nDestiny Traits: [tec_debug_leader_can_leader_get_destiny_trait]\n"
+  tec_debug.1.desc_flags: "\n\nFlags And Variables\n--------------------------\nRenowned Leader: [tec_debug_leader_flag_renowned_leader]\nLegendary Leader: [tec_debug_leader_flag_legendary_leader]\nNo Starting Leader Actions: [tec_debug_leader_flag_tec_no_starting_actions]\nFirst Handle Starting Modifiers: [tec_debug_leader_flag_tec_first_leader_handle_starting_modifiers_done]\nStarting Traits Added: §Y[tec_leader_starting_traits_modifier]/[tec_debug_leader_starting_traits_add]§!\nElitist Trait: [tec_debug_leader_flag_tec_elitist_trait]\nPatronage Traits: [tec_debug_leader_flag_tec_patronage_traits]\nPatronage Age: [tec_debug_leader_flag_tec_patronage_age]\nScience Directorate Traits: [tec_debug_leader_flag_tec_directorate_traits]\nCrusader Spirit Traits: [tec_debug_leader_flag_tec_crusader_traits]\nLetters of Marque Traits: [tec_debug_leader_flag_tec_marque_traits]\nRemnants Traits: [tec_debug_leader_flag_tec_remnant_traits]\nChampions of Empire Trait: [tec_debug_leader_flag_tec_A_CotE_traits]\nRitualistic Implants Trait: [tec_debug_leader_flag_tec_ritualistic_implants_cyborg_trait]\nSpiritualist Limited Cybernetics Trait: [tec_debug_leader_flag_tec_leader_trait_limited_cyborg_trait]\nPrivate Prospectors Traits: [tec_debug_leader_flag_tec_private_prospector_traits]\nTreasure Hunters Spirit Traits: [tec_debug_leader_flag_tec_treasure_hunters_traits]\nStorm Chasers Traits: [tec_debug_leader_flag_tec_storm_chasers_traits]"
+  tec_debug.1.kill_leader: "Kill Leader"
+  tec_debug.1.fire_leader: "Fire Leader"
+  tec_debug.1.increase_skill: "Increase Level"
+  tec_debug.1.random_trait: "Random Trait"
+  tec_debug.1.remove_negatives: "Remove Negative Traits"
+  tec_debug.1.rerun_leader_actions: "Rerun Leader Starting on Actions"
+  tec_debug.1.reset_leader: "Reset Leader To Level 1"
+# /
