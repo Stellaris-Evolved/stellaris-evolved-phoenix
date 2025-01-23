@@ -1,0 +1,31 @@
+# cui/tenet/tec_tenet_option_sprite.txt
+
+inline_script = {
+	script = tec_type_hint
+    icon = $icon$
+    tec_tenet = $name$
+}
+
+inline_script = {
+    script = conditional/tec_equal
+    value = $icon$
+    equal = no
+    code = "
+        spriteType = {
+            name = GFX_$name$
+            textureFile = gfx/interface/icons/tec_tenets/$name$.dds
+        }
+    "
+}
+
+inline_script = {
+    script = conditional/tec_equal_not
+    value = $icon$
+    equal = no
+    code = "
+        spriteType = {
+            name = GFX_$name$
+            textureFile = $icon$
+        }
+    "
+}

@@ -1,0 +1,204 @@
+tec_reset_tenet_cui = {
+    set_country_flag = tec_tenet_cui_closed
+    tec_reset_tenet_cui_tabs = yes
+}
+
+tec_reset_tenet_cui_tabs = {
+    remove_country_flag = tec_tenet_basic_tab_active
+    remove_country_flag = tec_tenet_spiritualist_tab_active
+    remove_country_flag = tec_tenet_special_tab_active
+    remove_country_flag = tec_tenet_advanced_tab_active
+    remove_country_flag = tec_tenet_authority_tab_active
+}
+
+tec_clear_tenet_activate_flag = {
+    inline_script = {
+        script = cui/tenet/tec_tenet_declarations
+        extra = "_step = clear_activated_flag"
+    }
+}
+
+tec_clear_tenet_deactivate_flag = {
+    inline_script = {
+        script = cui/tenet/tec_tenet_declarations
+        extra = "_step = clear_deactivated_flag"
+    }
+}
+
+tec_clear_tenets = {
+    custom_tooltip = tec_clear_tenets
+    hidden_effect = {
+        inline_script = {
+            script = cui/tenet/tec_tenet_declarations
+            extra = "_step = clear_tenets"
+        }
+        set_variable = {
+            which = tec_tenet_points_used
+            value = 0
+        }
+    }
+}
+
+tec_clear_invalid_tenets = {
+    custom_tooltip = tec_clear_invalid_tenets
+    hidden_effect = {
+        inline_script = {
+            script = cui/tenet/tec_tenet_declarations
+            extra = "_step = clear_invalid_tenets"
+        }
+    }
+}
+
+tec_recalculate_tenet_points = {
+    hidden_effect = {
+        set_variable = {
+            which = tec_tenet_points_used
+            value = 0
+        }
+        inline_script = {
+            script = iterators/tec_iterate_tenet
+            code = "
+                if = {
+                    limit = {
+                        tec_has_tenet = { tenet = \$name\$ }
+                    }
+
+                    change_variable = {
+                        which = tec_tenet_points_used
+                        value = value:tec_tenet_cost|tenet|\$name\$|
+                    }
+                }
+            "
+        }
+    }
+}
+
+tec_activate_tenet = {
+    inline_script = {
+    	script = tec_type_hint
+        tec_tenet = $tenet$
+        [[force] bool = $force$ ]
+        [[tooltip] bool = $tooltip$ ]
+    }
+    if = {
+        limit = {
+            always = $tooltip|no$
+        }
+        inline_script = {
+            script = cui/tenet/tec_tenet_declarations
+
+            extra = "
+                _step = activate_tenet
+                _tenet = \$tenet\$
+                _pass = \\\"_force = \$force\$ _tooltip = yes\\\"
+            "
+            tenet = $tenet$
+            force = $force|no$
+        }
+    }
+    else = {
+        custom_tooltip = tec_activate_tenet_$tenet$
+        hidden_effect = {
+            inline_script = {
+                script = cui/tenet/tec_tenet_declarations
+                extra = "
+                    _step = activate_tenet
+                    _tenet = \$tenet\$
+                    _pass = \\\"_force = \$force\$ _tooltip = no\\\"
+                "
+                tenet = $tenet$
+                force = $force|no$
+            }
+        }
+    }
+}
+
+tec_deactivate_tenet = {
+    inline_script = {
+        script = tec_type_hint
+        tec_tenet = $tenet$
+        [[tooltip] bool = $tooltip$ ]
+    }
+    if = {
+        limit = {
+            always = $tooltip|no$
+        }
+        inline_script = {
+            script = cui/tenet/tec_tenet_declarations
+            extra = "
+                    _step = deactivate_tenet
+                    _tenet = \$tenet\$
+                    _pass = \\\"_tooltip = yes\\\"
+                "
+            tenet = $tenet$
+            tooltip = yes
+        }
+    } else = {
+        custom_tooltip = tec_deactivate_tenet_$tenet$
+        hidden_effect = {
+            inline_script = {
+                script = cui/tenet/tec_tenet_declarations
+                extra = "
+                    _step = deactivate_tenet
+                    _tenet = \$tenet\$
+                    _pass = \\\"_tooltip = no\\\"
+                "
+                tenet = $tenet$
+            }
+        }
+    }
+}
+
+tec_internal_tenet_activate_confirmation = {
+    inline_script = {
+        script = tec_type_hint
+        tec_tenet = $tenet$
+    }
+    hidden_effect = {
+        set_country_flag = tec_tenet_decision_pending
+        set_country_flag = tec_tenet_queue_$tenet$
+        country_event = {
+            id = tec_tenet_cui.2
+        }
+    }
+}
+
+tec_internal_tenet_deactivate_confirmation = {
+    inline_script = {
+        script = tec_type_hint
+        tec_tenet = $tenet$
+    }
+    hidden_effect = {
+        set_country_flag = tec_tenet_decision_pending
+        set_country_flag = tec_tenet_queue_$tenet$
+        country_event = {
+            id = tec_tenet_cui.3
+        }
+    }
+}
+
+tec_internal_tenet_points_available_alarm = {
+    if = {
+        limit = {
+            is_ai = no
+        }
+        hidden_effect = {
+            country_event = {
+                id = tec_tenet_cui.5
+            }
+        }
+    }
+}
+
+tec_internal_tenet_new_tenet_alarm = {
+    if = {
+        limit = {
+            is_ai = no
+        }
+        hidden_effect = {
+            country_event = {
+                id = tec_tenet_cui.7
+            }
+        }
+    }
+}

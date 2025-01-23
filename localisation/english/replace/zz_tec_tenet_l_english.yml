@@ -1,0 +1,146 @@
+﻿l_english:
+ tec_has_empire_tenet: "Has Empire Ideology Tenet:"
+ tec_has_empire_last_activated_tenet: "Has last activated Empire Ideology Tenet:"
+ tec_has_empire_last_deactivated_tenet: "Has last deactivated Empire Ideology Tenet:"
+ tec_has_tenet_points_available: "Has Enough Points for Tenet: "
+
+ tec_has_pending_tenet_decision: "Has Pending Tenet Decision"
+ tec_has_pending_tenet_decision_no: "£trigger_no£ $tec_has_pending_tenet_decision$"
+ tec_has_pending_tenet_decision_yes: "£trigger_yes£ $tec_has_pending_tenet_decision$"
+ tec_activate_tenet_effect: "Activated Ideology Tenet:"
+ tec_deactivate_tenet_effect: "Deactivated Ideology Tenet:"
+ tec_clear_tenets: "Cleared All Ideology Tenets"
+ tec_clear_invalid_tenets: "Cleared Invalid Ideology Tenets"
+
+ tec_tenet_invalid: "Invalid"
+
+ tec_cui_tenet_header: "Ideology Tenets"
+ tec_cui_tenet_header_points: "Picks Available: §Y[from.tec_tenet_points_available]§!"
+ tec_cui_tenet_header_basic_group: "Basic Tenets"
+ tec_cui_tenet_header_spiritualist_group: "Spiritualist Tenets"
+ tec_cui_tenet_header_special_group: "Special Tenets"
+ tec_cui_tenet_header_advanced_group: "Advanced Tenets"
+ tec_cui_tenet_header_authority_group: "Authority Tenets"
+ tec_cui_tenet_title_activate_tenet: "Activate Tenet?"
+
+ tec_cui_tenet_title_activate_tenet_desc: "Are you sure you want to activate the ['tradition:[from.tec_tenet_in_queue_key]', [tec_tenet_in_queue_name]] Tenet?"
+ tec_cui_tenet_title_deactivate_tenet: "Deactivate Tenet?"
+ tec_cui_tenet_title_deactivate_tenet_desc: "Are you sure you want to deactivate the ['tradition:[from.tec_tenet_in_queue_key]', [tec_tenet_in_queue_name]] Tenet?"
+
+ tec_cui_has_no_authority_swap: "Has no Advanced Authority Swaps"
+ tec_cui_has_no_authority_swap_no: "£trigger_no£ $tec_cui_has_no_authority_swap$"
+ tec_cui_has_no_authority_swap_yes: "£trigger_yes£ $tec_cui_has_no_authority_swap$"
+
+ tec_tenet_faction_demand_liked_desc: "Having the §Y$tenet$§! Tenet pleases the [Root.GetName]"
+ tec_tenet_faction_demand_disliked_desc: "Having the §Y$tenet$§! Tenet displeases the [Root.GetName]"
+
+ tec_tenet_active: "§ETenet Active§!"
+ tec_tenet_effects_section: "§EEffects:§!"
+ tec_tenet_current_effects_section: "§EActive Effects:§!"
+ tec_tenet_on_activate_effects_section: "\n§EWhen Activated:§!"
+ tec_tenet_on_deactivate_effects_section: "§EWhen Deactivated:§!"
+ tec_tenet_tooltip_disabled_start: "§g"
+ tec_tenet_tooltip_normal_start: "§T"
+ tec_tenet_tooltip_color_end: "§!"
+ tec_tenet_tooltip_not_enough_points: "£trigger_no£ $tec_has_tenet_points_available$"
+
+ mod_tec_tenet_points_add: "Ideology Tenet Points"
+
+ tec_tenet_tag_basic_tenet: "§EBasic Tenet§!"
+ tec_tenet_tag_spiritualist_tenet: "§ESpiritualist Tenet§!"
+ tec_tenet_tag_advanced_tenet: "§EAdvanced Tenet§!"
+ tec_tenet_tag_special_tenet: "§ESpecial Tenet§!"
+ tec_tenet_tag_authority_tenet: "§EAuthority Tenet§!"
+ tec_tenet_tag_transitory_tenet: "§ETransitory Tenet§!"
+
+ tec_tenet_deactivate_generic: "Lose all effects of this Tenet"
+
+ tec_cui_tenet.5.name: "$mod_tec_tenet_points_add$ Available"
+ tec_cui_tenet.5.desc: "We have unspent $mod_tec_tenet_points_add$ that could be used to refine our government and ideology."
+
+ tec_cui_tenet.7.name: "New Tenet Available"
+ tec_cui_tenet.7.desc: "We have a new Tenet available, click here to view."
+#
+#  tec_tenet_state_religion: "State Religion"
+#  tec_tenet_state_religion_desc: "$tec_tenet_tag_basic_tenet$ ($tec_tenet_tag_transitory_tenet$)\nOur spiritual doctrine is seamlessly intertwined with governance, ensuring all civic actions and policies are rooted in sacred beliefs. This fosters unity and divine harmony, giving every citizen a profound sense of identity and stability within the cosmic order."
+#  tec_tenet_state_religion_effect: "[GetPriestIcon] [GetPriestPlural] Political Power: §Y+0.50§!\n\nCan build £building£ ['building:building_temple'] buildings on your planets and ['district:district_tec_arcology_faith'] on ['concept_tec_ecumenopoleis'] and other §YAdvanced Planets§!\n\nEmbracing any ['ethic:ethic_spiritualist'] Faction costs no §Y$tec_loc_unity$§!"
+#
+#  tec_tenet_materialistic_views: "Philosophical Materialism"
+#  tec_tenet_materialistic_views_desc: "$tec_tenet_tag_basic_tenet$ ($tec_tenet_tag_transitory_tenet$)\nWe emphasize the primacy of the material world and empirical knowledge. While religion, superstition and mysticism might have a place in the hearts of our people, the focus is on scientific inquiry and tangible progress, ensuring advancements are grounded in reality and reason."
+#  tec_tenet_materialistic_views_effect: "[GetResearcherPluralWithIcon] Political Power: §Y+0.50§!\n\nAllows the selection of §YResearch Category§! focus via policy\n\nCan use ['concept_tec_living_standard_academic_privilege_alias_icon'] Living Standards\n\nEmbracing any ['ethic:ethic_materialist'] Faction costs no §Y$tec_loc_unity$§!"
+#
+#
+#  tec_tenet_entrepreneur_economy: "Entrepreneur Economy"
+#  tec_tenet_entrepreneur_economy_desc: "$tec_tenet_tag_basic_tenet$ ($tec_tenet_tag_transitory_tenet$)\nOur economy thrives on the spirit of entrepreneurship, encouraging innovation and individual initiative. Citizens are empowered to pursue their ambitions, driving progress and prosperity through creativity and enterprise. "
+#  tec_tenet_entrepreneur_economy_effect: "$tec_private_hired$ $tec_loc_jobs$ and $job_trader_plural_with_icon$ Political Power: §Y+0.50§!\n\nCan build £building£ ['concept_tec_ethic_building_entrepreneur'] on your planets\n\nEmbracing any ['ethic:ethic_competitive'] Faction costs no §Y$tec_loc_unity$§!"
+#
+#  tec_tenet_public_employment: "Public Employment"
+#  tec_tenet_public_employment_desc: "$tec_tenet_tag_basic_tenet$ ($tec_tenet_tag_transitory_tenet$)\nOur society prioritizes public employment, ensuring that every citizen has a role in supporting communal well-being, providing a social security net."
+#  tec_tenet_public_employment_effect: "£job_tec_state_worker£ $job_tec_state_worker_plural$ Political Power: §Y+0.50§!\n\nUnemployed $tec_loc_pops$ become ['concept_tec_worker_job_tec_state_worker_plural_icon'], which consume extra §Y$tec_loc_amenities$§! in exchange of producing extra §Y$tec_loc_unity$§! and not suffering §Y$tec_loc_happiness$§! maluses, and benefit from Unemployment Modifiers\n\nEmbracing any ['ethic:ethic_cooperative'] Faction costs no §Y$tec_loc_unity$§!"
+#
+#  tec_tenet_reform_and_opening: "Reform and Opening"
+#  tec_tenet_reform_and_opening_desc: "$tec_tenet_tag_basic_tenet$\nEmbracing external investment and innovation, blending them with our cooperative principles. We strive to revitalizes our economy, encourages technological advancement, and strengthens international ties while maintaining our core values and social structure."
+#  tec_tenet_reform_and_opening_effect: "$MOD_PLANET_MAX_BUILDINGS_ADD$ (On Tier 2 Capitals and above): §R-1§!\n\nIncreased §Y$tec_loc_opinion$§! with ['concept_tec_authority_type_corporate'] Empires\n\n§Y£building£ Branch Office Capital§! buildings on your planets have reduce §Y$tec_loc_influence$§! Cost"
+#
+#  tec_tenet_keys_to_power: "Keys to Power"
+#  tec_tenet_keys_to_power_desc: "$tec_tenet_tag_basic_tenet$ ($tec_tenet_tag_transitory_tenet$)\nOur leadership wisely expands the distribution of power among key individuals, fostering loyalty and stability. By sharing authority and responsibilities, we prevent unrest and ensure a harmonious and effective governance, securing the prosperity and unity of our society."
+#  tec_tenet_keys_to_power_effect: "£job_clerk£ $job_clerk_plural$ Political Power: §Y+0.50§!\n\nCan use ['concept_tec_edict_encourage_free_thought_alias_icon'] Edict\n\nEmbracing any ['ethic:ethic_egalitarian'] Faction costs no §Y$tec_loc_unity$§!"
+#
+#  tec_tenet_executive_aggrandizement: "Executive Aggrandizement"
+#  tec_tenet_executive_aggrandizement_desc: "$tec_tenet_tag_basic_tenet$ ($tec_tenet_tag_transitory_tenet$)\nOur leadership gradually consolidates power, subtly expanding its influence and control. Through carefully orchestrated measures, authority is centralized, ensuring stability and decisive governance while maintaining the facade of traditional structures."
+#  tec_tenet_executive_aggrandizement_effect: "£job_enforcer£ $job_enforcer_plural$ Political Power: §Y+0.50§!\n\nCan use ['concept_tec_living_standard_stratified_alias_icon'] Living Standards\n\nEmbracing any ['ethic:ethic_authoritarian'] Faction costs no §Y$tec_loc_unity$§!"
+#
+#  tec_tenet_cosmic_curiosity: "Cosmic Curiosity"
+#  tec_tenet_cosmic_curiosity_desc: "$tec_tenet_tag_basic_tenet$ ($tec_tenet_tag_transitory_tenet$)\nThe universe is vast and full of wonders. While we remain cautious, our civilization recognizes the potential benefits of engaging with alien tenetures and technologies."
+#  tec_tenet_cosmic_curiosity_effect: "\nCan use ['concept_tec_edict_land_of_opportunity_alias_icon'] Edict after established communications with another empires\n\nIncreased §Y$tec_loc_opinion$§! with other species\n\nEmbracing any ['ethic:ethic_xenophile'] Faction costs no §Y$tec_loc_unity$§!"
+#
+#  tec_tenet_interspecies_grievances: "Interspecies Grievances"
+#  tec_tenet_interspecies_grievances_desc: "$tec_tenet_tag_basic_tenet$ ($tec_tenet_tag_transitory_tenet$)\nAs tensions between species reach a boiling point, our empire enacts policies to address long-standing disputes, risking further division in the name of stability."
+#  tec_tenet_interspecies_grievances_effect: "\nCan use ['concept_tec_policy_option_purge_allowed_alias_icon'] Policy Option\n\nDecreases §Y$tec_loc_opinion$§! with other species\n\nEmbracing any ['ethic:ethic_xenophobe'] Faction costs no §Y$tec_loc_unity$§!"
+#
+#  tec_tenet_selective_xenophilia: "Selective Xenophilia"
+#  tec_tenet_selective_xenophilia_desc: "$tec_tenet_tag_basic_tenet$\nNot all aliens are created equal. We recognize the value in select xeno species, tenetivating beneficial relationships while maintaining our tenetural identity."
+#  tec_tenet_selective_xenophilia_effect: "Allow §G2§! §YXeno Species§! to acquire ['concept_tec_right_option_citizenship_full_alias_icon']\n\nNo ['ethic:ethic_xenophile'] Attraction from these §YXeno Species§!\n\nIncreased §Y$tec_loc_opinion$§! with empires whose Species you granted §YFull Citizenship§!"
+#
+#  tec_tenet_strategic_readiness_initiaitive: "Military Readiness"
+#  tec_tenet_strategic_readiness_initiaitive_desc: "$tec_tenet_tag_basic_tenet$ ($tec_tenet_tag_transitory_tenet$)\nIn an increasingly dangerous galaxy, our civilization recognizes the need for enhanced military preparedness, balancing defensive capabilities with societal progress."
+#  tec_tenet_strategic_readiness_initiaitive_effect: "£job_soldier£ $job_soldier_plural$ Political Power: §Y+0.50§!\n\nCan use ['concept_tec_policy_option_no_retreat_doctrine_alias_icon'] Policy Option\n\nCan use ['concept_tec_edict_tec_doing_your_part_alias_icon'] Edict\n\nEmbracing any ['ethic:ethic_militarist'] Faction costs no §Y$tec_loc_unity$§!"
+#
+#  tec_tenet_deescalation_doctrine: "De-escalation Doctrine"
+#  tec_tenet_deescalation_doctrine_desc: "$tec_tenet_tag_basic_tenet$ ($tec_tenet_tag_transitory_tenet$)\nOur society embraces a defensive posture, prioritizing the protection of our people through diplomatic means and measured responses. We seek to defuse conflicts before they escalate."
+#  tec_tenet_deescalation_doctrine_effect: "[GetAdministratorNoPriestIcon] [GetAdministratorNoPriestPlural] Political Power: §Y+0.50§!\n\nCan use ['concept_tec_edict_peace_festivals_alias_icon'] Edict\n\nEmbracing any ['ethic:ethic_pacifist'] Faction costs no §Y$tec_loc_unity$§!"
+#
+#  tec_tenet_knowledge: "$policy_option_tec_spiritualist_tenet_knowledge$"
+#  tec_tenet_knowledge_desc: "$policy_option_tec_spiritualist_tenet_knowledge_desc$"
+#
+#  tec_tenet_prosperity: "$policy_option_tec_spiritualist_tenet_prosperity$"
+#  tec_tenet_prosperity_desc: "$policy_option_tec_spiritualist_tenet_prosperity_desc$"
+#
+# authority
+
+ # tec_tenet_direct_democratic: "$auth_direct_democratic$"
+ # tec_tenet_direct_democratic_desc: "$tec_tenet_tag_authority_tenet$\n$auth_direct_democratic_desc$"
+ # tec_tenet_direct_democratic_effect: "Replaces ['authority:auth_democratic:auth_democratic'] with ['authority:auth_democratic:auth_direct_democratic'] Advanced Authority"
+ #
+ # tec_tenet_ecclesiocracy: "$auth_tec_ecclesiocracy$"
+ # tec_tenet_ecclesiocracy_desc: "$tec_tenet_tag_authority_tenet$\n$auth_tec_ecclesiocracy_desc$"
+ # tec_tenet_ecclesiocracy_effect: "Replaces ['authority:auth_oligarchic:auth_oligarchic'] with ['authority:auth_oligarchic:auth_tec_ecclesiocracy'] Advanced Authority"
+ #
+ # tec_tenet_theocracy: "$auth_tec_theocracy$"
+ # tec_tenet_theocracy_desc: "$tec_tenet_tag_authority_tenet$\n$auth_tec_theocracy_desc$"
+ # tec_tenet_theocracy_effect: "Replaces ['authority:auth_dictatorial:auth_dictatorial'] with ['authority:auth_dictatorial:auth_tec_theocracy'] Advanced Authority"
+
+ tec_tenet_cyber_creed: "[from.tec_cyber_creed_authority_name]"
+ tec_tenet_cyber_creed_desc: "$tec_tenet_tag_authority_tenet$\n[from.tec_cyber_creed_authority_desc]"
+ tec_tenet_cyber_creed_effect: "Replaces ['authority:[tec_authority_key]:[tec_authority_key]'] with ['authority:[tec_authority_key]:[tec_cyber_creed_authority_key]'] Advanced Authority"
+ tec_tenet_cyber_creed_requirement: "Requires finishing the §Y$tec_loc_situation_icon$ $situation_cybernetic_creed_cyberization$§! Situation"
+
+ tec_tenet_cyber_individualist: "[from.tec_cyber_individualist_name]"
+ tec_tenet_cyber_individualist_desc: "$tec_tenet_tag_authority_tenet$\n[from.tec_cyber_individualist_desc]"
+ tec_tenet_cyber_individualist_effect: "Replaces ['authority:[tec_authority_key]:[tec_authority_key]'] with ['authority:[tec_authority_key]:[tec_cyber_individualist_key]'] Advanced Authority"
+ tec_tenet_cyber_individualist_requirement: "Requires finishing the §Y$tec_loc_situation_icon$ $futureshock_chain_title$§! Event Chain Finished with a §YIndividualist§! ending"
+
+ tec_tenet_cyber_collectivist: "[from.tec_cyber_collectivist_name]"
+ tec_tenet_cyber_collectivist_desc: "$tec_tenet_tag_authority_tenet$\n[from.tec_cyber_collectivist_desc]"
+ tec_tenet_cyber_collectivist_effect: "Replaces ['authority:[tec_authority_key]:[tec_authority_key]'] with ['authority:[tec_authority_key]:[tec_cyber_collectivist_key]'] Advanced Authority"
+ tec_tenet_cyber_collectivist_requirement: "Requires finishing the §Y$tec_loc_situation_icon$ $futureshock_chain_title$§! Event Chain Finished with a §YCollectivist§! ending"

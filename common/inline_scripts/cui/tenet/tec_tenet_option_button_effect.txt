@@ -1,0 +1,210 @@
+# cui/tenet/tec_tenet_option_button_effect.txt
+
+inline_script = {
+    script = tec_type_hint
+    tec_tenet = $name$
+    tec_tenet_category = $category$
+    country_trigger_block = "$potential$"
+}
+
+tec_tenet_$name$_background_effect = {
+    potential = {
+        exists = from
+        from = {
+            has_country_flag = tec_cui_tenet_$category$_tab_active
+            $potential$
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                from = {
+                    tec_has_tenet = {
+                        tenet = $name$
+                    }
+                }
+            }
+            always = yes
+        } else = {
+            from = {
+                tec_has_tenet_points_available = {
+                    tenet = $name$
+                }
+                tec_is_tenet_allowed = {
+                    tenet = $name$
+                }
+            }
+        }
+    }
+}
+
+tec_tenet_$name$_glow_effect = {
+    potential = {
+        exists = from
+        from = {
+            has_country_flag = tec_cui_tenet_$category$_tab_active
+            tec_has_tenet = {
+                tenet = $name$
+            }
+        }
+    }
+
+    allow = {
+        always = yes
+    }
+}
+tec_tenet_$name$_button_effect_allowed = {
+    potential = {
+        from = {
+            has_country_flag = tec_cui_tenet_$category$_tab_active
+            $potential$
+        }
+        from = {
+            OR = {
+                tec_has_tenet = {
+                    tenet = $name$
+                }
+                AND = {
+                    tec_has_tenet_points_available = {
+                        tenet = $name$
+                    }
+                    tec_is_tenet_allowed = {
+                        tenet = $name$
+                    }
+                }
+            }
+        }
+    }
+
+    allow = {
+        tec_has_pending_tenet_decision = no
+    }
+
+    effect = {
+        inline_script = {
+            script = cui/tenet/tec_tenet_option_button_effect_tooltip
+            name = $name$
+            from = from
+            skip_header = no
+        }
+    }
+}
+
+tec_tenet_$name$_button_effect_not_enough_points = {
+    potential = {
+        exists = from
+        from = {
+            has_country_flag = tec_cui_tenet_$category$_tab_active
+            $potential$
+        }
+        from = {
+            NOT = {
+                tec_has_tenet = {
+                    tenet = $name$
+                }
+            }
+            NOT = {
+                tec_has_tenet_points_available = {
+                    tenet = $name$
+                }
+            }
+            tec_is_tenet_allowed = {
+                tenet = $name$
+            }
+        }
+    }
+
+    allow = {
+        tec_has_pending_tenet_decision = no
+    }
+
+    effect = {
+        tooltip = {
+            inline_script = {
+                script = cui/tenet/tec_tenet_option_button_effect_tooltip
+                name = $name$
+                from = from
+                skip_header = no
+            }
+        }
+        custom_tooltip = tec_has_tenet_points_available_$name$_no
+    }
+}
+
+tec_tenet_$name$_button_effect_not_enough_points_cost = {
+    potential = {
+        exists = from
+        from = {
+            has_country_flag = tec_cui_tenet_$category$_tab_active
+            $potential$
+        }
+        from = {
+            NOT = {
+                tec_has_tenet = {
+                    tenet = $name$
+                }
+            }
+            NOT = {
+                tec_has_tenet_points_available = {
+                    tenet = $name$
+                }
+            }
+        }
+    }
+}
+
+tec_tenet_$name$_button_effect_disallowed = {
+    potential = {
+        exists = from
+        from = {
+            has_country_flag = tec_cui_tenet_$category$_tab_active
+            $potential$
+        }
+        from = {
+            NOT = {
+                tec_has_tenet = {
+                    tenet = $name$
+                }
+            }
+            NOT = {
+                tec_is_tenet_allowed = {
+                    tenet = $name$
+                }
+            }
+        }
+    }
+
+    allow = {
+        custom_tooltip = $name$_header
+        custom_tooltip = $name$_cost_header
+        custom_tooltip = $name$_desc
+        custom_tooltip = tec_loc_desc_separator
+        from = {
+            tec_is_tenet_allowed = {
+                tenet = $name$
+            }
+        }
+    }
+    effect = {
+        tooltip = {
+            inline_script = {
+                script = cui/tenet/tec_tenet_option_button_effect_tooltip
+                name = $name$
+                from = from
+                skip_header = no
+            }
+        }
+        custom_tooltip = tec_loc_desc_separator
+        country_list_tooltip = {
+            limit = {
+                is_same_value = from
+                from = {
+                    tec_is_tenet_allowed = {
+                        tenet = $name$
+                    }
+                }
+            }
+        }
+    }
+}

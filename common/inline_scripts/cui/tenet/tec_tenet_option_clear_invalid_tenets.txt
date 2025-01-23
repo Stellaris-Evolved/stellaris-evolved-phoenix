@@ -1,0 +1,17 @@
+# cui/tenet/tec_tenet_option_clear_invalid_tenets.txt
+
+if = {
+    limit = {
+        tec_has_tenet = {
+            tenet = $name$
+        }
+        NOT = {
+            tec_is_tenet_allowed = {
+                tenet = $name$
+            }
+        }
+    }
+    tec_deactivate_tenet = {
+        tenet = $name$
+    }
+}

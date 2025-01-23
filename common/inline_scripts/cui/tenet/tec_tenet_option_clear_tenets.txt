@@ -1,0 +1,12 @@
+# cui/tenet/tec_tenet_option_clear_tenets.txt
+
+if = {
+    limit = {
+        tec_has_tenet = {
+            tenet = $name$
+        }
+    }
+
+    tec_deactivate_tenet = { tenet = $name$ }
+    remove_country_flag = tec_tenet_$name$_last_deactivated
+}

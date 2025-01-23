@@ -1,0 +1,85 @@
+tec_tenet_example_modifier = {
+    planet_jobs_unity_produces_mult = 1
+    hide_from_country_list = yes
+}
+tec_tenet_state_religion_modifier = {
+    planet_priests_unity_produces_add = -1
+    hide_from_country_list = yes
+}
+tec_tenet_materialistic_views_modifier = {
+    pop_happiness = -0.075
+    hide_from_country_list = yes
+}
+tec_tenet_entrepreneur_economy_modifier = {
+    pop_cat_worker_happiness = -0.1
+    hide_from_country_list = yes
+}
+tec_tenet_public_employment_modifier = {
+    unemployment_resources_consumer_goods_upkeep_add = 0.5
+    hide_from_country_list = yes
+}
+tec_tenet_reform_and_opening_modifier = {
+    planet_max_branch_office_buildings_add = 1
+    hide_from_country_list = yes
+}
+tec_tenet_keys_to_power_modifier = {
+    pop_factions_produces_mult = 0.15
+    pop_cat_ruler_happiness = -0.20
+    hide_from_country_list = yes
+}
+tec_tenet_executive_aggrandizement_modifier = {
+    election_term_years_mult = 1
+    faction_approval = -0.1
+    pop_cat_ruler_political_power = 0.5
+    hide_from_country_list = yes
+}
+tec_tenet_cosmic_curiosity_modifier = {
+    diplomacy_upkeep_mult = -0.1
+    first_contact_clues_add = 1
+    intel_encryption_add = -1
+    hide_from_country_list = yes
+}
+tec_tenet_interspecies_grievances_modifier = {
+    ship_home_territory_fire_rate_mult = 0.075
+    diplo_weight_mult = -0.1
+    hide_from_country_list = yes
+}
+tec_tenet_selective_xenophilia_modifier = {
+    hide_from_country_list = yes
+}
+tec_tenet_strategic_readiness_initiaitive_modifier = {
+    pop_job_naval_mult = 0.05
+    ship_orbit_upkeep_mult = 0.05
+    hide_from_country_list = yes
+}
+tec_tenet_deescalation_doctrine_modifier = {
+    starbase_defense_platform_capacity_add = 2
+    country_war_exhaustion_mult = 0.1
+    hide_from_country_list = yes
+}
+tec_tenet_knowledge_modifier = {
+    planet_priests_unity_produces_add = -1
+    hide_from_country_list = yes
+}
+tec_tenet_prosperity_modifier = {
+    planet_priests_unity_produces_add = -1
+    hide_from_country_list = yes
+}
+tec_tenet_direct_democratic_modifier = {
+    hide_from_country_list = yes
+}
+tec_tenet_ecclesiocracy_modifier = {
+    hide_from_country_list = yes
+}
+tec_tenet_theocracy_modifier = {
+    hide_from_country_list = yes
+}
+tec_tenet_cyber_creed_modifier = {
+    hide_from_country_list = yes
+}
+tec_tenet_cyber_individualist_modifier = {
+    hide_from_country_list = yes
+}
+tec_tenet_cyber_collectivist_modifier = {
+    hide_from_country_list = yes
+}

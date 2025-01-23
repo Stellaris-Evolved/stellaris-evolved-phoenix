@@ -27,9 +27,11 @@ SCRIPTED_EFFECTS = div_str("common/scripted_effects")
 SCRIPTED_VARIABLES = div_str("common/scripted_variables")
 SCRIPT_VALUES = div_str("common/script_values")
 HOARDER_BUTTONS_TEMPLATE = INLINE_FOLDER / div_str("cui/hoarder/tec_hoarder_resource_buttons.txt")
+TENET_BUTTONS_TEMPLATE = INLINE_FOLDER / div_str("cui/tenet/tec_tenet_option_button.txt")
 SUFFIX_PLACEHOLDER = "\\<suffix\\>"
 
 def load_config(path: str) -> Config:
+    if not os.path.exists(path): return {}
     with open(path, 'r', encoding='utf8') as f:
         ret = yaml.load(f, FullLoader)
         if 'paths' in ret:

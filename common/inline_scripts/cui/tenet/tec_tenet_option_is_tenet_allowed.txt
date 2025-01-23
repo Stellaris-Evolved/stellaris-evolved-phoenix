@@ -1,0 +1,5 @@
+# cui/tenet/tec_tenet_option_is_tenet_allowed.txt
+
+AND = {
+    $allow$
+}

@@ -1,0 +1,3 @@
+# cui/tenet/tec_tenet_option_cost.txt
+
+$cost$

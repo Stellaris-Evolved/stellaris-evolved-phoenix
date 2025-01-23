@@ -1,0 +1,22 @@
+tec_tenet_adopt = {}
+tec_tenet_finish = {}
+
+inline_script = {
+    script = iterators/tec_iterate_cult
+    code = "
+        $name$ = {
+            possible = {
+                always = no
+            }
+
+            on_enabled = {
+                inline_script = {
+                    script = cui/cult/tec_cult_option_button_effect_tooltip
+                    name = $name$
+                    from = this
+                    skip_header = yes
+                }
+            }
+        }
+    "
+}

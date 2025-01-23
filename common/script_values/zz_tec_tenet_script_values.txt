@@ -1,0 +1,34 @@
+tec_tenet_points_max = {
+    base = @tec_tenet_points_base
+    add = modifier:tec_tenet_points_add
+}
+
+tec_tenet_points_available = {
+    add = value:tec_tenet_points_max
+    modifier = {
+        is_variable_set = tec_tenet_points_used
+        subtract = tec_tenet_points_used
+    }
+}
+
+tec_tenet_cost = {
+    inline_script = {
+        script = cui/tenet/tec_tenet_declarations
+        extra = "
+            _step = cost
+            _tenet = \$TENET\$
+        "
+        tenet = $TENET$
+    }
+}
+
+tec_tenet_ai_weight = {
+    inline_script = {
+        script = cui/tenet/tec_tenet_declarations
+        extra = "
+            _step = ai_weight
+            _tenet = \$TENET\$
+        "
+        tenet = $TENET$
+    }
+}

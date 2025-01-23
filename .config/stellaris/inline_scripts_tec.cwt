@@ -184,6 +184,12 @@ parameters = {
     menial_type = enum[tec_menial_type]
     ## context_key = inline_script@tec_type_hint
     hoarder_resource_type = enum[tec_hoarder_resource_type]
+    ## context_key = inline_script@tec_type_hint
+    tenet_include_step = enum[tec_tenet_include_step]
+    ## context_key = inline_script@tec_type_hint
+    tec_tenet = enum[tec_tenet]
+    ## context_key = inline_script@tec_type_hint
+    tec_tenet_category = enum[tec_tenet_category]
 
     #### Event keys
     ## context_key = inline_script@tec_type_hint

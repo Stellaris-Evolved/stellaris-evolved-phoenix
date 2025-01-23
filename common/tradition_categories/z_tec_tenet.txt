@@ -1,0 +1,23 @@
+fake_tradition_tec_tenet = {
+    tree_template = "tree_12_11_11"
+
+    potential = {
+        always = no
+    }
+
+    adoption_bonus = "tec_tenet_adopt"
+    finish_bonus = "tec_tenet_finsih"
+
+    inline_script = {
+        script = iterators/tec_iterate_cult
+        code = "
+            traditions =  {
+                $name$
+            }
+        "
+    }
+
+    ai_weight = {
+        factor = 10000
+    }
+}

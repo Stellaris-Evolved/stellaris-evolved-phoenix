@@ -1,0 +1,6 @@
+tec_tenet_points_add = {
+    icon = mod_country_government_civic_points_add
+    percentage = no
+    good = yes
+    category = country
+}

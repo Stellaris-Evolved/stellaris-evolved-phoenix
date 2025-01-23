@@ -1,0 +1,108 @@
+spriteTypes = {
+spriteType = {
+    name = GFX_tec_tenet_example
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_artifice_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_state_religion
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_materialistic_views
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_entrepreneur_economy
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_public_employment
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_reform_and_opening
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_keys_to_power
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_executive_aggrandizement
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_cosmic_curiosity
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_interspecies_grievances
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_selective_xenophilia
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_strategic_readiness_initiaitive
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_deescalation_doctrine
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_knowledge
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_prosperity
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_direct_democratic
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_ecclesiocracy
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_theocracy
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_cyber_creed
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_cyber_individualist
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+spriteType = {
+    name = GFX_tec_tenet_cyber_collectivist
+    effectFile = gfx/FX/buttonstate_onlydisable.shader
+    textureFile = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+}
+
+}

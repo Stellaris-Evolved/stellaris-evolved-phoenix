@@ -1,0 +1,9 @@
+# iterators/tec_iterate_tenet
+
+inline_script = {
+	script = cui/tenet/tec_tenet_declarations
+	extra = "
+		_step = iterate
+ 		_code = \"$code$\"
+	"
+}

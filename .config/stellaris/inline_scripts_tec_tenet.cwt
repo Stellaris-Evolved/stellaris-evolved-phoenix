@@ -1,0 +1,218 @@
+inline_scripts = {
+
+    ## context_configs_type = multiple
+    cui/tenet/tec_tenet_option_button_effect = {
+        value[anything] = {
+            ## replace_scopes = { this = any root = any from = country }
+            potential = single_alias_right[trigger_clause]
+            ## replace_scopes = { this = any root = any from = country }
+            allow = single_alias_right[trigger_clause]
+            ## replace_scopes = { this = any root = any from = country }
+            ## cardinality = 0..1
+            effect = single_alias_right[effect_clause]
+        }
+    }
+    ## context_configs_type = multiple
+    cui/tenet/tec_tenet_option_activate_tenet = {
+        ## replace_scopes = { this = country  root = any }
+        alias_name[effect] = alias_match_left[effect]
+    }
+    ## context_configs_type = multiple
+    cui/tenet/tec_tenet_option_deactivate_tenet = {
+        ## replace_scopes = { this = country  root = any }
+        alias_name[effect] = alias_match_left[effect]
+    }
+    ## context_configs_type = multiple
+    cui/tenet/tec_tenet_option_clear_activated_flag = {
+        ## replace_scopes = { this = country  root = any }
+        alias_name[effect] = alias_match_left[effect]
+    }
+    ## context_configs_type = multiple
+    cui/tenet/tec_tenet_option_clear_deactivated_flag = {
+        ## replace_scopes = { this = country  root = any }
+        alias_name[effect] = alias_match_left[effect]
+    }
+    ## context_configs_type = multiple
+    cui/tenet/tec_tenet_option_clear_tenets = {
+        ## replace_scopes = { this = country  root = any }
+        alias_name[effect] = alias_match_left[effect]
+    }
+    ## context_configs_type = multiple
+    cui/tenet/tec_tenet_option_clear_invalid_tenets = {
+        ## replace_scopes = { this = country  root = any }
+        alias_name[effect] = alias_match_left[effect]
+    }
+    ## context_configs_type = multiple
+    cui/tenet/tec_tenet_option_button_effect_tooltip = {
+        ## replace_scopes = { this = any  root = any from = country }
+        alias_name[effect] = alias_match_left[effect]
+    }
+    ## context_configs_type = multiple
+    cui/tenet/tec_tenet_option_is_tenet_allowed = {
+        ## replace_scopes = { this = country  root = any }
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+}
+
+definitions = {
+    ## type = scripted_trigger
+    ## replace_scopes = { this = country }
+    tec_has_tenet
+
+    ## type = scripted_trigger
+    ## replace_scopes = { this = country }
+    tec_is_tenet_allowed
+
+    ## type = scripted_trigger
+    ## replace_scopes = { this = country }
+    tec_has_last_activated_tenet
+
+    ## type = scripted_trigger
+    ## replace_scopes = { this = country }
+    tec_has_last_deactivated_tenet
+
+    ## type = scripted_trigger
+    ## replace_scopes = { this = country }
+    tec_has_tenet_points_available
+
+    ## type = scripted_trigger
+    ## replace_scopes = { this = country }
+    tec_has_pending_tenet_decision
+
+    ## type = scripted_effect
+    ## replace_scopes = { this = country }
+    tec_reset_tenet_cui
+
+    ## type = scripted_effect
+    ## replace_scopes = { this = country }
+    tec_reset_tenet_cui_tabs
+
+    ## type = scripted_effect
+    ## replace_scopes = { this = country }
+    tec_clear_tenet_activate_flag
+
+    ## type = scripted_effect
+    ## replace_scopes = { this = country }
+    tec_clear_tenet_deactivate_flag
+
+    ## type = scripted_effect
+    ## replace_scopes = { this = country }
+    tec_clear_tenets
+
+    ## type = scripted_effect
+    ## replace_scopes = { this = country }
+    tec_clear_invalid_tenets
+
+    ## type = scripted_effect
+    ## replace_scopes = { this = country }
+    tec_recalculate_tenet_points
+
+    ## type = scripted_effect
+    ## replace_scopes = { this = country }
+    tec_activate_tenet
+
+    ## type = scripted_effect
+    ## replace_scopes = { this = country }
+    tec_deactivate_tenet
+
+    ## type = scripted_effect
+    ## replace_scopes = { this = country }
+    tec_internal_tenet_activate_confirmation
+
+    ## type = scripted_effect
+    ## replace_scopes = { this = country }
+    tec_internal_tenet_deactivate_confirmation
+
+    ## type = script_value
+    ## replace_scopes = { this = country }
+    tec_tenet_points_max
+
+    ## type = script_value
+    ## replace_scopes = { this = country }
+    tec_tenet_points_available
+
+    ## type = script_value
+    ## replace_scopes = { this = country }
+    tec_tenet_cost
+
+    ## type = script_value
+    ## replace_scopes = { this = country }
+    tec_tenet_ai_weight
+}
+
+parameters = {
+    ## context_key = inline_script@cui/tenet/tec_tenet_declarations
+    ## context_configs_type = multiple
+    extra = {
+        ## cardinality = 1..1
+        _step = enum[tec_tenet_include_step]
+        ## cardinality = 0..1
+        _tenet = enum[tec_tenet]
+        ## cardinality = 0..1
+        _pass = { }
+        ## cardinality = 0..1
+        ## context_configs_type = multiple
+        ## inherit
+        _code = { }
+    }
+
+    ## context_key = inline_script@cui/tenet/tec_tenet_option_value[anything]
+    name = enum[tec_tenet]
+    ## context_key = inline_script@cui/tenet/tec_tenet_option_value[anything]
+    ## replace_scopes = { this = country  root = any }
+    ## context_configs_type = multiple
+    potential = single_alias_right[trigger_clause]
+    ## context_key = inline_script@cui/tenet/tec_tenet_option_value[anything]
+    ## replace_scopes = { this = country  root = any }
+    ## context_configs_type = multiple
+    allow = single_alias_right[trigger_clause]
+    ## context_key = inline_script@cui/tenet/tec_tenet_option_value[anything]
+    ## replace_scopes = { this = country  root = any }
+    ## context_configs_type = multiple
+    on_activate = single_alias_right[effect_clause]
+    ## context_key = inline_script@cui/tenet/tec_tenet_option_value[anything]
+    ## replace_scopes = { this = country  root = any }
+    ## context_configs_type = multiple
+    on_deactivate = single_alias_right[effect_clause]
+    ## context_key = inline_script@cui/tenet/tec_tenet_option_value[anything]
+    ## replace_scopes = { this = country  root = any }
+    ## context_configs_type = multiple
+    modifier = single_alias_right[modifier_clause]
+    ## context_key = inline_script@cui/tenet/tec_tenet_option_value[anything]
+    bool = hide_modifier
+    ## context_key = inline_script@cui/tenet/tec_tenet_option_value[anything]
+    bool = no_modifier
+    ## context_key = inline_script@cui/tenet/tec_tenet_option_value[anything]
+    ## file_extensions = { .dds .png .tga }
+    icon = filepath
+    ## context_key = inline_script@cui/tenet/tec_tenet_option_value[anything]
+    category = enum[tec_tenet_category]
+    ## context_key = inline_script@cui/tenet/tec_tenet_option_value[anything]
+    ## replace_scopes = { this = country  root = any }
+    ## context_configs_type = multiple
+    cost = single_alias_right[modifier_rule_clause]
+    ## context_key = inline_script@cui/tenet/tec_tenet_option_value[anything]
+    ## replace_scopes = { this = country  root = any }
+    ## context_configs_type = multiple
+    ai_weight = single_alias_right[modifier_rule_clause]
+
+    ## context_key = script_value@tec_tenet_cost
+    TENET = enum[tec_tenet]
+    ## context_key = script_value@tec_tenet_ai_weight
+    TENET = enum[tec_tenet]
+}
+
+
+# types = {
+#     ## type_key_filter = inline_script
+#     type[tec_tenet] = {
+#         name_field = name
+#         path = "common/inline_scripts/cui/tenet/"
+#         path_file = "tec_tenet_declarations.txt"
+#
+#         localisation = {
+#             name = "tec_tenet_$"
+#             desc = "tec_tenet_$_desc"
+#         }
+#     }
+# }

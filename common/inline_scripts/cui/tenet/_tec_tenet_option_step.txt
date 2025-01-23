@@ -1,0 +1,43 @@
+inline_script = {
+    script = tec_type_hint
+    tenet_include_step = $_step$
+
+    tec_tenet = $name$
+    tec_tenet_category = $category$
+    country_modifier_rule_block = "$cost$"
+    country_trigger_block = "$potential$"
+    country_trigger_block = "$allow$"
+    country_effect_block = "$on_activate$"
+    country_effect_block = "$on_deactivate$"
+    country_modifier_block = "$modifier$"
+    int = $x$
+    int = $y$
+    icon = $icon$
+    country_modifier_rule_block = "$ai_weight$"
+}
+
+
+
+inline_script = {
+    script = cui/tenet/_tec_tenet_option_step_$$_key$$
+    _step = $_step$
+    _pass = "$_pass$"
+    _code = "$_code$"
+
+    # actual parameters
+
+    name = $name$
+    category = $category$
+    cost = "$cost$"
+    x = $x$
+    y = $y$
+    potential = "$potential$"
+    allow = "$allow$"
+    on_activate = "$on_activate$"
+    on_deactivate = "$on_deactivate$"
+    modifier = "$modifier$"
+    no_modifier = $no_modifier$
+    hide_modifier = $hide_modifier$
+    icon = $icon$
+    ai_weight = "$ai_weight$"
+}

@@ -12,7 +12,7 @@ namespace = overwritten_event
 #	id = overwritten_event.2
 
 planet_event = {
-	id = overwritten_event
+	id = overwritten_event.1
 	hide_window = yes
 	is_triggered_only = yes
 
