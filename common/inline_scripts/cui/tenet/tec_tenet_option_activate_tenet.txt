@@ -1,0 +1,58 @@
+# cui/tenet/tec_tenet_option_activate_tenet.txt
+
+if = {
+    limit = {
+        OR = {
+            NOT = {
+                tec_has_tenet = {
+                    tenet = $name$
+                }
+            }
+            always = $_tooltip$
+        }
+        OR = {
+            always = $_force$
+            tec_is_tenet_allowed = {
+                tenet = $name$
+            }
+        }
+    }
+    set_country_flag = tec_tenet_$name$
+    if = {
+        limit = {
+            NOT = { always = $no_modifier$ }
+        }
+        if = {
+            limit = {
+                always = $hide_modifier$
+            }
+            hidden_effect = {
+                add_modifier = {
+                    modifier = $name$_modifier
+                    days = -1
+                }
+            }
+        } else = {
+            add_modifier = {
+                modifier = $name$_modifier
+                days = -1
+            }
+        }
+    }
+    tec_clear_tenet_activate_flag = yes
+    set_country_flag = tec_tenet_$name$_last_activated
+    $on_activate$
+    fire_on_action = {
+        on_action = tec_tenet_on_activate
+    }
+    hidden_effect = {
+        create_variable_if_not_exists = {
+            VARIABLE = tec_tenet_points_used
+            VALUE_IF_CREATED = 0
+        }
+        change_variable = {
+            which = tec_tenet_points_used
+            value = value:tec_tenet_cost|tenet|$name$|
+        }
+    }
+}

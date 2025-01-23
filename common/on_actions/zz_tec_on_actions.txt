@@ -1,0 +1,2 @@
+tec_tenet_on_activate = {}
+tec_tenet_on_deactivate = {}

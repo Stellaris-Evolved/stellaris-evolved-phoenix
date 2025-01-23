@@ -1,0 +1,1958 @@
+@tec_button_size = 45
+@tec_button_complete_width = 255
+@tec_section_size = 795
+@tec_section_height = 550
+@tec_text_size = 200
+@tec_grid_padding = 10
+@tec_grid_padding_left = 20
+@tec_section_2_top = 100
+@tec_section_3_top = 255
+@tec_section_4_top = 410
+@tec_section_header = 35
+guiTypes = {
+# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_state_religion_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 0) + tec_button_complete_width * 0]
+        y = @[tec_grid_padding * (0.5 + 0) + tec_button_size * 0]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_state_religion_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_state_religion_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_state_religion_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_state_religion_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_state_religion_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_state_religion"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_state_religion_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_state_religion_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_state_religion_cost"
+        multiline = yes
+        effect = "tec_tenet_state_religion_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_state_religion_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_state_religion_cost_red"
+        multiline = yes
+        effect = "tec_tenet_state_religion_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_state_religion_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_state_religion_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_state_religion_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_state_religion" 	# header text
+        multiline = yes
+        effect = "tec_tenet_state_religion_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_state_religion_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_state_religion_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_state_religion_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_state_religion_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_state_religion_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_state_religion_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_materialistic_views_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 0) + tec_button_complete_width * 0]
+        y = @[tec_grid_padding * (0.5 + 1) + tec_button_size * 1]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_materialistic_views_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_materialistic_views_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_materialistic_views_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_materialistic_views_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_materialistic_views_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_materialistic_views"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_materialistic_views_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_materialistic_views_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_materialistic_views_cost"
+        multiline = yes
+        effect = "tec_tenet_materialistic_views_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_materialistic_views_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_materialistic_views_cost_red"
+        multiline = yes
+        effect = "tec_tenet_materialistic_views_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_materialistic_views_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_materialistic_views_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_materialistic_views_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_materialistic_views" 	# header text
+        multiline = yes
+        effect = "tec_tenet_materialistic_views_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_materialistic_views_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_materialistic_views_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_materialistic_views_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_materialistic_views_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_materialistic_views_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_materialistic_views_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_entrepreneur_economy_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 0) + tec_button_complete_width * 0]
+        y = @[tec_grid_padding * (0.5 + 2) + tec_button_size * 2]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_entrepreneur_economy_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_entrepreneur_economy_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_entrepreneur_economy_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_entrepreneur_economy_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_entrepreneur_economy_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_entrepreneur_economy"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_entrepreneur_economy_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_entrepreneur_economy_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_entrepreneur_economy_cost"
+        multiline = yes
+        effect = "tec_tenet_entrepreneur_economy_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_entrepreneur_economy_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_entrepreneur_economy_cost_red"
+        multiline = yes
+        effect = "tec_tenet_entrepreneur_economy_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_entrepreneur_economy_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_entrepreneur_economy_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_entrepreneur_economy_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_entrepreneur_economy" 	# header text
+        multiline = yes
+        effect = "tec_tenet_entrepreneur_economy_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_entrepreneur_economy_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_entrepreneur_economy_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_entrepreneur_economy_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_entrepreneur_economy_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_entrepreneur_economy_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_entrepreneur_economy_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_public_employment_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 0) + tec_button_complete_width * 0]
+        y = @[tec_grid_padding * (0.5 + 3) + tec_button_size * 3]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_public_employment_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_public_employment_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_public_employment_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_public_employment_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_public_employment_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_public_employment"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_public_employment_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_public_employment_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_public_employment_cost"
+        multiline = yes
+        effect = "tec_tenet_public_employment_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_public_employment_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_public_employment_cost_red"
+        multiline = yes
+        effect = "tec_tenet_public_employment_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_public_employment_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_public_employment_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_public_employment_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_public_employment" 	# header text
+        multiline = yes
+        effect = "tec_tenet_public_employment_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_public_employment_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_public_employment_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_public_employment_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_public_employment_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_public_employment_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_public_employment_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_reform_and_opening_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 1) + tec_button_complete_width * 1]
+        y = @[tec_grid_padding * (0.5 + 3) + tec_button_size * 3]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_reform_and_opening_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_reform_and_opening_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_reform_and_opening_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_reform_and_opening_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_reform_and_opening_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_reform_and_opening"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_reform_and_opening_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_reform_and_opening_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_reform_and_opening_cost"
+        multiline = yes
+        effect = "tec_tenet_reform_and_opening_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_reform_and_opening_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_reform_and_opening_cost_red"
+        multiline = yes
+        effect = "tec_tenet_reform_and_opening_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_reform_and_opening_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_reform_and_opening_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_reform_and_opening_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_reform_and_opening" 	# header text
+        multiline = yes
+        effect = "tec_tenet_reform_and_opening_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_reform_and_opening_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_reform_and_opening_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_reform_and_opening_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_reform_and_opening_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_reform_and_opening_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_reform_and_opening_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_keys_to_power_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 0) + tec_button_complete_width * 0]
+        y = @[tec_grid_padding * (0.5 + 4) + tec_button_size * 4]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_keys_to_power_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_keys_to_power_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_keys_to_power_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_keys_to_power_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_keys_to_power_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_keys_to_power"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_keys_to_power_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_keys_to_power_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_keys_to_power_cost"
+        multiline = yes
+        effect = "tec_tenet_keys_to_power_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_keys_to_power_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_keys_to_power_cost_red"
+        multiline = yes
+        effect = "tec_tenet_keys_to_power_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_keys_to_power_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_keys_to_power_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_keys_to_power_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_keys_to_power" 	# header text
+        multiline = yes
+        effect = "tec_tenet_keys_to_power_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_keys_to_power_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_keys_to_power_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_keys_to_power_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_keys_to_power_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_keys_to_power_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_keys_to_power_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_executive_aggrandizement_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 0) + tec_button_complete_width * 0]
+        y = @[tec_grid_padding * (0.5 + 5) + tec_button_size * 5]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_executive_aggrandizement_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_executive_aggrandizement_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_executive_aggrandizement_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_executive_aggrandizement_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_executive_aggrandizement_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_executive_aggrandizement"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_executive_aggrandizement_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_executive_aggrandizement_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_executive_aggrandizement_cost"
+        multiline = yes
+        effect = "tec_tenet_executive_aggrandizement_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_executive_aggrandizement_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_executive_aggrandizement_cost_red"
+        multiline = yes
+        effect = "tec_tenet_executive_aggrandizement_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_executive_aggrandizement_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_executive_aggrandizement_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_executive_aggrandizement_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_executive_aggrandizement" 	# header text
+        multiline = yes
+        effect = "tec_tenet_executive_aggrandizement_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_executive_aggrandizement_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_executive_aggrandizement_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_executive_aggrandizement_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_executive_aggrandizement_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_executive_aggrandizement_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_executive_aggrandizement_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_cosmic_curiosity_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 0) + tec_button_complete_width * 0]
+        y = @[tec_grid_padding * (0.5 + 6) + tec_button_size * 6]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_cosmic_curiosity_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cosmic_curiosity_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cosmic_curiosity_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cosmic_curiosity_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cosmic_curiosity_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_cosmic_curiosity"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cosmic_curiosity_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cosmic_curiosity_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_cosmic_curiosity_cost"
+        multiline = yes
+        effect = "tec_tenet_cosmic_curiosity_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cosmic_curiosity_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_cosmic_curiosity_cost_red"
+        multiline = yes
+        effect = "tec_tenet_cosmic_curiosity_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_cosmic_curiosity_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cosmic_curiosity_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cosmic_curiosity_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_cosmic_curiosity" 	# header text
+        multiline = yes
+        effect = "tec_tenet_cosmic_curiosity_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cosmic_curiosity_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cosmic_curiosity_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cosmic_curiosity_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cosmic_curiosity_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cosmic_curiosity_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cosmic_curiosity_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_interspecies_grievances_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 0) + tec_button_complete_width * 0]
+        y = @[tec_grid_padding * (0.5 + 7) + tec_button_size * 7]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_interspecies_grievances_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_interspecies_grievances_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_interspecies_grievances_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_interspecies_grievances_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_interspecies_grievances_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_interspecies_grievances"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_interspecies_grievances_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_interspecies_grievances_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_interspecies_grievances_cost"
+        multiline = yes
+        effect = "tec_tenet_interspecies_grievances_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_interspecies_grievances_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_interspecies_grievances_cost_red"
+        multiline = yes
+        effect = "tec_tenet_interspecies_grievances_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_interspecies_grievances_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_interspecies_grievances_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_interspecies_grievances_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_interspecies_grievances" 	# header text
+        multiline = yes
+        effect = "tec_tenet_interspecies_grievances_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_interspecies_grievances_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_interspecies_grievances_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_interspecies_grievances_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_interspecies_grievances_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_interspecies_grievances_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_interspecies_grievances_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_selective_xenophilia_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 1) + tec_button_complete_width * 1]
+        y = @[tec_grid_padding * (0.5 + 7) + tec_button_size * 7]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_selective_xenophilia_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_selective_xenophilia_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_selective_xenophilia_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_selective_xenophilia_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_selective_xenophilia_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_selective_xenophilia"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_selective_xenophilia_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_selective_xenophilia_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_selective_xenophilia_cost"
+        multiline = yes
+        effect = "tec_tenet_selective_xenophilia_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_selective_xenophilia_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_selective_xenophilia_cost_red"
+        multiline = yes
+        effect = "tec_tenet_selective_xenophilia_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_selective_xenophilia_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_selective_xenophilia_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_selective_xenophilia_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_selective_xenophilia" 	# header text
+        multiline = yes
+        effect = "tec_tenet_selective_xenophilia_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_selective_xenophilia_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_selective_xenophilia_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_selective_xenophilia_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_selective_xenophilia_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_selective_xenophilia_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_selective_xenophilia_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_strategic_readiness_initiaitive_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 0) + tec_button_complete_width * 0]
+        y = @[tec_grid_padding * (0.5 + 8) + tec_button_size * 8]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_strategic_readiness_initiaitive_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_strategic_readiness_initiaitive_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_strategic_readiness_initiaitive_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_strategic_readiness_initiaitive_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_strategic_readiness_initiaitive_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_strategic_readiness_initiaitive"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_strategic_readiness_initiaitive_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_strategic_readiness_initiaitive_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_strategic_readiness_initiaitive_cost"
+        multiline = yes
+        effect = "tec_tenet_strategic_readiness_initiaitive_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_strategic_readiness_initiaitive_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_strategic_readiness_initiaitive_cost_red"
+        multiline = yes
+        effect = "tec_tenet_strategic_readiness_initiaitive_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_strategic_readiness_initiaitive_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_strategic_readiness_initiaitive_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_strategic_readiness_initiaitive_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_strategic_readiness_initiaitive" 	# header text
+        multiline = yes
+        effect = "tec_tenet_strategic_readiness_initiaitive_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_strategic_readiness_initiaitive_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_strategic_readiness_initiaitive_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_strategic_readiness_initiaitive_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_strategic_readiness_initiaitive_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_strategic_readiness_initiaitive_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_strategic_readiness_initiaitive_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_deescalation_doctrine_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 0) + tec_button_complete_width * 0]
+        y = @[tec_grid_padding * (0.5 + 9) + tec_button_size * 9]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_deescalation_doctrine_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_deescalation_doctrine_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_deescalation_doctrine_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_deescalation_doctrine_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_deescalation_doctrine_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_deescalation_doctrine"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_deescalation_doctrine_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_deescalation_doctrine_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_deescalation_doctrine_cost"
+        multiline = yes
+        effect = "tec_tenet_deescalation_doctrine_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_deescalation_doctrine_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_deescalation_doctrine_cost_red"
+        multiline = yes
+        effect = "tec_tenet_deescalation_doctrine_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_deescalation_doctrine_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_deescalation_doctrine_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_deescalation_doctrine_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_deescalation_doctrine" 	# header text
+        multiline = yes
+        effect = "tec_tenet_deescalation_doctrine_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_deescalation_doctrine_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_deescalation_doctrine_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_deescalation_doctrine_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_deescalation_doctrine_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_deescalation_doctrine_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_deescalation_doctrine_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_direct_democratic_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 0) + tec_button_complete_width * 0]
+        y = @[tec_grid_padding * (0.5 + 0) + tec_button_size * 0]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_direct_democratic_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_direct_democratic_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_direct_democratic_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_direct_democratic_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_direct_democratic_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_direct_democratic"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_direct_democratic_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_direct_democratic_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_direct_democratic_cost"
+        multiline = yes
+        effect = "tec_tenet_direct_democratic_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_direct_democratic_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_direct_democratic_cost_red"
+        multiline = yes
+        effect = "tec_tenet_direct_democratic_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_direct_democratic_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_direct_democratic_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_direct_democratic_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_direct_democratic" 	# header text
+        multiline = yes
+        effect = "tec_tenet_direct_democratic_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_direct_democratic_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_direct_democratic_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_direct_democratic_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_direct_democratic_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_direct_democratic_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_direct_democratic_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_ecclesiocracy_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 1) + tec_button_complete_width * 1]
+        y = @[tec_grid_padding * (0.5 + 0) + tec_button_size * 0]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_ecclesiocracy_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_ecclesiocracy_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_ecclesiocracy_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_ecclesiocracy_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_ecclesiocracy_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_ecclesiocracy"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_ecclesiocracy_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_ecclesiocracy_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_ecclesiocracy_cost"
+        multiline = yes
+        effect = "tec_tenet_ecclesiocracy_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_ecclesiocracy_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_ecclesiocracy_cost_red"
+        multiline = yes
+        effect = "tec_tenet_ecclesiocracy_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_ecclesiocracy_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_ecclesiocracy_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_ecclesiocracy_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_ecclesiocracy" 	# header text
+        multiline = yes
+        effect = "tec_tenet_ecclesiocracy_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_ecclesiocracy_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_ecclesiocracy_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_ecclesiocracy_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_ecclesiocracy_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_ecclesiocracy_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_ecclesiocracy_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_theocracy_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 2) + tec_button_complete_width * 2]
+        y = @[tec_grid_padding * (0.5 + 0) + tec_button_size * 0]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_theocracy_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_theocracy_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_theocracy_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_theocracy_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_theocracy_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_theocracy"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_theocracy_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_theocracy_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_theocracy_cost"
+        multiline = yes
+        effect = "tec_tenet_theocracy_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_theocracy_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_theocracy_cost_red"
+        multiline = yes
+        effect = "tec_tenet_theocracy_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_theocracy_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_theocracy_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_theocracy_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_theocracy" 	# header text
+        multiline = yes
+        effect = "tec_tenet_theocracy_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_theocracy_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_theocracy_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_theocracy_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_theocracy_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_theocracy_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_theocracy_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_cyber_creed_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 0) + tec_button_complete_width * 0]
+        y = @[tec_grid_padding * (0.5 + 1) + tec_button_size * 1]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_creed_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_creed_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_creed_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_creed_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_creed_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_cyber_creed"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_creed_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_creed_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_cyber_creed_cost"
+        multiline = yes
+        effect = "tec_tenet_cyber_creed_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_creed_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_cyber_creed_cost_red"
+        multiline = yes
+        effect = "tec_tenet_cyber_creed_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_creed_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_creed_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_creed_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_cyber_creed" 	# header text
+        multiline = yes
+        effect = "tec_tenet_cyber_creed_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_creed_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_creed_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_creed_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_creed_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_creed_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_creed_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_cyber_individualist_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 1) + tec_button_complete_width * 1]
+        y = @[tec_grid_padding * (0.5 + 1) + tec_button_size * 1]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_individualist_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_individualist_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_individualist_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_individualist_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_individualist_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_cyber_individualist"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_individualist_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_individualist_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_cyber_individualist_cost"
+        multiline = yes
+        effect = "tec_tenet_cyber_individualist_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_individualist_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_cyber_individualist_cost_red"
+        multiline = yes
+        effect = "tec_tenet_cyber_individualist_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_individualist_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_individualist_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_individualist_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_cyber_individualist" 	# header text
+        multiline = yes
+        effect = "tec_tenet_cyber_individualist_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_individualist_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_individualist_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_individualist_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_individualist_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_individualist_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_individualist_button_effect_allowed"
+    }
+}# cui/tenet/tec_tenet_option_button.txt
+
+containerWindowType = {
+    name = "tec_cui_tec_tenet_cyber_collectivist_container"
+    position = {
+        x = @[tec_grid_padding * (0.5 + 2) + tec_button_complete_width * 2]
+        y = @[tec_grid_padding * (0.5 + 1) + tec_button_size * 1]
+    }
+    size = {
+        width = @[ tec_button_complete_width ]
+        height = @[ tec_button_size ]
+    }
+
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_collectivist_bg"
+        quadTextureSprite = "GFX_bg_area_light"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_collectivist_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_collectivist_bg_glow"
+        quadTextureSprite = "GFX_glow_tile_cyan_no_padding"
+        position = { x = -1 y = -1 }
+        size = { x = @[tec_button_complete_width +2] y = @[tec_button_size + 2] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_collectivist_glow_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_collectivist_icon"
+        quadTextureSprite = "GFX_tec_tenet_tec_tenet_cyber_collectivist"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_collectivist_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_collectivist_cost"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_cyber_collectivist_cost"
+        multiline = yes
+        effect = "tec_tenet_cyber_collectivist_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_collectivist_cost_red"
+        position = { x = @[tec_button_complete_width - 25] y = 0 }
+        size = { x = 25 y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_cui_tec_tenet_cyber_collectivist_cost_red"
+        multiline = yes
+        effect = "tec_tenet_cyber_collectivist_button_effect_not_enough_points_cost"
+    }
+
+
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_collectivist_lock"
+        quadTextureSprite = "GFX_tec_lock"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_collectivist_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_collectivist_text"
+        position = { x = @[tec_button_size + tec_grid_padding] y = 0 }
+        size = { x = @tec_text_size y = @tec_button_size }
+        buttonFont = "cg_16b"
+        buttonText = "tec_tenet_cyber_collectivist" 	# header text
+        multiline = yes
+        effect = "tec_tenet_cyber_collectivist_background_effect"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_collectivist_disallowed"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_collectivist_button_effect_disallowed"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_collectivist_not_enough_points"
+        quadTextureSprite = "GFX_invisible"
+        position = { x = 0 y = 0 }
+        size = { x = @tec_button_complete_width y = @tec_button_size }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_collectivist_button_effect_not_enough_points"
+    }
+
+    effectButtonType = {
+        name = "tec_tenet_cyber_collectivist_allowed"
+        quadTextureSprite = "GFX_button_light"
+        position = { x = -2 y = -2 }
+        size = { x = @[tec_button_complete_width +4] y = @[tec_button_size + 4] }
+        buttonFont = "cg_16b"
+        effect = "tec_tenet_cyber_collectivist_button_effect_allowed"
+    }
+}
+}

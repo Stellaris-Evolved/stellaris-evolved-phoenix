@@ -1,0 +1,239 @@
+
+namespace = tec_cui_tenet
+
+country_event = {
+    id = tec_cui_tenet.1
+    title = tec_blank
+    desc = tec_blank
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "tec_tenet_view"
+    trigger = { always = yes }
+
+    immediate = {
+        set_country_flag = tec_tenet_basic_tab_active
+    }
+
+    option = {
+        name = tec_blank
+        tec_reset_tenet_cui = yes
+    }
+
+    abort_trigger = {
+        has_active_event = {
+            tec_cui_tenet.5
+            tec_cui_tenet.7
+        }
+    }
+
+    after = { tec_reset_tenet_cui = yes }
+}
+
+country_event = {
+    id = tec_cui_tenet.2
+    title = tec_cui_tenet_title_activate_tenet
+    desc = tec_cui_tenet_title_activate_tenet_desc
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "tec_cui_confirm_view"
+    trigger = { always = yes }
+
+    option = {
+        name = YES
+
+        switch = {
+            trigger = has_country_flag
+            inline_script = {
+                script = iterators/tec_iterate_tenet
+                code = "
+                    tec_tenet_queue_$name$ = {
+                        tec_activate_tenet = {
+                            tenet = $name$
+                            tooltip = yes
+                        }
+                    }
+                "
+            }
+        }
+        custom_gui = tec_cui_confirm_option_yes
+    }
+
+    option = {
+        name = NO
+        default_hide_option = yes
+        custom_gui = tec_cui_confirm_option_no
+    }
+
+    after = {
+        inline_script = {
+            script = iterators/tec_iterate_tenet
+            code = "
+                remove_country_flag = tec_tenet_queue_$name$
+            "
+        }
+        remove_country_flag = tec_tenet_decision_pending
+    }
+}
+
+country_event = {
+    id = tec_cui_tenet.3
+    title = tec_cui_tenet_title_deactivate_tenet
+    desc = tec_cui_tenet_title_deactivate_tenet_desc
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "tec_cui_confirm_view"
+    trigger = { always = yes }
+
+    option = {
+        name = YES
+
+        switch = {
+            trigger = has_country_flag
+            inline_script = {
+                script = iterators/tec_iterate_tenet
+                code = "
+                    tec_tenet_queue_$name$ = {
+                        tec_deactivate_tenet = {
+                            tenet = $name$
+                            tooltip = yes
+                        }
+                    }
+                "
+            }
+        }
+        custom_gui = tec_cui_confirm_option_yes
+    }
+
+    option = {
+        name = NO
+        default_hide_option = yes
+        custom_gui = tec_cui_confirm_option_no
+    }
+
+    after = {
+        inline_script = {
+            script = iterators/tec_iterate_tenet
+            code = "
+                remove_country_flag = tec_tenet_queue_$name$
+            "
+        }
+        remove_country_flag = tec_tenet_decision_pending
+    }
+}
+
+
+country_event = {
+    id = tec_cui_tenet.4
+    is_triggered_only = yes
+    hide_window = yes
+
+
+    trigger = { always = yes }
+
+    immediate = {
+        tec_clear_invalid_tenets = yes
+        tec_recalculate_tenet_points = yes
+    }
+}
+
+
+country_event = {
+    id = tec_cui_tenet.5
+    title = tec_cui_tenet.5.name
+    desc = tec_cui_tenet.5.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "tec_tenet_view"
+    auto_opens = no
+    notification_event_icon = "GFX_message_unknown"
+
+    trigger = { always = yes }
+
+    immediate = {
+        set_country_flag = tec_tenet_basic_tab_active
+    }
+
+    option = {
+        name = tec_blank
+        tec_reset_tenet_cui = yes
+    }
+
+    abort_trigger = {
+        has_active_event = {
+            tec_cui_tenet.1
+            tec_cui_tenet.7
+        }
+    }
+
+    after = { tec_reset_tenet_cui = yes }
+}
+
+# THIS = country
+# Fired by: on_post_government_changed
+country_event = {
+    id = tec_cui_tenet.6
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        tec_clear_invalid_tenets = yes
+        tec_recalculate_tenet_points = yes
+    }
+}
+
+country_event = {
+    id = tec_cui_tenet.7
+    title = tec_cui_tenet.7.name
+    desc = tec_cui_tenet.7.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "tec_tenet_view"
+    auto_opens = no
+    notification_event_icon = "GFX_message_unknown"
+
+    trigger = { always = yes }
+
+    immediate = {
+        set_country_flag = tec_tenet_basic_tab_active
+    }
+
+    option = {
+        name = tec_blank
+        tec_reset_tenet_cui = yes
+    }
+
+    abort_trigger = {
+        has_active_event = {
+            tec_cui_tenet.1
+            tec_cui_tenet.5
+        }
+    }
+
+    after = { tec_reset_tenet_cui = yes }
+}
+
+
+country_event = {
+    id = tec_cui_tenet.8
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        NOR = {
+            has_active_event = {
+                tec_cui_tenet.1
+                tec_cui_tenet.5
+                tec_cui_tenet.7
+            }
+        }
+        check_variable_arithmetic = {
+            which = value:tec_tenet_points_available
+            value > 0
+        }
+    }
+
+    immediate = {
+        tec_internal_tenet_points_available_alarm = yes
+    }
+}

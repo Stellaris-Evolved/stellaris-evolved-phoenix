@@ -1,0 +1,5 @@
+# cui/tenet/tec_tenet_option_modifier.txt
+
+$name$_modifier = {
+    $modifier$
+}

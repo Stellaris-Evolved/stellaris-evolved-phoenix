@@ -1,0 +1,768 @@
+# cui/tenet/tec_tenet_declarations.txt
+
+inline_script = {
+    # These two lines are mandatory in this specific order
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    # this is the tenet code name and will be referenced in scripted triggers etc
+    name = tec_tenet_example
+
+    category = spiritualist
+
+    x = -1
+    y = -1
+
+    # This is the icon, atm it does nothing but be metadata for our internal tools
+    # that autogenerate stuff for us. In the future if inlines work in .gfx files
+    # this will actually do something.
+
+    # Tenet will require the following sprite to be created manually for modders without
+    # our internal tools. GFX_tec_tenet_<name> (<name> is name from above)
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_artifice_1.dds
+
+    # empire wide modifier to apply when taking the tenet, this again as `icon`
+    # is metadata for our internal tools that autogenerate stuff.
+
+    # Tenet will require the following static_modifier to be created manually for modders without
+    # our internal tools. tec_tenet_<name>_modifier (<name> is name from above)
+    modifier = "
+        planet_jobs_unity_produces_mult = 1
+    "
+
+    # This controls seeing it in UI, in most cases it is not needed (as it is assumed it is present
+    # at all times. Considering the rigidity of UI modding, this should be used only in very few instances
+    # One such instance would be a Tenet swap, aka making a tenet that is exclusive with another and share
+    # same position in UI
+    potential = "
+        always = no
+    "
+
+    # This controls if and when the Tenet is pickable in UI, aka its actual requirements
+    # if not provided it is assumed that Tenet can be picked at all times
+    allow = "
+        NOT = {
+            tec_has_tenet = {
+                tenet = tec_tenet_prosperity
+            }
+        }
+    "
+
+    # This is an effect that is ran when the Tenet is activated, can be omitted
+    on_activate = "
+        capital_scope = {
+            change_pc = pc_gaia
+        }
+    "
+    # This is an effect that is ran when the Tenet is deactivated, can be omitted
+    on_deactivate = "
+        random_owned_pop = {
+            kill_pop = yes
+        }
+    "
+}
+
+# Basic
+
+# Ethic Based
+
+# Spiritualist
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_state_religion
+    category = basic
+
+    x = 0
+    y = 0
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    modifier = "
+        planet_priests_unity_produces_add = -1
+    "
+    allow = "
+        is_spiritualist = no
+        has_make_spiritualist_perk = no
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_state_religion_effect
+    "
+}
+
+# Materialist
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_materialistic_views
+    category = basic
+
+    x = 0
+    y = 1
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    modifier = "
+        pop_happiness = -0.075
+    "
+    allow = "
+        is_materialist = no
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_materialistic_views_effect
+    "
+}
+
+# Competitive
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_entrepreneur_economy
+    category = basic
+
+    x = 0
+    y = 2
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    modifier = "
+        pop_cat_worker_happiness = -0.1
+    "
+    allow = "
+        is_competitive = no
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_entrepreneur_economy_effect
+    "
+}
+
+# Cooperative
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_public_employment
+    category = basic
+
+    x = 0
+    y = 3
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    modifier = "
+        unemployment_resources_consumer_goods_upkeep_add = 0.5
+    "
+    allow = "
+        is_cooperative = no
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_public_employment_effect
+    "
+}
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_reform_and_opening
+    category = basic
+
+    x = 1
+    y = 3
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    modifier = "
+        planet_max_branch_office_buildings_add = 1
+    "
+    allow = "
+        is_cooperative = yes
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_reform_and_opening_effect
+    "
+}
+
+# egalitarian
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_keys_to_power
+    category = basic
+
+    x = 0
+    y = 4
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    modifier = "
+        pop_factions_produces_mult = 0.15
+        pop_cat_ruler_happiness = -0.20
+    "
+    allow = "
+        is_egalitarian = no
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_keys_to_power_effect
+    "
+}
+
+# authoritarian
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_executive_aggrandizement
+    category = basic
+
+    x = 0
+    y = 5
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    modifier = "
+        election_term_years_mult = 1
+        faction_approval = -0.1
+        pop_cat_ruler_political_power = 0.5
+    "
+    allow = "
+        is_authoritarian = no
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_executive_aggrandizement_effect
+    "
+}
+
+# xenophile
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_cosmic_curiosity
+    category = basic
+
+    x = 0
+    y = 6
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    modifier = "
+        diplomacy_upkeep_mult = -0.1
+        first_contact_clues_add = 1
+        intel_encryption_add = -1
+    "
+    allow = "
+        is_xenophile = no
+        is_homicidal = no
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_cosmic_curiosity_effect
+    "
+}
+
+# xenophobe
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_interspecies_grievances
+    category = basic
+
+    x = 0
+    y = 7
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    modifier = "
+        ship_home_territory_fire_rate_mult = 0.075
+        diplo_weight_mult = -0.1
+    "
+    allow = "
+        is_xenophobe = no
+        has_comms_with_alien_empire = yes
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_interspecies_grievances_effect
+    "
+}
+
+# TODO implement
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_selective_xenophilia
+    category = basic
+
+    x = 1
+    y = 7
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    no_modifier = yes
+    allow = "
+        is_xenophobe = yes
+        is_homicidal = no
+        tec_is_selective_kinship_empire = no
+        any_owned_species = {
+            NOT = { is_same_species = prev }
+        }
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_selective_xenophilia_effect
+    "
+}
+
+
+# militarist
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_strategic_readiness_initiaitive
+    category = basic
+
+    x = 0
+    y = 8
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    modifier = "
+        pop_job_naval_mult = 0.05
+        ship_orbit_upkeep_mult = 0.05
+    "
+    allow = "
+        is_militarist = no
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_strategic_readiness_initiaitive_effect
+    "
+}
+
+# pacifist
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_deescalation_doctrine
+    category = basic
+
+    x = 0
+    y = 9
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    modifier = "
+		starbase_defense_platform_capacity_add = 2
+        country_war_exhaustion_mult = 0.1
+    "
+    allow = "
+        is_pacifist = no
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_deescalation_doctrine_effect
+    "
+}
+
+# tenets
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_knowledge
+    category = spiritualist
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    modifier = "
+        planet_priests_unity_produces_add = -1
+    "
+    allow = "
+        NOT = {
+            tec_has_tenet = {
+                tenet = tec_tenet_prosperity
+            }
+        }
+    "
+    on_activate = "
+        capital_scope = {
+            change_pc = pc_city
+        }
+    "
+}
+
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_prosperity
+    category = spiritualist
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    modifier = "
+        planet_priests_unity_produces_add = -1
+    "
+    allow = "
+        NOT = {
+            tec_has_tenet = {
+                tenet = tec_tenet_knowledge
+            }
+        }
+    "
+    on_activate = "
+        capital_scope = {
+            change_pc = pc_city
+        }
+    "
+}
+
+# special
+
+# advanced
+
+# authority
+
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_direct_democratic
+    category = authority
+    cost = "
+        base = 1
+        modifier = {
+            has_ethic = ethic_fanatic_egalitarian
+            set = 0
+        }
+        modifier = {
+            has_ethic = ethic_egalitarian
+            is_pluralist = yes
+            set = 0
+        }
+    "
+
+    x = 0
+    y = 0
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    no_modifier = yes
+    allow = "
+        OR = {
+            tec_country_has_no_authority_swap = yes
+            tec_has_tenet = { tenet = tec_tenet_direct_democratic }
+        }
+        has_authority = auth_democratic
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_direct_democratic_effect
+        hidden_effect = {
+            fire_on_action = {
+                on_action = on_pre_government_changed
+            }
+            advanced_authority_refresh = yes
+            fire_on_action = {
+                on_action = on_post_government_changed
+            }
+        }
+    "
+    on_deactivate = "
+        custom_tooltip = tec_tenet_deactivate_generic
+        hidden_effect = {
+            fire_on_action = {
+                on_action = on_pre_government_changed
+            }
+            advanced_authority_refresh = yes
+            fire_on_action = {
+                on_action = on_post_government_changed
+            }
+        }
+    "
+}
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_ecclesiocracy
+    category = authority
+
+    cost = "
+        base = 1
+        modifier = {
+            has_ethic = ethic_fanatic_spiritualist
+            set = 0
+        }
+        modifier = {
+            has_ethic = ethic_spiritualist
+            is_elitist = yes
+            set = 0
+        }
+    "
+
+    x = 1
+    y = 0
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    no_modifier = yes
+    allow = "
+        OR = {
+            tec_country_has_no_authority_swap = yes
+            tec_has_tenet = { tenet = tec_tenet_ecclesiocracy }
+        }
+        has_authority = auth_oligarchic
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_ecclesiocracy_effect
+        hidden_effect = {
+            fire_on_action = {
+                on_action = on_pre_government_changed
+            }
+            advanced_authority_refresh = yes
+            fire_on_action = {
+                on_action = on_post_government_changed
+            }
+        }
+    "
+    on_deactivate = "
+        custom_tooltip = tec_tenet_deactivate_generic
+        hidden_effect = {
+            fire_on_action = {
+                on_action = on_pre_government_changed
+            }
+            advanced_authority_refresh = yes
+            fire_on_action = {
+                on_action = on_post_government_changed
+            }
+        }
+    "
+}
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_theocracy
+    category = authority
+
+    cost = "
+        base = 1
+        modifier = {
+            has_ethic = ethic_fanatic_spiritualist
+            set = 0
+        }
+        modifier = {
+            has_ethic = ethic_spiritualist
+            is_authoritarian = yes
+            set = 0
+        }
+        modifier = {
+            has_civic = civic_psionic_sovereign
+            set = 0
+        }
+    "
+
+    x = 2
+    y = 0
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    no_modifier = yes
+    allow = "
+        OR = {
+            tec_country_has_no_authority_swap = yes
+            tec_has_tenet = { tenet = tec_tenet_theocracy }
+        }
+        has_authority = auth_dictatorial
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_theocracy_effect
+        hidden_effect = {
+            fire_on_action = {
+                on_action = on_pre_government_changed
+            }
+            advanced_authority_refresh = yes
+            fire_on_action = {
+                on_action = on_post_government_changed
+            }
+        }
+    "
+    on_deactivate = "
+        custom_tooltip = tec_tenet_deactivate_generic
+        hidden_effect = {
+            fire_on_action = {
+                on_action = on_pre_government_changed
+            }
+            advanced_authority_refresh = yes
+            fire_on_action = {
+                on_action = on_post_government_changed
+            }
+        }
+    "
+}
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_cyber_creed
+    category = authority
+
+    cost = "
+        base = 0
+    "
+
+    x = 0
+    y = 1
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    no_modifier = yes
+    allow = "
+        OR = {
+            tec_country_has_no_authority_swap = yes
+            tec_has_tenet = { tenet = tec_tenet_cyber_creed }
+        }
+        has_origin = origin_cybernetic_creed
+        custom_tooltip = {
+            text = tec_tenet_tec_tenet_cyber_creed_requirement
+            has_country_flag = tec_has_cyber_creed_authority_tenet
+        }
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_cyber_creed_effect
+        hidden_effect = {
+            fire_on_action = {
+                on_action = on_pre_government_changed
+            }
+            set_country_flag = cyber_creed_advanced_government
+            advanced_authority_refresh = yes
+            fire_on_action = {
+                on_action = on_post_government_changed
+            }
+        }
+    "
+
+    on_deactivate = "
+        custom_tooltip = tec_tenet_deactivate_generic
+        hidden_effect = {
+            fire_on_action = {
+                on_action = on_pre_government_changed
+            }
+            remove_country_flag = cyber_creed_advanced_government
+            advanced_authority_refresh = yes
+            fire_on_action = {
+                on_action = on_post_government_changed
+            }
+        }
+    "
+}
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_cyber_individualist
+    category = authority
+
+    cost = "
+        base = 0
+    "
+
+    x = 1
+    y = 1
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    no_modifier = yes
+    allow = "
+        OR = {
+            tec_country_has_no_authority_swap = yes
+            tec_has_tenet = { tenet = tec_tenet_cyber_individualist }
+        }
+        custom_tooltip = {
+            fail_text = tec_tenet_tec_tenet_cyber_individualist_requirement
+            has_country_flag = tec_has_cyber_individualist_tenet
+        }
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_cyber_individualist_effect
+        hidden_effect = {
+            fire_on_action = {
+                on_action = on_pre_government_changed
+            }
+            set_country_flag = cyber_individualist
+            advanced_authority_refresh = yes
+            fire_on_action = {
+                on_action = on_post_government_changed
+            }
+        }
+    "
+
+    on_deactivate = "
+        custom_tooltip = tec_tenet_deactivate_generic
+        hidden_effect = {
+            fire_on_action = {
+                on_action = on_pre_government_changed
+            }
+            remove_country_flag = cyber_individualist
+            advanced_authority_refresh = yes
+            fire_on_action = {
+                on_action = on_post_government_changed
+            }
+        }
+    "
+}
+
+inline_script = {
+    script = cui/tenet/tec_tenet_option
+    $extra$
+
+    name = tec_tenet_cyber_collectivist
+    category = authority
+
+    cost = "
+        base = 0
+    "
+
+    x = 2
+    y = 1
+
+    icon = gfx/interface/icons/traditions/evolved_traditions/tr_tec_balance_1.dds
+    no_modifier = yes
+    allow = "
+        OR = {
+            tec_country_has_no_authority_swap = yes
+            tec_has_tenet = { tenet = tec_tenet_cyber_collectivist }
+        }
+        custom_tooltip = {
+            fail_text = tec_tenet_tec_tenet_cyber_collectivist_requirement
+            has_country_flag = tec_has_cyber_collectivist_tenet
+        }
+    "
+    on_activate = "
+        custom_tooltip = tec_tenet_tec_tenet_cyber_collectivist_effect
+        hidden_effect = {
+            fire_on_action = {
+                on_action = on_pre_government_changed
+            }
+            set_country_flag = cyber_collectivist
+            advanced_authority_refresh = yes
+            fire_on_action = {
+                on_action = on_post_government_changed
+            }
+        }
+    "
+
+    on_deactivate = "
+        custom_tooltip = tec_tenet_deactivate_generic
+        hidden_effect = {
+            fire_on_action = {
+                on_action = on_pre_government_changed
+            }
+            remove_country_flag = cyber_collectivist
+            advanced_authority_refresh = yes
+            fire_on_action = {
+                on_action = on_post_government_changed
+            }
+        }
+    "
+}

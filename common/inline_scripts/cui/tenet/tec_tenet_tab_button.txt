@@ -1,0 +1,40 @@
+# cui/tenet/tec_tenet_tab_button.txt
+
+inline_script = {
+    script = tec_type_hint
+    tec_tenet_category = $category$
+}
+
+tec_$category$_tenet_tab_button_effect_active = {
+    potential = {
+        from = {
+            has_country_flag = tec_cui_tenet_$category$_tab_active
+        }
+    }
+    allow = { always = yes }
+    effect = {
+        hidden_effect = {
+            from = {
+                tec_reset_tenet_cui_tabs = yes
+                set_country_flag = tec_cui_tenet_$category$_tab_active
+            }
+        }
+    }
+}
+
+tec_$category$_tenet_tab_button_effect_inactive = {
+    potential = {
+        from = {
+            NOT = { has_country_flag = tec_cui_tenet_$category$_tab_active }
+        }
+    }
+    allow = { always = yes }
+    effect = {
+        hidden_effect = {
+            from = {
+                tec_reset_tenet_cui_tabs = yes
+                set_country_flag = tec_cui_tenet_$category$_tab_active
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+inline_script = {
+	script = conditional/parts/tec_equal_step_inline
+	key = $equal$
+	$value$ = 1
+	$equal$ = 0
+	inline = $inline$
+	parameters = "
+		$parameters$
+	"
+}

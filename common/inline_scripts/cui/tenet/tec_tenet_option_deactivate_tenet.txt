@@ -1,0 +1,41 @@
+# cui/tenet/tec_tenet_option_deactivate_tenet.txt
+
+if = {
+    limit = {
+        OR = {
+            tec_has_tenet = {
+                tenet = $name$
+            }
+            always = $_tooltip$
+        }
+    }
+
+    remove_country_flag = tec_tenet_$name$
+    if = {
+        limit = {
+            NOT = { always = $no_modifier$ }
+        }
+        if = {
+            limit = {
+                always = $hide_modifier$
+            }
+            hidden_effect = {
+                remove_modifier = $name$_modifier
+            }
+        } else = {
+            remove_modifier = $name$_modifier
+        }
+    }
+    tec_clear_tenet_deactivate_flag = yes
+    set_country_flag = tec_tenet_$name$_last_deactivated
+    $on_deactivate$
+    fire_on_action = {
+        on_action = tec_tenet_on_deactivate
+    }
+    hidden_effect = {
+        subtract_variable = {
+            which = tec_tenet_points_used
+            value = value:tec_tenet_cost|tenet|$name$|
+        }
+    }
+}

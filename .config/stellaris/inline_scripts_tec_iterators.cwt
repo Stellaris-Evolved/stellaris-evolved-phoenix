@@ -7,20 +7,31 @@ parameters = {
     ## context_configs_type = multiple
     ## inherit
     code
+
     ## context_key = inline_script@iterators/tec_iterate_ethic_gestalt
     ## context_configs_type = multiple
     ## inherit
     code
+
     ## context_key = inline_script@iterators/tec_iterate_ethic_regular
     ## context_configs_type = multiple
     ## inherit
     code
+
     ## context_key = inline_script@iterators/tec_iterate_number
     ## context_configs_type = multiple
     ## inherit
     code
-    ## context_key = inline_script@iterators/tec_iterate_hoarder_resource
-    ## context_configs_type = multiple
+
+    ## context_key = inline_script@iterators/tec_iterate_tenet
+    ## inherit
+    code
+
+    ## context_key = inline_script@iterators/tec_iterate_authority
+    ## inherit
+    code
+
+    ## context_key = inline_script@iterators/tec_iterate_authority_regular
     ## inherit
     code
 }

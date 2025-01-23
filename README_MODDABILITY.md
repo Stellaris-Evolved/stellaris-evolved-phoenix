@@ -21,19 +21,19 @@ that have the  `mod_support/tec_effect_include` or script value that have `mod_s
 inside their logic, usually inside an `OR` statement can be extended by creating a scripted trigger
 of your own with a suffix appended to the trigger/effect name.
 
-For example, if you want to add a spiritualist main cult, and have it supported
+For example, if you want to add a spiritualist main tenet, and have it supported
 by automatically disabling normal temples and swapping you priest, you might want
-to overwrite the `tec_is_spiritualist_main_cult`. But with the extension mechanism
-we have in place you can create `tec_is_spiritualist_main_cult_<suffix>` the `<suffix>`
+to overwrite the `tec_is_spiritualist_main_tenet`. But with the extension mechanism
+we have in place you can create `tec_is_spiritualist_main_tenet_<suffix>` the `<suffix>`
 being a specific identifier that we can create and add to evolved for your 
 patch/mod/addon etc.
 
 IE, something like below, if your `<suffix>` is `sam`:
 
 ```
-tec_is_spiritualist_main_cult_sam = {
+tec_is_spiritualist_main_tenet_sam = {
     OR = {
-        has_valid_civic = civic_sam_my_cult_civic
+        has_valid_civic = civic_sam_my_tenet_civic
     }
 }
 ```
@@ -46,7 +46,7 @@ Inline scripts that have `mod_support/tec_inlines_include` inside their logic
 allow themselves to be extended by creating an inline inside the `common/inline_scripts/evolved_support`
 with the path of the inline you want to extend.
 
-For example if we want to extend as above the main cult swaps of priests,
+For example if we want to extend as above the main tenet swaps of priests,
 you will want to extend the `jobs/tec_priest` inline, which you can do by making
 a file at the path `common/inline_scripts/evolved_support/jobs/tec_priest_<suffix>`, the `<suffix>`
 being a specific identifier that we can create and add to evolved for your patch/mod/addon etc.
@@ -66,10 +66,10 @@ inline_script = {
         $trigger$
 
         owner = {
-            has_valid_civic = civic_sam_my_cult_civic
+            has_valid_civic = civic_sam_my_tenet_civic
         }
     "
-    job = sam_my_cult_priest
+    job = sam_my_tenet_priest
     count = $count$
     mult = $mult$
     display = $display$
@@ -187,8 +187,8 @@ inline_script = {
 * [tec_is_ringworld](common/scripted_triggers/zzz_evolved_scripted_triggers.txt#L1742)
 * [tec_is_space_arcology](common/scripted_triggers/zzz_evolved_scripted_triggers.txt#L1688)
 * [tec_is_special_researcher_empire](common/scripted_triggers/zzz_evolved_country_scripted_triggers.txt#L161)
-* [tec_is_spiritualist_main_cult](common/scripted_triggers/zzz_evolved_country_scripted_triggers.txt#L333)
-* [tec_is_spiritualist_secondary_cult](common/scripted_triggers/zzz_evolved_country_scripted_triggers.txt#L356)
+* [tec_is_spiritualist_main_tenet](common/scripted_triggers/zzz_evolved_country_scripted_triggers.txt#L333)
+* [tec_is_spiritualist_secondary_tenet](common/scripted_triggers/zzz_evolved_country_scripted_triggers.txt#L356)
 * [tec_is_subhabitat_megastructure](common/scripted_triggers/zzz_evolved_galaxy_gen_scripted_triggers.txt#L115)
 * [tec_is_wet_modded_planet_exceptions](common/scripted_triggers/zzz_evolved_scripted_triggers.txt#L1939)
 * [tec_planet_special_blocks_assembly_buildings](common/scripted_triggers/zzz_evolved_buildings_scripted_triggers.txt#L1816)
@@ -468,7 +468,7 @@ inline_script = {
 * [jobs/tec_warrior_drone](common/inline_scripts/jobs/tec_warrior_drone.txt#L29)
 * [jobs/weights/tec_clerk](common/inline_scripts/jobs/weights/tec_clerk.txt#L5)
 * [jobs/weights/tec_maintenance_drone](common/inline_scripts/jobs/weights/tec_maintenance_drone.txt#L5)
-* [mod_support/tec_spiritualist_cults](common/inline_scripts/mod_support/tec_spiritualist_cults.txt#L5)
+* [mod_support/tec_spiritualist_tenets](common/inline_scripts/mod_support/tec_spiritualist_tenets.txt#L5)
 * [modifiers/tec_artisan_efficiency](common/inline_scripts/modifiers/_tec_artisan_efficiency.txt#L120)
 * [modifiers/tec_farmer_efficiency](common/inline_scripts/modifiers/_tec_farmer_efficiency.txt#L42)
 * [modifiers/tec_foundry_efficiency](common/inline_scripts/modifiers/_tec_foundry_efficiency.txt#L106)

@@ -1,0 +1,85 @@
+tec_has_tenet = {
+    inline_script = {
+        script = tec_type_hint
+        tec_tenet = $tenet$
+    }
+
+    [[tenet]
+        custom_tooltip = {
+            text = tec_has_$tenet$
+            # fail_text =  tec_has_$tenet$_no
+            # success_text =  tec_has_$tenet$_yes
+            has_country_flag = tec_tenet_$tenet$
+        }
+    ]
+    [[!tenet]
+        always = no
+    ]
+}
+
+tec_is_tenet_allowed = {
+    inline_script = {
+        script = tec_type_hint
+        tec_tenet = $tenet$
+    }
+    inline_script = {
+        script = cui/tenet/tec_tenet_declarations
+        extra = "
+            _step = is_tenet_allowed
+            _tenet = \$tenet\$
+        "
+        tenet = $tenet$
+    }
+}
+
+tec_has_last_activated_tenet = {
+    inline_script = {
+        script = tec_type_hint
+        tec_tenet = $tenet$
+    }
+
+    custom_tooltip = {
+        text =  tec_has_last_activated_$tenet$
+        # fail_text =  tec_has_last_activated_$tenet$_no
+        # success_text =  tec_has_last_activated_$tenet$_yes
+        has_country_flag = tec_tenet_$tenet$_last_activated
+    }
+}
+
+tec_has_last_deactivated_tenet = {
+    inline_script = {
+        script = tec_type_hint
+        tec_tenet = $tenet$
+    }
+    custom_tooltip = {
+        text =  tec_has_last_deactivated_$tenet$
+        # fail_text =  tec_has_last_deactivated_$tenet$_no
+        # success_text =  tec_has_last_deactivated_$tenet$_yes
+        has_country_flag = tec_tenet_$tenet$_last_deactivated
+    }
+}
+
+tec_has_tenet_points_available = {
+    inline_script = {
+        script = tec_type_hint
+        tec_tenet = $tenet$
+    }
+    custom_tooltip = {
+        text = tec_has_tenet_points_available_$tenet$
+        # fail_text = tec_has_tenet_points_available_$tenet$_no
+        # success_text = tec_has_tenet_points_available_$tenet$_yes
+        check_variable_arithmetic = {
+            which = value:tec_tenet_points_available
+            value >= value:tec_tenet_cost|tenet|$tenet$|
+        }
+    }
+}
+
+tec_has_pending_tenet_decision = {
+    custom_tooltip = {
+        text = tec_has_pending_tenet_decision
+        # fail_text = tec_has_pending_tenet_decision_no
+        # success_text = tec_has_pending_tenet_decision_yes
+        has_country_flag = tec_tenet_decision_pending
+    }
+}

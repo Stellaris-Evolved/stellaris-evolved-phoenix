@@ -1,7 +1,6 @@
 enums = {
     enum[tec_trimmed_ethic] = {
         # Vanilla
-
         authoritarian
         egalitarian
         xenophobe
@@ -20,11 +19,9 @@ enums = {
         pluralist
 
         # Gestalt Vanilla
-
         gestalt_consciousness
 
         # Gestalt Evolved
-
         gestalt_empathy
         gestalt_apathy
         gestalt_preservation
@@ -172,4 +169,63 @@ enums = {
         advanced
         strategic
     }
+
+    enum[tec_tenet_include_step] = {
+        button # sadly not used cause gui files do not accept inlines
+        button_effect
+        modifier # sadly not used cause static modifiers do not accept inlines
+        sprite
+        clear_activated_flag
+        clear_deactivated_flag
+        clear_tenets
+        clear_invalid_tenets
+        activate_tenet
+        deactivate_tenet
+        is_tenet_allowed
+        iterate
+        cost
+        ai_weight
+    }
+
+
+    complex_enum[tec_tenet] = {
+        path = "game/common/inline_scripts/cui/tenet/"
+        path_file = "tec_tenet_declarations.txt"
+        name = {
+            name = enum_name
+        }
+    }
+
+    enum[tec_tenet_category] = {
+        basic
+        spiritualist
+        special
+        advanced
+        authority
+    }
+
+
+
+}
+
+
+types = {
+    type[tec_tenet] = {
+        name_field = name
+        path = "game/common/inline_scripts/cui/tenet"
+        path_file = "tec_tenet_declarations.txt"
+        images = {
+            icon = icon # <sprite>
+        }
+
+        localisation = {
+            name = "$"
+            desc = "$_desc"
+        }
+    }
+}
+
+tec_tenet = {
+    name = scalar
+    categroy = float
 }

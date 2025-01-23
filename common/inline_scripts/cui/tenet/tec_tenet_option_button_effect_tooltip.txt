@@ -1,0 +1,101 @@
+# cui/tenet/tec_tenet_option_button_effect_tooltip.txt
+
+inline_script = {
+    script = tec_type_hint
+    tec_tenet = $name$
+    country_scope = $from$
+    bool = $skip_header$
+}
+
+if = {
+    limit = {
+        NOT = {
+            always = $skip_header$
+        }
+    }
+    custom_tooltip = $name$_header
+}
+custom_tooltip = $name$_cost_header
+if = {
+    limit = {
+        $from$ = {
+            tec_has_tenet = {
+                tenet = $name$
+            }
+        }
+    }
+    custom_tooltip = tec_tenet_active
+}
+custom_tooltip = $name$_desc
+custom_tooltip = tec_loc_desc_separator
+if = {
+    limit = {
+        $from$ = {
+            tec_has_tenet = {
+                tenet = $name$
+            }
+        }
+    }
+    custom_tooltip = tec_tenet_tooltip_disabled_start
+    custom_tooltip = tec_tenet_current_effects_section
+} else = {
+    custom_tooltip = tec_tenet_tooltip_normal_start
+    custom_tooltip = tec_tenet_effects_section
+}
+tooltip = {
+    $from$ = {
+        tec_activate_tenet = {
+            tenet = $name$
+            force = yes
+            tooltip = yes
+        }
+    }
+}
+custom_tooltip = tec_tenet_tooltip_color_end
+if = {
+    limit = {
+        $from$ = {
+            NOT = {
+                tec_has_tenet = {
+                    tenet = $name$
+                }
+            }
+        }
+    }
+    custom_tooltip = tec_tenet_tooltip_disabled_start
+} else = {
+    custom_tooltip = tec_tenet_tooltip_normal_start
+}
+custom_tooltip = tec_tenet_on_deactivate_effects_section
+tooltip = {
+    $from$ = {
+        tec_deactivate_tenet = {
+            tenet = $name$
+            tooltip = yes
+        }
+    }
+}
+custom_tooltip = tec_tenet_tooltip_color_end
+
+$from$ = {
+    if = {
+        limit = {
+            NOT = {
+                tec_has_tenet = {
+                    tenet = $name$
+                }
+            }
+        }
+        hidden_effect = {
+            tec_internal_tenet_activate_confirmation = {
+                tenet = $name$
+            }
+        }
+    } else = {
+        hidden_effect = {
+            tec_internal_tenet_deactivate_confirmation = {
+                tenet = $name$
+            }
+        }
+    }
+}

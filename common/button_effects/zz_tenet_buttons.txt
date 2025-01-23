@@ -1,0 +1,25 @@
+inline_script = {
+    script = cui/tenet/tec_tenet_declarations
+    extra = "_step = button_effect"
+}
+
+inline_script = {
+    script = cui/tenet/tec_tenet_tab_button
+    category = basic
+}
+inline_script = {
+    script = cui/tenet/tec_tenet_tab_button
+    category = spiritualist
+}
+inline_script = {
+    script = cui/tenet/tec_tenet_tab_button
+    category = special
+}
+inline_script = {
+    script = cui/tenet/tec_tenet_tab_button
+    category = advanced
+}
+inline_script = {
+    script = cui/tenet/tec_tenet_tab_button
+    category = authority
+}
