@@ -63,8 +63,9 @@
 	todo_firefantasy:0 ""
 	todo_foundation:0 ""
 	todo_ships:0 ""
-
 	todo_art:0 ""
+
+	todo_phoenix:0 ""
 
 	# Common loc
 	tec_loc_energy:0 "$tec_loc_energy_icon$ Energy"
@@ -125,7 +126,7 @@
 	tec_loc_codebreaking:0 "$MOD_INTEL_DECRYPTION_ADD$"
 	tec_loc_encryption:0 "$MOD_INTEL_ENCRYPTION_ADD$"
 
- # Fake resource locs
+	# Fake resource locs
 	tec_loc_housing: "£housing£ $PLANET_HOUSING_TITLE$"
 	tec_loc_amenities: "£amenities£ $PLANET_AMENITIES_TITLE$"
 	tec_loc_amenities_icon: "£amenities£"

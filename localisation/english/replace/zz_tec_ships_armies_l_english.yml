@@ -1,1 +1,39 @@
 ﻿l_english:
+
+
+# ARMIES
+# ------------------------------------------------------------
+	# ------------------------------------------------------------ Ascensions
+		# ------- Psychic
+		tec_psyker_army:0 "Psychic Phalanx"
+		tec_psyker_army_plural:0 "Psychic Phalanxes"
+		tec_psyker_army_desc:0 "A group of elite psykers trained for direct combat approaches using the extreme power contained within their psyche, unleashing reality-altering destructive waves upon their foes, or diminishing their minds until they are under their control."
+
+		tec_psyker_army_gestalt:0 "Psychic Horde"
+		tec_psyker_army_gestalt_plural:0 "Psychic Hordes"
+		tec_psyker_army_gestalt_desc:0 "A massive psychically connected swarm of combat drones, coordinated with an efficiency never seen, unleashing reality altering waves around their path and upon their foes, diminishing their minds until surrender is the only option."
+	# /
+	# ------------------------------------------------------------ Civics
+		# --------------- Dread Armies
+		tec_geist_army:0 "Ghoul Army"
+		tec_geist_army_plural:0 "Ghoul Armies"
+		tec_geist_army_desc:0 "Undead soldiers with a higher degree of intelligence, commanded by a powerful necromonger. Freed from any fear, they strike terror into the hearts of whoever tries to defy their masters."
+
+		# --------------- Pherodrones
+		tec_pherodrone:0 "Pherodrone Army"
+		tec_pherodrone_plural:0 "Pherodrone Armies"
+		tec_pherodrone_desc:0 "Specialized and resilient army of drones that uses biological components to subdue other organics, no matter their will or their living status, to serve the collective."
+
+		tec_pherodrone_def:0 "$tec_pherodrone$"
+		tec_pherodrone_def_plural:0 "$tec_pherodrone_plural$"
+		tec_pherodrone_def_desc:0 "$tec_pherodrone_desc$"
+
+		tec_husk:0 "Frenzied Husk"
+		tec_husk_plural:0 "Frenzied Husks"
+		tec_husk_desc:0 "Whatever remains of this former living organic is no more, now its a mindless killing machine driven by the desires of a gestalt collective."
+
+		tec_nascentlarvae:0 "Nascent Drone"
+		tec_nascentlarvae_plural:0 "Nascent Drones"
+		tec_nascentlarvae_desc:0 "Small mindlessly aggressive drones spawned from the remains of a organic husk. Disgusting."
+	# /
+# /
