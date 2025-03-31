@@ -5,64 +5,232 @@
 # /
 
 # Evolved vars - general
-	@tec_planet_view_height = 740			#og 680 +60
+	@tec_planet_view_height = 760			#og 680 +60
 	@tec_planet_view_width = 900			#og 850 +50
 	@tec_planet_view_height_lowres = 680	#og 680
 	@tec_planet_view_width_lowres = 850		#og 850
 	@tec_planet_view_pos_x = 300			#og 300
 	@tec_planet_view_pos_y = 200			#og 200
 
-	@tec_planet_view_bg_height = 640	#og 640
-	@tec_planet_view_bg_width = 850		#og 850
+	@tec_planet_view_bg_height = 720	#og 640 +60
+	@tec_planet_view_bg_width = 900		#og 850 +50
+
+	@tec_planet_view_ring_x = 298		#og -19
+	@tec_planet_view_ring_y = 70		#og 4
+	@tec_planet_view_observation_x = 265	#og 18
+	@tec_planet_view_observation_y = 70		#og 4
+
+	@tec_planet_view_movecapital_x = 265	#og 17
+	@tec_planet_view_movecapital_y = 70		#og 4
+
+	@tec_planet_view_prevcol_x = 265	#og 93
+	@tec_planet_view_prevcol_y = 31		#og 4
+	@tec_planet_view_nextcol_x = 298	#og 129
+	@tec_planet_view_nextcol_y = 31		#og 4
+
+	@tec_planet_view_close_x = 15		#og -43
+	@tec_planet_view_close_y = -2		#og 4
+	@tec_planet_view_goto_x = 265		#og 205
+	@tec_planet_view_goto_y = -2		#og 4
+
+	@tec_planet_view_modifiers_x = x		#og x
+	@tec_planet_view_modifiers_y = y		#og y
+
+	@tec_planet_devastation_pos_x = 60		#og 360
+	@tec_planet_devastation_pos_y = 60		#og 110
 # /
 
 # Evolved vars - Planet art
-	@tec_planet_art_container_height = 230		#og 230
-	@tec_planet_art_container_width = 840		#og 840
-	@tec_planet_art_container_position_x = 14	#og 14
-	@tec_planet_art_container_position_y = 47	#og 47
+	@tec_planet_art_container_height = 300	#og 230
+	@tec_planet_art_container_width = 890	#og 840 +50
+	@tec_planet_art_container_pos_x = 64	#og 14 +50
+	@tec_planet_art_container_pos_y = 107	#og 47 +60
 
-	@tec_planet_art_portrait_height = 250		#og 250
-	@tec_planet_art_portrait_width = 850		#og 850
-	@tec_planet_art_portrait_position_x = -14	#og -14
-	@tec_planet_art_portrait_position_y = -36	#og -36
+	@tec_planet_art_portrait_height = 330	#og 250
+	@tec_planet_art_portrait_width = 850	#og 850
+	@tec_planet_art_portrait_pos_x = -14	#og -14 + 25
+	@tec_planet_art_portrait_pos_y = -55	#og -36 - 19
 
-	@tec_planet_art_view_position_x = 34	#og 34
-	@tec_planet_art_view_position_y = 146	#og 146
-	@tec_planet_art_view_scale = 1.40		#og 1.40
+	@tec_planet_art_view_pos_x = 54		#og 34
+	@tec_planet_art_view_pos_y = -80	#og 146 -180
+	@tec_planet_art_view_scale = 1.30	#og 1.40
 
-	@tec_planet_art_blackframe_position_x = 34	#og 34
-	@tec_planet_art_blackframe_position_y = 146	#og 146
-	@tec_planet_art_blackframe_scale = 1.40		#og 1.40
+	@tec_planet_art_blackframe_pos_x = -8	#og -8 +25
+	@tec_planet_art_blackframe_pos_y = -15	#og -15
+	@tec_planet_art_blackframe_scale = 1.6	#og 1.6
 
-	@tec_planet_art_blackframe_position_x = -8	#og -8
-	@tec_planet_art_blackframe_position_y = -15	#og -15
-	@tec_planet_art_blackframe_scale = 1.6		#og 1.6
+	@tec_planet_art_gradient_pos_x = -40	#og 0
+	@tec_planet_art_gradient_pos_y = 0		#og 0
+	@tec_planet_art_gradient_scale = 1.4	#og 1.33
 
-	@tec_planet_art_gradient_position_x = 0		#og 0
-	@tec_planet_art_gradient_position_y = 0		#og 0
-	@tec_planet_art_gradient_scale = 1.33		#og 1.33
+	@tec_planet_art_stripes_pos_x = 50		#og 50
+	@tec_planet_art_stripes_pos_y = -15		#og -15
+	@tec_planet_art_stripes_scale = 1.46	#og 1.46
 
-	@tec_planet_art_stripes_position_x = 50		#og 50
-	@tec_planet_art_stripes_position_y = -15	#og -15
-	@tec_planet_art_stripes_scale = 1.46		#og 1.46
+	#v line where name is located
+	@tec_planet_art_topbar_pos_x = 0		#og 50
+	@tec_planet_art_topbar_pos_y = -54		#og -39
+	@tec_planet_art_topbar_pos_width = 275	#og 275
+	@tec_planet_art_topbar_pos_height = 45	#og 45
 
-	@tec_planet_art_topbar_position_x = 0		#og 50
-	@tec_planet_art_topbar_position_y = -39		#og -39
-	@tec_planet_art_topbar_position_width = 275	#og 275
-	@tec_planet_art_topbar_position_height = 45	#og 45
+	@tec_planet_art_governor_pos_x = -14	#og -14
+	@tec_planet_art_governor_pos_y = 10		#og 10
+	@tec_planet_art_governor_pos_width = 260	#og 260
+	@tec_planet_art_governor_pos_height = 150	#og 150
 
-	@tec_planet_art_governor_position_x = -14		#og -14
-	@tec_planet_art_governor_position_y = 10		#og 10
-	@tec_planet_art_governor_position_width = 260	#og 260
-	@tec_planet_art_governor_position_height = 150	#og 150
+	@tec_planet_art_flag_pos_x = -65	#og 0 -65
+	@tec_planet_art_flag_pos_y = -60	#og -45 -15
 
-	@tec_planet_art_flag_position_x = 0		#og 0
-	@tec_planet_art_flag_position_y = -45	#og -45
+	@tec_planet_art_name_bg_pos_x = -7		#og -7
+	@tec_planet_art_name_bg_pos_y = -20		#og -13
+	
+# /
+
+# Evolved vars - governor
+	@tec_planet_governor_pos_x = 0		#og 0
+	@tec_planet_governor_pos_y = 130		#og 70
+	@tec_planet_governor_width = 250	#og 250
+	@tec_planet_governor_height = 125	#og 125
+
+	@tec_planet_governor_sector_pos_x = 70		#og 70
+	@tec_planet_governor_sector_pos_y = 130		#og 70
+	@tec_planet_governor_sector_width = 100		#og 100
+	@tec_planet_governor_sector_height = 125	#og 125
+
+# /
+
+# Evolved vars - Population/stability
+	@tec_planet_actions_pos_x = 0		#og 566
+	@tec_planet_actions_pos_y = 250		#og 566
+	@tec_planet_actions_width = 100%		#og 100%
+	@tec_planet_actions_height = 28			#og 30
+
+	@tec_planet_actions_shadow_pos_x = 0	#og 566
+	@tec_planet_actions_shadow_pos_y = 16	#og 11
+	
+# /
+
+# Evolved vars - Resources
+	# resources
+	@tec_planet_resources_pos_x = 0		#og 566
+	@tec_planet_resources_pos_y = 138	#og 93
+	@tec_planet_resources_height = 40	#og 166
+	@tec_planet_resources_width = 900	#og 274
+
+
+	@tec_planet_resources_production_title_pos_x = 23	#og 0
+	@tec_planet_resources_production_title_pos_y = 4	#og 8
+	@tec_planet_resources_production_title_height = 20	#og 20
+	@tec_planet_resources_production_title_width = 274	#og 274
+
+	@tec_planet_resources_production_pos_x = 100	#og 12
+	@tec_planet_resources_production_pos_y = 5		#og 30
+	@tec_planet_resources_production_height = 75	#og 60
+	@tec_planet_resources_production_width = 350	#og 250
+
+	@tec_planet_resources_consumption_title_pos_x = 500		#og 0
+	@tec_planet_resources_consumption_title_pos_y = 4		#og 96
+	@tec_planet_resources_consumption_title_height = 20		#og 20
+	@tec_planet_resources_consumption_title_width = 274		#og 274
+
+	@tec_planet_resources_consumption_pos_x = 550	#og 12
+	@tec_planet_resources_consumption_pos_y = 5		#og 120
+	@tec_planet_resources_consumption_height = 75	#og 50
+	@tec_planet_resources_consumption_width = 340	#og 250
 # /
 
 # Evolved vars - Infrastructure
+	@tec_planet_districts_header_pos_x = 0		#og 10
+	@tec_planet_districts_header_pos_y = 93		#og 54
+	@tec_planet_districts_header_width = 900	#og 830
+	@tec_planet_districts_header_height = 37	#og 37
 
+	@tec_planet_districts_available_group_pos_x = 720	#og 650
+	@tec_planet_districts_available_group_pos_y = 10	#og 10
+	@tec_planet_districts_available_group_width = 250	#og 250
+	@tec_planet_districts_available_group_height = 45	#og 45
+
+	@tec_planet_districts_available_grid_pos_x = 0		#og 0
+	@tec_planet_districts_available_grid_pos_y = 0		#og 0
+	@tec_planet_districts_available_grid_width = 100		#og 100
+	@tec_planet_districts_available_grid_height = 20		#og 20
+	@tec_planet_districts_available_slots_vertical = 2		#og 2
+	@tec_planet_districts_available_slots_horizontal = 20	#og 20
+
+	@tec_planet_districts_available_title_pos_x = 825	#og 750
+	@tec_planet_districts_available_title_pos_y = 10	#og 10
+	@tec_planet_districts_available_title_width = 70	#og 70
+	@tec_planet_districts_available_title_height = 45	#og 45
+
+	@tec_planet_districts_queue_button_pos_x = 867	#og 796
+	@tec_planet_districts_queue_button_pos_y = 4	#og 4
+
+	@tec_planet_districts_window_pos_x = 10		#og 10
+	@tec_planet_districts_window_pos_y = 185	#og 93
+	@tec_planet_districts_window_width = 882	#og 552
+	@tec_planet_districts_window_height = 167	#og 167
+
+	@tec_planet_districts_main_pos_x = 10		#og 10
+	@tec_planet_districts_main_pos_y = 93		#og 93
+	@tec_planet_districts_main_width = 552		#og 552
+	@tec_planet_districts_main_height = 167		#og 167
+
+	@tec_planet_districts_main_zone_grid_pos_x = 255		#og 255
+	@tec_planet_districts_main_zone_grid_pos_y = 6			#og 6
+	@tec_planet_districts_main_zone_grid_width = 271		#og 271
+	@tec_planet_districts_main_zone_grid_height = 166		#og 166
+	@tec_planet_districts_main_zone_grid_slot_width = 320	#og 274
+	@tec_planet_districts_main_zone_grid_slot_height = 53	#og 53
+	@tec_planet_districts_main_zone_slots_horizontal = 2	#og 1
+	@tec_planet_districts_main_zone_slots_vertical = 3		#og 3
+
+	@tec_planet_districts_secondary_pos_x = 10		#og 10
+	@tec_planet_districts_secondary_pos_y = 353		#og 264
+	@tec_planet_districts_secondary_width = 890		#og 830
+	@tec_planet_districts_secondary_height = 175	#og 175
+	@tec_planet_districts_secondary_grid_pos_x = 0	#og 0
+	@tec_planet_districts_secondary_grid_pos_y = 0	#og 0
+	@tec_planet_districts_secondary_grid_width = 890	#og 830
+		# this defines dynamic districts bar lenght
+	@tec_planet_districts_secondary_grid_height = 500	#og 175
+	@tec_planet_districts_secondary_grid_slot_width = 278	#og 278
+	@tec_planet_districts_secondary_grid_slot_height = 170	#og 155
+
+# /
+
+# Evolved vars - zone grids
+	# Generic zone interior
+	@tec_planet_zone_buildings_size_width = 205		#og 205
+	@tec_planet_zone_buildings_size_height = 205	#og 205
+	@tec_planet_zone_buildings_slot_width = 49		#og 52
+	@tec_planet_zone_buildings_slot_height = 60		#og 52
+
+	# Government zone
+	@tec_planet_zone_main_buildings_pos_x = 5		#og 5
+	@tec_planet_zone_main_buildings_pos_y = 22		#og 22	
+
+	@tec_planet_zone_main_size_pos_x = 83		#og 83
+	@tec_planet_zone_main_size_pos_y = 35		#og 35
+	@tec_planet_zone_main_size_width = 164		#og 164
+	@tec_planet_zone_main_size_height = 75		#og 75
+
+	# City zone
+	@tec_planet_zone_city_size_width = 310		#og 291
+	@tec_planet_zone_city_size_height = 50		#og 50
+
+	@tec_planet_zone_city_buildings_pos_x = 105	#og 133
+	@tec_planet_zone_city_buildings_pos_y = 0	#og 133
+
+	@tec_planet_zone_name_pos_x = 30		#og 30
+	@tec_planet_zone_name_pos_y = -15			#og 0
+	@tec_planet_zone_name_size_width = 65		#og 105
+	@tec_planet_zone_name_size_height = 80		#og 50
+
+	# General/menial zones
+	@tec_planet_zone_general_size_pos_x = 70	#og 70
+	@tec_planet_zone_general_size_pos_y = 35	#og 35
+	@tec_planet_zone_general_size_width = 198	#og 198
+	@tec_planet_zone_general_size_height = 79	#og 79
 # /
 
 # Evolved vars - rest
@@ -163,11 +331,11 @@ guiTypes = {
 		containerWindowType = {
 			name = "planet_portrait_window"
 			size = { width = @tec_planet_art_container_width height = @tec_planet_art_container_height }
-			position = { x = @tec_planet_art_container_position_x y = @tec_planet_art_container_position_x }
+			position = { x = @tec_planet_art_container_pos_x y = @tec_planet_art_container_pos_x }
 
 			containerWindowType = {
 				name = "portrait"
-				position = { x= @tec_planet_art_portrait_position_x y = @tec_planet_art_portrait_position_y}
+				position = { x= @tec_planet_art_portrait_pos_x y = @tec_planet_art_portrait_pos_y}
 				size = { width = @tec_planet_art_portrait_width height = @tec_planet_art_portrait_height }
 				moveable = no
 				clipping = yes
@@ -175,7 +343,7 @@ guiTypes = {
 				buttonType = {
 					name = "portrait"
 					spriteType = "GFX_portrait_planet"
-					position = { x = @tec_planet_art_view_position_x y = @tec_planet_art_view_position_y }
+					position = { x = @tec_planet_art_view_pos_x y = @tec_planet_art_view_pos_y }
 					scale = @tec_planet_art_view_scale
 					alwaystransparent = yes
 
@@ -184,14 +352,14 @@ guiTypes = {
 				iconType = {
 					name = "black_frame"
 					spriteType = "GFX_planetview_black_frame"
-					position = { x = @tec_planet_art_blackframe_position_x y = @tec_planet_art_blackframe_position_y }
+					position = { x = @tec_planet_art_blackframe_pos_x y = @tec_planet_art_blackframe_pos_y }
 					scale = @tec_planet_art_blackframe_scale
 					alwaystransparent = yes
 				}
 				iconType = {
 					name = "city_gradient"
 					spriteType = "GFX_planet_city_gradient"
-					position = { x = @tec_planet_art_gradient_position_x y = @tec_planet_art_gradient_position_y }
+					position = { x = @tec_planet_art_gradient_pos_x y = @tec_planet_art_gradient_pos_y }
 					orientation = upper_left
 					alwaysTransparent = yes
 					scale = @tec_planet_art_gradient_scale
@@ -199,7 +367,7 @@ guiTypes = {
 				iconType = {
 					name = "stripes_1"
 					spriteType = "GFX_planetview_stripes_1"
-					position = { x = @tec_planet_art_stripes_position_x y = @tec_planet_art_stripes_position_y }
+					position = { x = @tec_planet_art_stripes_pos_x y = @tec_planet_art_stripes_pos_y }
 					orientation = upper_left
 					alwaysTransparent = yes
 					scale = @tec_planet_art_stripes_scale
@@ -208,8 +376,8 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "planet_top_bar"
-				position = { x = @tec_planet_art_topbar_position_x y = @tec_planet_art_topbar_position_y }
-				size = { width = @tec_planet_art_topbar_position_width height = @tec_planet_art_topbar_position_height }
+				position = { x = @tec_planet_art_topbar_pos_x y = @tec_planet_art_topbar_pos_y }
+				size = { width = @tec_planet_art_topbar_pos_width height = @tec_planet_art_topbar_pos_height }
 
 				background = {
 					name = "planet_top_bar"
@@ -220,19 +388,19 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "governor_title_bg"
-				position = { x = @tec_planet_art_governor_position_x y = @tec_planet_art_governor_position_y }
-				size = { width = @tec_planet_art_governor_position_width height = @tec_planet_art_governor_position_height }
+				position = { x = @tec_planet_art_governor_pos_x y = @tec_planet_art_governor_pos_y }
+				size = { width = @tec_planet_art_governor_pos_width height = @tec_planet_art_governor_pos_height }
 
-				background = {
-					name = "leader_background"
-					spriteType = "GFX_bg_planet_view_governor"
-				}
+				#background = {
+				#	name = "leader_background"
+				#	spriteType = "GFX_bg_planet_view_governor"
+				#}
 			}
 
 			buttonType = {
 				name = "flag"
 				quadTextureSprite = "GFX_empire_flag_64"
-				position = { x= @tec_planet_art_flag_position_x y = @tec_planet_art_flag_position_y }
+				position = { x= @tec_planet_art_flag_pos_x y = @tec_planet_art_flag_pos_y }
 			}
 		}
 
@@ -248,7 +416,7 @@ guiTypes = {
 		iconType = {
 			name = "hex_bg"
 			spriteType = "GFX_hex_bg"
-			position = { x = -7 y = -13 }
+			position = { x = @tec_planet_art_name_bg_pos_x y = @tec_planet_art_name_bg_pos_y }
 			alwaysTransparent = yes
 		}
 
@@ -280,7 +448,7 @@ guiTypes = {
 			buttonType = {
 				name = "open_orbital_ring"
 				quadTextureSprite = "GFX_button_orbital_ring"
-				position = { x = -19 y = 4 }
+				position = { x = @tec_planet_view_ring_x y = @tec_planet_view_ring_y }
 				clicksound = "click"
 				pdx_tooltip = "OPEN_ORBITAL_RING"
 			}
@@ -288,7 +456,7 @@ guiTypes = {
 			buttonType = {
 				name = "previous_planet"
 				quadTextureSprite = "GFX_button_left"
-				position = { x = 93 y = 4 }
+				position = { x = @tec_planet_view_prevcol_x y = @tec_planet_view_prevcol_y }
 				shortcut = "CTRL+TAB"
 				clicksound = "click"
 				pdx_tooltip = "PREV"
@@ -297,7 +465,7 @@ guiTypes = {
 			buttonType = {
 				name = "previous_planet_extra_shortcut"
 				quadTextureSprite = "GFX_invisible"
-				position = { x = 93 y = 4 }
+				position = { x = @tec_planet_view_prevcol_x y = @tec_planet_view_prevcol_y }
 				shortcut = "SHIFT+TAB"
 				clicksound = "click"
 				alwaysTransparent = yes
@@ -306,7 +474,7 @@ guiTypes = {
 			buttonType = {
 				name = "next_planet"
 				quadTextureSprite = "GFX_button_right"
-				position = { x = 129 y = 4 }
+				position = { x = @tec_planet_view_nextcol_x y = @tec_planet_view_nextcol_y }
 				#orientation = upper_left
 				shortcut = "TAB"
 				clicksound = "click"
@@ -316,13 +484,13 @@ guiTypes = {
 			buttonType = {
 				name = "move_capital"
 				quadTextureSprite = "GFX_fleet_action_button_move_capital"
-				position = { x = 17 y = 4 }
+				position = { x = @tec_planet_view_movecapital_x y = @tec_planet_view_movecapital_y }
 			}
 
 			buttonType = {
 				name = "zoom_to_planet_button"
 				quadTextureSprite = "GFX_fleetview_focus"
-				position = { x = 205 y = 4 }
+				position = { x = @tec_planet_view_goto_x y = @tec_planet_view_goto_y }
 				pdx_tooltip = "ZOOM_TO_PLANET"
 				shortCut = "q"
 				tooltip_mode_enabled = yes
@@ -331,13 +499,13 @@ guiTypes = {
 			buttonType = {
 				name = "go_to_observation_post"
 				quadTextureSprite = "GFX_fleetview_open_observation_post"
-				position = { x = 18 y = 4 }
+				position = { x = @tec_planet_view_observation_x y = @tec_planet_view_observation_y }
 			}
 
 			buttonType = {
 				name = "close"
 				quadTextureSprite = "GFX_close"
-				position = { x = -43 y = 4 }
+				position = { x = @tec_planet_view_close_x y = @tec_planet_view_close_y }
 				shortcut = "ESCAPE"
 				clicksound = "back_click"
 				actionShortcut = "cancel"
@@ -431,15 +599,15 @@ guiTypes = {
 		#<-------------------------- GOVERNOR --------------------------->
 		containerWindowType = {
 			name = "governor_window"
-			position = { x = 0 y = 70 }
-			size = { width = 250 height = 125 }
+			position = { x = @tec_planet_governor_pos_x y = @tec_planet_governor_pos_y }
+			size = { width = @tec_planet_governor_width height = @tec_planet_governor_height }
 			clipping = no
 		}
-
+		
 		containerWindowType = {
 			name = "sector_governor_window"
-			position = { x = 70 y = 70 }
-			size = { width = 100 height = 125 }
+			position = { x = @tec_planet_governor_sector_pos_x y = @tec_planet_governor_sector_pos_y }
+			size = { width = @tec_planet_governor_sector_width height = @tec_planet_governor_sector_height }
 			clipping = no
 		}
 
@@ -447,7 +615,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "planet_devastation"
 			size = { width = 180 height = 35 }
-			position = { x = 360 y = 110 }
+			position = { x = @tec_planet_devastation_pos_x y = @tec_planet_devastation_pos_y }
 
 			background = {
 				name = "background"
@@ -493,13 +661,13 @@ guiTypes = {
 		# Actions & Planet Info
 		containerWindowType = {
 			name = "planet_actions_window"
-			position = { x = 0 y = 200 }
-			size = { width = 100% height = 30 }
+			position = { x = @tec_planet_actions_pos_x y = @tec_planet_actions_pos_y }
+			size = { width = @tec_planet_actions_width height = @tec_planet_actions_height }
 
 			containerWindowType = {
 				name = "planet_actions_window"
-				position = { x = 0 y = 11 }
-				size = { width = 100%  height = 40 }
+				position = { x = @tec_planet_actions_shadow_pos_x y = @tec_planet_actions_shadow_pos_y }
+				size = { width = @tec_planet_actions_width  height = @tec_planet_actions_height }
 				background = {
 					name = "stability_pops_bg"
 					spriteType = "GFX_dark_area_50_opaque"
@@ -828,8 +996,8 @@ guiTypes = {
 				name = "colonizable_planet_window"
 					containerWindowType = {
 						name = "districts_header_bg"
-						size = { width = 830 height = 37 }
-						position = { x = 10 y = 54 }
+						size = { width = @tec_planet_districts_header_width height = @tec_planet_districts_header_height }
+						position = { x = @tec_planet_districts_header_pos_x y = @tec_planet_districts_header_pos_y }
 
 						background = {
 							name = "district_background"
@@ -905,17 +1073,17 @@ guiTypes = {
 						# Available District Cubes Container
 						containerWindowType = {
 							name = "available_districts_window"
-							size = { width = 250 height = 45 }
-							position = { x = 650 y = 10 }
+							size = { width = @tec_planet_districts_available_group_width height = @tec_planet_districts_available_group_height }
+							position = { x = @tec_planet_districts_available_group_pos_x y = @tec_planet_districts_available_group_pos_y }
 
 							gridBoxType = {
 								name = "available_districts_grid_box"
-								size = { width = 100 height = 20 }
-								position = { x = 0 y = 0 }
+								size = { width = @tec_planet_districts_available_grid_width height = @tec_planet_districts_available_grid_height }
+								position = { x = @tec_planet_districts_available_grid_pos_x y = @tec_planet_districts_available_grid_pos_y }
 								format = "UPPER_RIGHT"
 								slotsize = { width = 10 height = 10 }
-								max_slots_horizontal = 20
-								max_slots_vertical = 2
+								max_slots_horizontal = @tec_planet_districts_available_slots_horizontal
+								max_slots_vertical = @tec_planet_districts_available_slots_vertical
 								add_horizontal = no
 							}
 						}
@@ -923,8 +1091,8 @@ guiTypes = {
 						# Districts num
 						containerWindowType = {
 							name = "planet_num_districts"
-							size = { width = 70 height = 45 }
-							position = { x = 750 y = 10 }
+							size = { width = @tec_planet_districts_available_title_width height = @tec_planet_districts_available_title_height }
+							position = { x = @tec_planet_districts_available_title_pos_x y = @tec_planet_districts_available_title_pos_y }
 
 							instantTextBoxType={
 								name = "planet_districts_amount"
@@ -941,7 +1109,7 @@ guiTypes = {
 						buttonType = {
 							name = "build_queue_button"
 							quadTextureSprite = "GFX_button_build_queue"
-							position = { x = 796 y = 4 }
+							position = { x = @tec_planet_districts_queue_button_pos_x y = @tec_planet_districts_queue_button_pos_y }
 							clicksound = "click"
 							pdx_tooltip = "QUEUE"
 						}
@@ -954,27 +1122,38 @@ guiTypes = {
 				### Districts Container Window
 				containerWindowType = {
 					name = "districts_window"
-					size = { width = 552 height = 167 }
-					position = { x = 10 y = 93 }
+					size = { width = @tec_planet_districts_window_width height = @tec_planet_districts_window_height }
+					position = { x = @tec_planet_districts_window_pos_x y = @tec_planet_districts_window_pos_y }
 					background = {
 						position = { x = 0 y = 0 }
 						name = "districts_window_background"
 						spriteType = "GFX_dark_area"
 						alwaysTransparent = yes
 					}
+					
+					buttonType = {	# Evolved - second background because aesthetics
+						position = { x = 548 y = 0 }
+						size = {
+							x = 350
+							y = 165
+						}
+						name = "districts_window_background_2"
+						spriteType = "GFX_dark_area_50_opaque"
+						#alwaysTransparent = yes
+					}
 
 					buttonType ={
 						name = "selection_highlight"
 						spriteType = "GFX_glow_tile_orange_no_padding"
 						position = { x = 0 y = 0 }
-						size = { x = 552 y = 167 }
+						size = { x = @tec_planet_districts_window_width y = @tec_planet_districts_window_height }
 						alwaystransparent = yes
 					}
 
 					buttonType = {
 						name = "district_button"
 						position = { x = 0 y = 0 }
-						size = { x = 552 y = 167 }
+						size = { x = @tec_planet_districts_window_width y = @tec_planet_districts_window_height }
 						quadTextureSprite = "GFX_district_hover"
 						clicksound = "menu_slide_open"
 					}
@@ -1100,8 +1279,8 @@ guiTypes = {
 					#Primary Zone
 					containerWindowType = {
 						name = "zone"
-						position = { x = 83 y = 35 }
-						size = { width = 164 height = 75 }
+						position = { x = @tec_planet_zone_main_size_pos_x y = @tec_planet_zone_main_size_pos_y }
+						size = { width = @tec_planet_zone_main_size_width height = @tec_planet_zone_main_size_height }
 
 						background = {
 							name = "zone_background"
@@ -1118,7 +1297,7 @@ guiTypes = {
 							name = "selection_highlight"
 							spriteType = "GFX_glow_tile_orange_no_padding"
 							position = { x = 0 y = 0 }
-							size = { x = 164 y = 75 }
+							size = { x = @tec_planet_zone_main_size_width y = @tec_planet_zone_main_size_height }
 							alwaystransparent = yes
 						}
 
@@ -1145,10 +1324,10 @@ guiTypes = {
 						#Buildings
 						gridBoxType = {
 							name = "buildings_box"
-							position = { x = 5 y = 22 }
-							size = { width = 205 height = 205 }
+							position = { x = @tec_planet_zone_main_buildings_pos_x y = @tec_planet_zone_main_buildings_pos_y }
+							size = { width = @tec_planet_zone_buildings_size_width height = @tec_planet_zone_buildings_size_height }
 							format = "UPPER_LEFT"
-							slotsize = { width = 52 height = 60 }
+							slotsize = { width = @tec_planet_zone_buildings_slot_width height = @tec_planet_zone_buildings_slot_height }
 							add_horizontal = yes
 							max_slots_horizontal = 6
 							max_slots_vertical = 2
@@ -1189,31 +1368,45 @@ guiTypes = {
 					#Secondary Zones
 					gridBoxType = {
 						name = "zones_grid_box"
-						position = { x = 255 y = 6 }
-						size = { width = 271 height = 166 }
+						position = { x = @tec_planet_districts_main_zone_grid_pos_x y = @tec_planet_districts_main_zone_grid_pos_y }
+						size = { width = @tec_planet_districts_main_zone_grid_width height = @tec_planet_districts_main_zone_grid_height }
 						format = "UPPER_LEFT"
-						slotsize = { width = 274 height = 53 }
+						slotsize = { width = @tec_planet_districts_main_zone_grid_slot_width height = @tec_planet_districts_main_zone_grid_slot_height }
 						add_horizontal = yes
-						max_slots_horizontal = 1
-						max_slots_vertical = 3
+						max_slots_horizontal = @tec_planet_districts_main_zone_slots_horizontal
+						max_slots_vertical = @tec_planet_districts_main_zone_slots_vertical
 					}
 				}
 
 				containerWindowType = {
 					name = "districts_grid_window"
-					size = { width = 830 height = 173 }
-					position = { x = 10 y = 264 }
+					size = { width = @tec_planet_districts_secondary_width height = @tec_planet_districts_secondary_height }
+					position = { x = @tec_planet_districts_secondary_pos_x y = @tec_planet_districts_secondary_pos_y }
+					# Evolved - DYNAMIC DISTRICTS!
+						verticalScrollbar = "right_vertical_slider"
+						# vv this restricts to the ui margin, clipping is necessary
+						margin = { top = 0 bottom = 8 }
+						clipping = yes
+						#smooth_scrolling = yes
+					# /
 
 					# Districts Buttons
 					gridBoxType = {
 						name = "districts_grid_box"
-						position = { x = 0 y = 0 }
-						size = { width = 830 height = 175 }
+						position = { x = @tec_planet_districts_secondary_grid_pos_x y = @tec_planet_districts_secondary_grid_pos_y }
+						#Evolved note vv height determines the scrollbar too! give extra space
+						size = { width = @tec_planet_districts_secondary_grid_width height = @tec_planet_districts_secondary_grid_height }
 						format = "UPPER_LEFT"
-						slotsize = { width = 278 height = 155 }
+						slotsize = { width = @tec_planet_districts_secondary_grid_slot_width height = @tec_planet_districts_secondary_grid_slot_height }
 						add_horizontal = yes
 						max_slots_horizontal = 3
 						max_slots_vertical = 1
+					}
+
+					# Evolved - Background is needed for the scrollbar
+					background = {
+						name = "background"
+						spriteType = "GFX_invisible"
 					}
 				}
 
@@ -1294,8 +1487,8 @@ guiTypes = {
 				# Planetary Resources
 				containerWindowType = {
 					name = "planetary_resources"
-					size = { width = 274 height = 166 }
-					position = { x = 566 y = 93 }
+					size = { width = @tec_planet_resources_width height = @tec_planet_resources_height }
+					position = { x = @tec_planet_resources_pos_x y = @tec_planet_resources_pos_y }
 
 					background = {
 						name = "output_background"
@@ -1306,43 +1499,43 @@ guiTypes = {
 						name = "planetary_production_output_title"
 						font = "cg_16b"
 						text = "PLANETARY_PRODUCTION"
-						position = { x = 0 y = 8 }
-						maxWidth = 274
-						maxHeight = 20
+						position = { x = @tec_planet_resources_production_title_pos_x y = @tec_planet_resources_production_title_pos_y }
+						maxWidth = @tec_planet_resources_production_title_width
+						maxHeight = @tec_planet_resources_production_title_height 
 						fixedSize = yes
-						format = center
+						format = left
 						alwaysTransparent = yes
 					}
-
+				
 					instantTextBoxType={
 						name = "planetary_production_output_amount"
 						font = "cg_16b"
-						position = { x = 12  y = 30 }
+						position = { x = @tec_planet_resources_production_pos_x  y = @tec_planet_resources_production_pos_y }
 						text = "" # produced resources set in code
-						maxWidth = 250
-						maxHeight = 60
+						maxWidth = @tec_planet_resources_production_width
+						maxHeight =  @tec_planet_resources_production_height
 						format = center
 						scrollbartype = "standardtext_slider_small"
 					}
-
+				
 					instantTextBoxType = {
 						name = "planetary_consumption_output_title"
 						font = "cg_16b"
 						text = "PLANETARY_DEFICIT"
-						position = { x = 0 y = 96 }
-						maxWidth = 274
-						maxHeight = 20
+						position = { x = @tec_planet_resources_consumption_title_pos_x y = @tec_planet_resources_consumption_title_pos_y }
+						maxWidth = @tec_planet_resources_consumption_title_width
+						maxHeight = @tec_planet_resources_consumption_title_height
 						fixedSize = no
-						format = center
+						format = left
 						alwaysTransparent = yes
 					}
 					instantTextBoxType={
 						name = "planetary_consumption_output_amount"
 						font = "cg_16b"
-						position = { x = 12  y = 120 }
+						position = { x = @tec_planet_resources_consumption_pos_x  y = @tec_planet_resources_consumption_pos_y }
 						text = "" # consumed resources set in code
-						maxWidth = 250
-						maxHeight = 50
+						maxWidth = @tec_planet_resources_consumption_width
+						maxHeight = @tec_planet_resources_consumption_height
 						format = center
 						scrollbartype = "standardtext_slider_small"
 					}
@@ -4104,8 +4297,8 @@ guiTypes = {
 		#Zone
 		containerWindowType = {
 			name = "zone"
-			size = { width = 198 height = 79 }
-			position = { x = 70 y = 35 }
+			size = { width = @tec_planet_zone_general_size_width height = @tec_planet_zone_general_size_height }
+			position = { x = @tec_planet_zone_general_size_pos_x y = @tec_planet_zone_general_size_pos_y }
 
 			background = {
 				name = "districts_window_background"
@@ -4115,7 +4308,7 @@ guiTypes = {
 			buttonType = {
 				name = "zone_info_button"
 				position = { x = 0 y = 0 }
-				size = { x = 198 y = 79 }
+				size = { x = @tec_planet_zone_general_size_width y = @tec_planet_zone_general_size_height }
 				quadTextureSprite = "GFX_district_hover"
 				clicksound = "menu_slide_open"
 			}
@@ -4124,7 +4317,7 @@ guiTypes = {
 				name = "selection_highlight"
 				spriteType = "GFX_glow_tile_orange_no_padding"
 				position = { x = 0 y = 0 }
-				size = { x = 198 y = 79 }
+				size = { x = @tec_planet_zone_general_size_width y = @tec_planet_zone_general_size_height }
 				alwaystransparent = yes
 			}
 
@@ -4152,9 +4345,9 @@ guiTypes = {
 			gridBoxType = {
 				name = "buildings_box"
 				position = { x = 10 y = 24 }
-				size = { width = 205 height = 205 }
+				size = { width = @tec_planet_zone_buildings_size_width height = @tec_planet_zone_buildings_size_height }
 				format = "UPPER_LEFT"
-				slotsize = { width = 52 height = 60 }
+				slotsize = { width = @tec_planet_zone_buildings_slot_width height = @tec_planet_zone_buildings_slot_height }
 				add_horizontal = yes
 				max_slots_horizontal = 6
 				max_slots_vertical = 2
@@ -4208,7 +4401,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "zone_entry"
 		position = { x = 0 y = 0 }
-		size = { width = 291 height = 50 }
+		size = { width = @tec_planet_zone_city_size_width height = @tec_planet_zone_city_size_height }
 
 		background = {
 			position = { x = 0 y = 0 }
@@ -4220,7 +4413,7 @@ guiTypes = {
 		buttonType = {
 			name = "zone_info_button"
 			position = { x = 0 y = 0 }
-			size = { x = 291 y = 50 }
+			size = { x = @tec_planet_zone_city_size_width y = @tec_planet_zone_city_size_height  }
 			quadTextureSprite = "GFX_district_hover"
 			clicksound = "menu_slide_open"
 		}
@@ -4229,17 +4422,17 @@ guiTypes = {
 			name = "selection_highlight"
 			spriteType = "GFX_glow_tile_orange_no_padding"
 			position = { x = 0 y = 0 }
-			size = { x = 291 y = 50 }
+			size = { x = @tec_planet_zone_city_size_width y = @tec_planet_zone_city_size_height  }
 			alwaystransparent = yes
 		}
 
 		instantTextBoxType = {
 			name = "zone_title"
 			font = "cg_16b"
-			position = { x = 30 y = 0 }
+			position = { x = @tec_planet_zone_name_pos_x y = @tec_planet_zone_name_pos_y }
 			text = "zone_early_industry"
-			maxWidth = 105
-			maxHeight = 50
+			maxWidth = @tec_planet_zone_name_size_width
+			maxHeight = @tec_planet_zone_name_size_height
 			fixedSize = yes
 			format = left
 			vertical_alignment = center
@@ -4257,10 +4450,10 @@ guiTypes = {
 		#Buildings
 		gridBoxType = {
 			name = "buildings_box"
-			position = { x = 133 y = 0 }
-			size = { width = 156 height = 205 }
+			position = { x = @tec_planet_zone_city_buildings_pos_x y = @tec_planet_zone_city_buildings_pos_y }
+			size = { width = @tec_planet_zone_buildings_size_width height = @tec_planet_zone_buildings_size_height }
 			format = "UPPER_LEFT"
-			slotsize = { width = 52 height = 50 }
+			slotsize = { width = @tec_planet_zone_buildings_slot_width height = @tec_planet_zone_buildings_slot_height }
 			add_horizontal = yes
 			max_slots_horizontal = 6
 			max_slots_vertical = 2

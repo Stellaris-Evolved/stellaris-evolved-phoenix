@@ -3,3 +3,8 @@
 	# TODO
 
 # Full replaces
+
+
+# UI
+	PLANETARY_PRODUCTION:0 "Production"
+	PLANETARY_DEFICIT:0 "Deficit"
