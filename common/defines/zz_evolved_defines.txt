@@ -1,0 +1,157 @@
+NGameplay = {
+	MAX_PLANET_STABILITY				= 200
+	MIN_PLANET_AMENITIES				= 0.125	# Mult of amenities to amenities needs
+	MIN_PLANET_RELATIVE_HOUSING			= 0.25	# Mult of housing to housing needs
+
+	COUNCIL_RESEARCH_POSITIONS = {
+		"councilor_gestalt_cognitive"
+		"councilor_research" 
+		"councilor_tec_aiauth_development"
+	}
+	COUNCIL_NAVAL_POSITIONS = {
+		"councilor_gestalt_legion"
+		"councilor_defense"
+		"councilor_tec_aiauth_firewall"
+	}
+	COUNCIL_DIPLOMACY_POSITIONS = {
+		"councilor_gestalt_regulatory"
+		"councilor_state"
+		"councilor_tec_aiauth_manager"
+	}
+
+	POP_ETHOS_LOWER_ETHIC_THRESHOLD				= 0.5	# If the % of pops following an ethic is <= this relative to its attraction do not diverge away from it
+	POP_ETHOS_UPPER_ETHIC_THRESHOLD				= 2.0	# If the % of pops following an ethic is >= this relative to its attraction do not diverge to it
+	POP_ETHOS_DIVERGENCE_INTERVAL				= 480	# Number of days until a Pop has a change to diverge from empire ethos
+	POP_ETHOS_DIVERGENCE_RATE_MULT				= 0.05		# Chance of a pop evaluating its ethics every year
+	POP_CHANGE_FACTION_CHANCE					= 0.05	# Once every month a pop has X chance to change faction but only if the pop wants to
+	POP_CURRENT_FACTION_WEIGHT					= 2.00	# Weight for current faction is multiplied by this much for pops
+
+	RESOLUTION_VOTE_TIMER 						= 360					# number of days a resolution will be on the senate floor before being passed/failed
+	RESOLUTION_VOTE_PREMATURE_TIMER 			= 180			# number of days until the custodian/emperor can prematurely end the senate session
+	SENATE_RECESS_TIMER 						= 760	
+	CHANGE_VOTE_COOLDOWN 						= 60
+	#/TEST
+	#RESOLUTION_VOTE_TIMER = 10					# number of days a resolution will be on the senate floor before being passed/failed
+	#SENATE_RECESS_TIMER = 10	
+
+	MOVE_CAPITAL_INFLUENCE_COST					= 200	# Influence cost to move the empire capital to another planet.
+	MOVE_CAPITAL_COOLDOWN_YEARS 				= 10	# Cooldown in years for moving capital.
+
+	STARBASE_CAPACITY_SYSTEM_MULT				= 0.15
+	
+	EXPERIMENTAL_SUBSPACE_NAVIGATION_TIME_MULT 	= 0.75
+
+	EMERGENCY_MEASURES_COOLDOWN 				= 3600
+
+	
+
+	#fed changes
+	FEDERATION_PERK_EXPERATION_MONTHS			= 3		#Month for picked perk to expire if level lost
+	# Upped, as there are a lot of extra ethics (3)
+	FEDERATION_BASE_ETHICS						= 6		# count of unique ethics not penalized for federation cohesion
+	FEDERATION_ENVOY_BASE_EFFECT				= 1.0	# envoys base effect on cohesion
+	FEDERATION_MEMBERS_PENALTY					= -0.25	# penalty for each federation member
+	FEDERATION_NO_MEMBERS_PENALTY				= -100.0	# penalty if the federation has no members
+	# Lowered, more ethics = more problems (0.15)
+	FEDERATION_ETHICS_PENALTY					= -0.10	# Federation cohesion penalty for extra unique ethics
+	# Lowered, more ethics = more problems (0.5)
+	FEDERATION_OPPOSING_ETHICS_PENALTY			= -0.3	# Federation cohesion for opposing ethics
+	FEDERATION_BASE_COHESION					= 5.0 	# base federation cohesion
+	FEDERATION_COHESION_RANGE					= 100	# max cohesion range
+	FEDERATION_COHESION_TO_XP					= 0.1	# cohesion to xp conversion
+	FEDERATION_MAX_FLEET_SIZE					= 0
+	FEDERATION_JOIN_COHESION_PENALTY			= -50	# Cohesion loss every time a new member is added to the federation (after the first two)
+	FEDERATION_LEAVE_COHESION_PENALTY			= -50	# Cohesion loss every time a member leaves the federation
+	FEDERATION_SWITCH_COHESION_PENALTY			= -50	# Cohesion loss when you switch federation type
+	# Federation changes
+
+	HABITABILITY_AUTO_MIGRATION		= 0.0
+}
+
+NSpecies = {
+	MIN_ETHIC_POINTS 							= 5
+	#Phoenix_removed#HALF_BREED_BASE_CHANCE						= 0.1
+	#Phoenix_removed#HALF_BREED_SAME_CLASS_CHANCE_ADD			= 0.25
+	#Phoenix_removed#HALF_BREED_SWAP_BASE_SPECIES_CHANCE			= 0.25
+	#Phoenix_removed#HALF_BREED_EXTRA_TRAIT_POINTS				= 1
+	#Phoenix_removed#HALF_BREED_EXTRA_TRAIT_PICKS				= 1
+}
+
+NPop = {
+	#Phoenix_removed#FORCED_SPECIES_GROWTH_PENALTY				= 0 #.1	# This amount of progress is lost on setting a forced species for growth
+	#Phoenix_removed#FORCED_SPECIES_ASSEMBLY_PENALTY				= 0	#.5	# This amount of progress is lost on setting a forced species for assembly
+	# Changed because nonsense
+
+	BASE_POLITICAL_POWER								= 0.01		# Base political power
+	MIN_POLITICAL_POWER_POSITIVE_STABILITY_IMPACT		= 0.0
+	MAX_POLITICAL_POWER_POSITIVE_STABILITY_IMPACT		= 20
+	MIN_POLITICAL_POWER_NEGATIVE_STABILITY_IMPACT		= 0.05
+	MAX_POLITICAL_POWER_NEGATIVE_STABILITY_IMPACT		= 20
+
+	RESETTLE_UNEMPLOYED_BASE_RATE				= 10	# Base pop amount that can auto-migrate from a planet per month
+	RESETTLE_DESTROY_COLONY_COST			= 200	# Influence surcharge for manually resettling the last pop from a colony
+
+	# removed
+	#Phoenix_removed#SAME_STRATA_EMPLOYMENT_BONUS		= 0 # How much score will be added to an unemployed pop when considering it for a job in the same strata
+}
+
+# #nai
+# NPop = {
+# 	AI_FREE_JOBS_DISTRICT_BUILD_CAP 			= 2			# AI will not build new districts on a planet with more than this many free jobs
+# 	AI_DEFICIT_SCORE_MULT						= 2			# AI will score buildings producing resources in deficit this much more
+# 	AI_FOCUS_SCORE_MULT 						= 2			# AI will score buildings producing focus resources this much more
+# 	AI_AMENITIES_SCORE_MULT 					= 2			# AI will score amenity buildings this much more than other misc resources
+# 	AI_HOUSING_SCORE_MULT						= 4.5		# AI will score housing buildings this much more than other misc resources
+# 	AI_CRIME_REDUCTION_SCORE_MULT 				= 0.25		# AI will score crime fighting buildings this much more than other misc resource
+# 	AI_ADMIN_CAP_SCORE_MULT 					= 1			# AI will score admin cap buildings this much more than other misc resource
+# 	AI_POPS_SCORE_MULT 							= 50		# AI will score pop growth and assembly buildings this much more ( already fairly high weighted in code )
+# 	AI_POP_GROWTH_JOB_TRESHOLD 					= 0.05 		# AI will consider a job defined as a giving pop growth if it gives at least this many % bonus
+# 	AI_UPGRADE_SCORE_MULT 						= 100		# AI will score building upgrades this much more ( since they don't take up a new building slot )
+
+# 	AI_UPPER_AMENITIES_LIMIT 					= 5 		# AI will try to reduce the amount of amenities on a planet if it's above this number by downprioritizing amenity jobs
+# 	AI_LOWER_AMENITIES_LIMIT 					= 2 		# AI will try to increase amenities on a planet if it's below this number by increasing priority of amenity jobs and building new amenities buildings
+# 	AI_IS_AMENITIES_JOB_FACTOR 					= 1.5		# Factor of when a job is considered an amenities job, e.g. for 2 a job needs to produce twice as much amenities as resources
+# 	POP_RANK_LIMIT_FOR_AMENITIES_ADJUSTMENT 	= 2 		# Pops above this rank will not be subject of automatic job reshuffling to balance amenities
+
+# 	AI_TECHNOLOGY_RARE_WEIGHT_MULT 				= 1.5		# AI will multiply AI weight of rare techs with this value
+
+# 	WAR_EXHAUSTION_TO_INTERVENE 				= 0.10
+
+# 	AI_MIN_HABITABILITY_TO_COLONIZE 			= 0.19		# AI will avoid colonizing planets with habitability lower than this.
+
+# 	AI_MIN_BRANCH_OFFICE_WORTH_TO_ESTABLISH 	= 1.0		# AI megacorporations will not establish branch offices unless value is above this
+# }
+
+NAI = {
+	AI_FREE_JOBS_DISTRICT_BUILD_CAP = 5						# AI will not build new districts on a planet with more than this many free jobs
+	AI_FREE_JOBS_BUILDING_BUILD_CAP = 5						# AI will not build new buildings on a planet with more than this many free jobs
+
+	AI_DESIGNATION_COOLDOWN = 120							# Reduced so planets make sense
+
+	AI_ADDITIVE_SUPERFLUOUS_INCOME_THRESOLD = 10000 		# Addative threshold,
+	AI_MULTIPLICATIVE_SUPERFLUOUS_INCOME_THRESOLD = 5 	# Multiplicative threshold
+	# AI will not build new buildings on a planet with more than this many free jobs
+
+	#Phoenix_removed#AI_IS_AMENITIES_JOB_mult = 50						# Factor of when a job is considered an amenities job, e.g. for 2 a job needs to produce twice as much amenities as resources
+	AI_IS_AMENITIES_JOB_FACTOR = 1.5						# Factor of when a job is considered an amenities job, e.g. for 2 a job needs to produce twice as much amenities as resources
+	POP_RANK_LIMIT_FOR_AMENITIES_ADJUSTMENT = 2 			# Pops above this rank will not be subject of automatic job reshuffling to balance amenities
+	AI_MINIMUM_AMENITY_PER_JOB_LIMIT = 50					# Jobs need to produce at least this many amenities to be considered for the AI amenity shuffling
+
+
+	AI_UPGRADE_SCORE_MULT = 1.5
+	AI_RARE_RESOURCES = { "exotic_gases" "rare_crystals" "volatile_motes" "sr_living_metal" "nanites" "sr_tec_ai_power" "sr_zro" } #Tells AI which the "strategic" resources are used for their economy planing
+
+	AI_MIN_CURRENCY_TO_SELL = 250.0		# If the AI has less currency (energy) than this it will consider selling resources
+	AI_MIN_CURRENCY_INCOME_TO_SELL = 10.0	# If the AI has less currency (energy) gain last month than this it will consider selling resources
+
+	BOSS_MILITARY_POWER = 150000			# The military power at which AI feels safe to engage a 'boss' creature
+		# Upped from 40k due to changes
+	ULTRA_BOSS_MILITARY_POWER = 400000			# The military power at which AI feels safe to engage a 'ultra boss' opponent
+		# Upped from 100k due to changes
+
+	PLANETARY_ASCENSION_ALLOWED_SPENDING = 0.25	# How much AI is willing to pay for planetary ascension in relation to the cost of a tradition
+
+	AI_MIN_HABITABILITY_TO_COLONIZE = -0.1 # ai wont colonize shattered rings, so we set this to 0
+
+	MIN_WANTED_SCIENTISTS = 2
+}

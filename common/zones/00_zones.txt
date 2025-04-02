@@ -238,6 +238,21 @@ zone_research = {
 	planet_modifier = {
 		zone_building_slots_add = 4
 	}
+	# Sadly this does not work
+	#triggered_planet_modifier = {
+	#	potential = {
+	#		has_planet_flag = TEC_TEST_DYNAMIC_ZONE_1
+	#	}
+	#	set_planet_flag = TEC_TEST_DYNAMIC_ZONE_1
+	#	zone_building_slots_add = -1
+	#}
+	#triggered_planet_modifier = {
+	#	potential = {
+	#		has_planet_flag = TEC_TEST_DYNAMIC_ZONE_2
+	#	}
+	#	set_planet_flag = TEC_TEST_DYNAMIC_ZONE_2
+	#	zone_building_slots_add = -1
+	#}
 
 	triggered_desc = {
 		trigger = {
